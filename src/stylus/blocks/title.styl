@@ -1,0 +1,57 @@
+.title
+  font-size: 36px
+  line-height: 48px
+
+  @media (max-width: $breakpoint-md - 1)
+    font-size: 30px
+
+  span
+    color: $blue
+
+  .big
+    font-size: 48px
+    line-height: 60px
+    font-weight: bold
+    color: $blue
+    margin-top: 2px
+    @media (max-width: $breakpoint-md - 1)
+      margin-top: 0
+      font-size: 30px
+      line-height: 48px
+
+
+  &--bg
+    text-align: center
+    font-weight: bold
+    position: relative
+    @media (max-width: $breakpoint-md - 1)
+      font-size: 36px
+
+    &:before
+      content: attr(data-bg)
+      font-size: 87px
+      position: absolute
+      top: 50%
+      left: 50%
+      transform translate(-50%, -50%)
+      white-space nowrap
+      color transparent
+      opacity: .17
+      -webkit-text-stroke: 1px #000
+      z-index: -1
+      pointer-events none
+      @media (max-width: $breakpoint-md - 1)
+        font-size: 60px
+
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      background: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTEgMzQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTUgMGgxdjIzaC0xeiIvPjxwYXRoIGQ9Im0wIDIzaDExdjExaC0xMXoiIGZpbGw9IiMwMDZkZmUiLz48L3N2Zz4=') 50% 50% no-repeat;
+      background-size: contain
+      width: 17px
+      height: 39px
+      left: 50%
+      margin-left: -9px
+      top: 100%
+      margin-top: 22px

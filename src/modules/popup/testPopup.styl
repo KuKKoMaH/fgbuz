@@ -1,0 +1,282 @@
+.testPopup
+  max-width 1090px
+  margin: 0 auto
+  position: relative
+  border: 20px solid $black
+  border-top: 0
+  border-bottom: 0
+
+  .wpcf7-not-valid-tip
+    left: 50%
+    transform translateX(-50%)
+
+  &:before, &:after
+    content: ''
+    display: block
+    position: absolute
+    width: 73px
+    height: 20px
+    background: $black
+    top: 0
+    z-index: 1
+
+  &:before
+    left: 0
+
+  &:after
+    right: 0
+
+  &__inner
+    margin: 100px 0 40px
+    padding: 44px 20px 7px
+
+    &:before, &:after
+      content: ''
+      display: block
+      position: absolute
+      width: 73px
+      height: 20px
+      background: $black
+      bottom: 0
+      z-index: 1
+
+    &:before
+      left: 0
+
+    &:after
+      right: 0
+
+  &__title
+    font-family: 'Museo Sans Cyrl 700', sans-serif
+    font-size: 29px
+    line-height: 36px
+    text-align: center
+    color: $blue
+    position: relative
+    margin-bottom: 116px
+
+    &:before, &:after
+      content: ''
+      display: block
+      position: absolute
+      height: 6px
+      top: 100%
+      margin-top: 42px
+
+    &:before
+      left: 80px
+      right: 50%
+      background: $blue
+
+    &:after
+      left: 50%
+      right: 80px
+      background: $black
+
+  &__items
+    display: flex
+    flex-wrap wrap
+    position: relative
+
+    &:before, &:after
+      content: ''
+      display: block
+      position: absolute
+      background: #d9d9d9
+      width: 1px
+      top: 0
+      bottom: 64px
+
+    &:before
+      left: 33.3333%
+      @media (max-width: $breakpoint-md - 1)
+        left: 50%
+    &:after
+      left: 66.6666%
+      @media (max-width: $breakpoint-md - 1)
+        display: none
+
+    &--big
+      &:before
+        @media (max-width: $breakpoint-md - 1)
+          display: none
+
+  &__item
+    width: 33.3333%
+    text-align: center
+    padding: 4px 0
+    margin-bottom: 64px
+    cursor: pointer
+    @media (max-width: $breakpoint-md - 1)
+      width: 50%
+    &:hover ^[0]__number
+      filter: none
+
+    &--big
+      @media (max-width: $breakpoint-md - 1)
+        width: 100%
+
+      & ^[0]__number
+        font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+        font-size: 210px
+        line-height: 150px
+        -webkit-text-stroke: 1px $blue;
+
+      & ^[0]__text
+        font-size: 29px
+        font-weight: normal
+
+  &__text
+    font-weight: bold
+    margin-top: 31px
+
+  &__number
+    &--01
+      background-image: radial-gradient(rgba($blue, 0) 0%, rgba($blue, 0) 30%, $blue 31%, $blue 100%)
+      background-position: calc(50% + 3px) -37px
+      background-size: 270px 125px;
+
+    &--02
+      background-position: calc(50% + 39px) 11px
+      background-size: 200px 200px
+
+    &--03
+      background-position: calc(50% + -30px) -76px
+      background-size: 150px 150px
+
+    &--04
+      background-position: calc(50% + 13px) 27px
+      background-size: 110px 110px
+
+    &--05
+      background-position: calc(50% + -51px) -43px
+      background-size: 110px 110px
+
+    &--06
+      background-position: calc(50% + 10px) 25px
+      background-size: 110px 110px
+
+    &--01-big
+      background-position: calc(50% + 50px) 45px
+      background-size: 180px 180px
+
+    &--02-big
+      background-position: calc(50% + -80px) 40px
+      background-size: 180px 180px
+
+    &--03-big
+      background-position: calc(50% + 45px) -55px
+      background-size: 180px 180px
+
+    &
+      position: relative
+      font-family: 'Acumin Pro Condensed', sans-serif;
+      font-size: 115px
+      line-height: 85px
+      font-weight: 900
+      color transparent
+      -webkit-text-stroke: 1px $black;
+      -webkit-background-clip: text;
+      filter: brightness(0)
+      background-repeat: no-repeat;
+      background-image: radial-gradient(#006dfe 0%, #006dfe 50%, rgba(0, 0, 0, 0) 51%, rgba(0, 0, 0, 0) 100%);
+      anim(.2s)
+
+  &__label
+    font-size: 30px
+    line-height: 36px
+    text-align: center
+    margin-bottom: 40px
+
+  &__radios
+    display: flex
+    align-items center
+    justify-content space-between
+    margin: 0 auto 80px
+    max-width 700px
+
+  &__radio
+    input
+      display: none
+
+  &__radio-text
+    position: relative
+    display: flex
+    align-items center
+
+    &:before, &:after
+      content: ''
+      display: block
+
+    &:before
+      width: 31px
+      height: 31px
+      border-radius: 50%
+      border: 2px solid #d1d1d1
+      margin-right: 18px
+
+    &:after
+      position: absolute
+      left: 10px
+      top: 10px
+      width: 11px
+      height: 11px
+      border-radius: 50%
+      background: #d1d1d1
+      //opacity: 0
+      anim()
+
+    input:checked ~ &:after
+      background: $blue
+
+  //opacity: 1
+
+  &__toggle
+    display: flex
+    align-items center
+    justify-content center
+    margin-bottom: 50px
+
+  &__switch
+    height: 40px
+    width: 133px
+    margin: 0 30px
+    border-radius: 20px
+    border: 1px solid $black
+    padding: 2px
+
+    input
+      display: none
+
+    //input:checked
+
+    input:checked ~  ^[0]__slider
+      margin-left: 50%
+
+  &__slider
+    position: relative
+    width: 50%
+    height: 100%
+    border-radius: ((40 - 2 - 4) / 2) px
+    background: $blue url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAQCAQAAABjX+2PAAAAFElEQVR42mP4r8mABDB4o9LDSxoA3Rs3gf8swPkAAAAASUVORK5CYII=') 50% 50% no-repeat
+    anim()
+
+  &__input
+    display: block
+    position: relative
+    z-index: 1
+    width: 100%
+    font-size: 18px
+    padding: 21px 37px
+    border: 1px solid $black
+    max-width 470px
+    margin: 0 auto 34px
+
+    &--textarea
+      min-height: 134px
+
+  &__button
+    width: 100%
+    max-width 470px
+    margin: 0 auto 40px
+    display: flex

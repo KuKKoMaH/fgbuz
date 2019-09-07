@@ -1,0 +1,73 @@
+#testPopup1.testPopup.noise
+  .testPopup__inner
+    .testPopup__title
+      | Хорошо, первый шаг сделан. Давайте дальше#[br]
+      | Выберите что для вас важно в бизнес-партнере
+    .testPopup__items
+      .testPopup__item
+        .testPopup__number.testPopup__number--01 01
+        .testPopup__text КРЕАТИВНЫЙ ПОДХОД
+      .testPopup__item
+        .testPopup__number.testPopup__number--02 02
+        .testPopup__text ВЫПОЛНЕНИЕ ОБЯЗАТЕЛЬСТВ
+      .testPopup__item
+        .testPopup__number.testPopup__number--03 03
+        .testPopup__text ОБЩИЙ ЯЗЫК
+      .testPopup__item
+        .testPopup__number.testPopup__number--04 04
+        .testPopup__text СКОРОСТЬ ИСПОЛНЕНИЯ
+      .testPopup__item
+        .testPopup__number.testPopup__number--05 05
+        .testPopup__text ПОСТОЯННАЯ СВЯЗЬ И КОНТРОЛЬ
+      .testPopup__item
+        .testPopup__number.testPopup__number--06 06
+        .testPopup__text МИНИМАЛЬНОЕ ВЗАИМОДЕЙСТВИЕ
+
+#testPopup2.testPopup.noise
+  .testPopup__inner
+    .testPopup__title
+      | Уже понимаем Вас больше. Остался всего один шаг#[br]
+      | Имеете ли вы опыт в интернет маректинге
+    .testPopup__items.testPopup__items--big
+      .testPopup__item.testPopup__item--big
+        .testPopup__number.testPopup__number--01-big 01
+        .testPopup__text Имею неудачный
+      .testPopup__item.testPopup__item--big
+        .testPopup__number.testPopup__number--02-big 02
+        .testPopup__text Имею удачный
+      .testPopup__item.testPopup__item--big
+        .testPopup__number.testPopup__number--03-big 03
+        .testPopup__text Не имею вообще
+
+#testPopup3.testPopup.noise
+  .testPopup__inner
+    .testPopup__title
+      | Теперь мы лучше знакомы с Вами#[br]
+      | Заполните форму и мы предложим вам самые выгодняе условия на рынке
+    form
+      input.testPopup__input(placeholder='Введите Ваше имя:')
+
+      .testPopup__label Выберите размер Вашего бизнеса
+      .testPopup__radios
+        label.testPopup__radio
+          input(type="radio" name="size" value="Малый")
+          .testPopup__radio-text Малый
+        label.testPopup__radio
+          input(type="radio" name="size" value="Средний")
+          .testPopup__radio-text Средний
+        label.testPopup__radio
+          input(type="radio" name="size" value="Крупный")
+          .testPopup__radio-text Крупный
+
+      .testPopup__label Выберите ориентированность Вашего бизнеса
+      .testPopup__toggle
+        | B to B
+        label.testPopup__switch
+          input(type="checkbox" name="type")
+          .testPopup__slider
+        | B to C
+
+
+      input.testPopup__input(placeholder='Введите Ваш номер телефона:')
+      textarea.testPopup__input.testPopup__input--textarea(placeholder='Расскажите нам больше о Вашем бизнесе (если хотите):')
+      button.btn.btn--lineIcon.testPopup__button ПОЛУЧИТЕ САМЫЕ ВЫГОДНЫЕ УСЛОВИЯ

@@ -1,0 +1,92 @@
+.footer
+
+  &__top
+    background-color: #fbfbfb
+
+  &__menu
+    position: relative
+    padding: 50px 10px 45px
+    font-size: 16px
+
+    & > ul
+      display flex
+
+      a
+        anim()
+
+        &:hover
+          color: #e21d2b
+          text-decoration: underline;
+
+      & > li
+        flex 1
+        padding-left: 25px
+
+        & > a
+          font-weight: 500
+          margin-bottom: 3px
+          display: inline-block
+
+          &:after
+            content: ''
+            display: inline-block
+            vertical-align: middle;
+            width: 6px
+            height: 6px
+            background: #e21d2b
+            border-radius: 50%
+            margin-left: 8px
+
+        li
+          margin-bottom: 10px
+
+  &__contacts
+    position: absolute
+    width: 355px
+    right: 28px
+    top: 100%
+    margin-top: -145px
+    background: #ffffff
+    border-radius: 4px
+    padding: 20px 20px 39px
+
+    &Header
+      padding: 12px 0 12px
+      text-align: center
+      font-weight: 500
+      border-bottom: 1px dashed #e21d2b;
+      margin-bottom: 20px
+
+    &Body
+      text-align: center
+      line-height: 2
+
+  &__bottom
+    background: #302e30
+    color: #ffffff
+    font-size: 16px
+
+  &__sup
+    display: flex
+    align-items: center
+    padding: 45px 10px
+    max-width 780px
+
+  &__company
+    display: flex
+    align-items: center
+    margin-bottom: 40px
+
+  &__logo
+    width: 44px
+    height: 44px
+    margin-right: 47px
+
+  &__right
+    margin-left: 45px
+
+  &__link
+    opacity .5
+    anim()
+    &:hover
+      opacity 1

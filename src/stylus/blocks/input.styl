@@ -1,0 +1,31 @@
+.input
+  //&__label
+  //  display: block
+  //  font-size: 11px
+  //  font-weight: 500
+  //  margin-bottom: 12px
+
+  position: relative
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    width: 22px
+    height: 4px
+    background: $blue
+    top: 100%
+    margin-top: -1px
+
+  &__input
+    display: block
+    width: 100%
+    border-bottom: 1px solid $black
+    font-size: 16px
+    color: $black
+    padding: 10px 0
+    //transition: border-color .1s ease-out
+
+    &--textarea
+      min-width 100%
+      max-width 100%
+

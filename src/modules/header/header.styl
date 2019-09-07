@@ -1,0 +1,88 @@
+.header
+  background: url(./header.jpg) 50% 0 no-repeat;
+  //background-size: cover;
+
+  &__top
+    display: flex;
+    align-items: center;
+    justify-content space-between
+    height: 134px
+    line-height: 1.35
+
+  &__left
+    display: flex;
+    align-items: center;
+
+  &__logo
+    width: 58px
+    height: 58px
+
+  &__title
+    width: 134px
+    height: 21px
+    margin-left: 16px
+    fill: #1d1d1b
+
+  &__label
+    font-size: 16px
+
+  &__value
+    font-weight: 500
+
+  &__contacts
+    position: relative
+
+    &-icon
+      position: absolute
+      fill: #e21d2b
+      width: 12px
+      height: 12px
+      right: 100%
+      margin-right: 10px
+      top: 6px
+
+  &__working
+    position: relative
+
+    &-icon
+      position: absolute
+      fill: #e21d2b
+      width: 16px
+      height: 16px
+      right: 100%
+      margin-right: 10px
+      top: 4px
+
+  &__menu
+    border: 1px solid rgba(#1b1c20, .1)
+    border-left:0;
+    border-right: 0
+
+    ul
+      display: flex;
+      align-items stretch
+      justify-content: space-between
+
+    a
+      position relative
+      padding: 20px 0
+      font-size: 14px
+      font-weight bold
+      color: #454545
+      display: block
+      height: 100%
+
+      &:after
+        content: ''
+        display: block
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 0
+        height: 0
+        background: #e21d2b
+        anim()
+
+      &:hover, &.current-menu-item
+        &:after
+          height: 3px

@@ -1,0 +1,39 @@
+.btn
+  display: inline-flex
+  align-items center
+  justify-content center
+  background: #e11b2a
+  padding: 0 40px
+  position: relative
+  //font-size: 16px
+  font-weight: bold
+  height: 58px
+  cursor: pointer
+  border-radius: 29px
+  color: #ffffff
+  anim()
+
+  svg
+    display: block
+    anim()
+
+  &:focus
+    outline 0
+
+  &:hover, &--active
+    background: darken(#e11b2a, 15%)
+
+    svg
+      fill: #ffffff
+
+  &--sm
+    height: 50px
+    padding: 0 58px
+    border-radius: 25px
+
+  &--round
+    width: 52px
+    height: 52px
+    padding: 0
+    align-items center
+    justify-content: center

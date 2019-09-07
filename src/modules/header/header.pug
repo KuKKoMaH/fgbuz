@@ -1,0 +1,28 @@
+header.header
+  .c.header__top
+    .header__left
+      svg.header__logo: use(xlink:href="#logo")
+      svg.header__title: use(xlink:href="#title")
+
+    .header__contacts
+      svg.header__contacts-icon: use(xlink:href="#call")
+      .header__label Есть вопросы? Звоните сейчас!
+      .header__value +7 (812) 603-41-8
+
+    .header__working
+      svg.header__working-icon: use(xlink:href="#clock")
+      .header__label Ежедневно
+      .header__value с 9:00 до 18:00
+
+    button.btn ЗАКАЗАТЬ ЗВОНОК
+
+  .header__menu
+    .c
+      ul
+        li: a(href='#') О НАС
+        li: a(href='#') ВОРОТА
+        li: a(href='#') ЗАБОРЫ
+        li: a(href='#') НАВЕСЫ
+        li: a(href='#') НАШИ РАБОТЫ
+        li: a(href='#') БЛОГ
+        li: a(href='#') КОНТАКТЫ

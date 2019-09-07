@@ -1,0 +1,110 @@
+.welcome
+  background: url(./welcome.jpg) 50% 0 no-repeat;
+  //background-size: cover;
+  padding: 61px 0
+  height: 666px
+
+  &__top
+    font-size: 36px
+    font-weight: bold
+    margin-bottom: 9px
+
+  &__title
+    display: block
+    width: 614px
+    height: 88px
+    margin-bottom: 34px
+    fill: #1d1d1b
+
+  &__sub
+    font-size: 24px
+    font-weight: 500
+    margin-bottom: 20px
+
+  &__list
+    li
+      margin-bottom: 18px
+      padding-left: 16px
+
+    a
+      font-weight: bold
+
+      &:before
+        content: ''
+        position: absolute
+        width: 6px
+        height: 6px
+        background #e21d2b
+        border-radius: 50%
+        margin-top: 12px
+        margin-left: -16px
+
+      &:hover
+        span:after
+          width: 100%
+
+        .welcome__dot
+          &:before
+            width: 38px
+            height: 38px
+          &:after
+            width: 14px
+            height: 14px
+
+    span
+      display: inline-block
+      position: relative;
+
+      &:after
+        content: ''
+        display: block
+        position: absolute
+        top: 100%
+        left: 0
+        width: 0
+        height: 3px
+        background: #e21d2b
+        anim()
+
+    sub
+      font-size: 16px
+      font-weight: 500
+      bottom: 0
+
+  &__dot
+    position: absolute
+    width: 38px
+    height: 38px
+    left: 50%
+
+    &:before, &:after
+      content: ''
+      display: block
+      position: absolute
+      left: 50%
+      top: 50%
+      border-radius: 50%
+      transform: translate(-50%, -50%)
+      anim()
+
+    &:before
+      width: 14px
+      height: 14px
+      background: #e43741
+
+    &:after
+      width: 0
+      height: 0
+      background: #ffffff
+
+    &--1
+      margin-left: -187px
+      top: 520px
+
+    &--2
+      margin-left: 53px;
+      top: 629px;
+
+    &--3
+      margin-left: 291px;
+      top: 635px;

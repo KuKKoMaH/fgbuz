@@ -1,0 +1,73 @@
+.examples
+  background: url(img/examplesBg.jpg) 50% 50% no-repeat
+  background-size: cover;
+  padding: 80px 0 50px
+
+  &__items
+    margin: 0 -15px
+
+    &:after
+      content: ''
+      display: block
+      clear both
+
+  &__grid
+    float: left
+    width: 25%
+    position: relative
+
+    &:before
+      content: "";
+      display: block;
+      padding-top: 100%
+
+    &--r2
+      &:before
+        padding-top: 200%
+
+    &--c2
+      width: 50%
+
+      &:before
+        padding-top: 50%
+
+  &__item
+    position: absolute;
+    left: 15px
+    top: 15px
+    bottom: 15px
+    right: 15px
+    overflow: hidden
+
+    img
+      position: absolute
+      top: 50%
+      left: 50%
+      transform translate(-50%, -50%) scale(1.2)
+      anim(.2s)
+
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      z-index: 1
+      anim(.2s)
+      top: -3px
+      right: -3px
+      bottom: -3px
+      left: -3px
+      border: 3px solid #fff;
+
+    &:hover
+      img
+        transform translate(-50%, -50%) scale(1)
+
+      &:before
+        top: 10px
+        right: 10px
+        bottom: 10px
+        left: 10px
+
+  &__more
+    text-align: center;
+    margin-top: 35px

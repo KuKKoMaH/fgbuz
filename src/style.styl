@@ -1,0 +1,143 @@
+/*!!
+ * Theme Name: aviscom
+ */
+
+@import "destyle.css/destyle.css"
+@import "baron/baron.css";
+@import "baron/skins/styles.css";
+
+@import "stylus/_fonts.styl";
+@import "stylus/_vars.styl";
+@import "stylus/_mixins.styl";
+
+html
+  font-family: 'Roboto', sans-serif;
+  color: #2d2d2d
+  font-size: 18px
+  line-height: 1.65
+  font-weight: 300
+
+html, body
+  overflow-x: hidden
+
+.lines
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABJMAAAABCAQAAADAmydUAAAAHklEQVR4Ae3BAQ0AAAzDoDqYf7fPfQC1gLeAt4C3AxuqAD3B4Pz6AAAAAElFTkSuQmCC') calc(50% - 1px) 0 repeat-y;
+
+h2
+  font-size: 36px
+  line-height: 1.35
+  text-align: center
+  font-weight: 500
+  margin-bottom: 64px
+
+  span
+    color: #e53641
+
+b
+  font-weight: bold
+
+.c
+  padding: 0 10px
+  margin-left: auto
+  margin-right: auto
+  max-width: $container-lg
+  width: 100%
+  @media (max-width: $breakpoint-lg - 1)
+    max-width: $container-md
+    padding: 0 20px
+  @media (max-width: $breakpoint-md - 1)
+    max-width: 100%
+
+.page
+  //anim(.2s)
+  min-height 100vh
+  display: flex
+  flex-direction column
+  will-change filter
+
+  &.mfp-body-open
+    filter: blur(10px)
+    overflow: hidden
+
+.lazy
+  visibility: hidden
+  opacity: 0
+
+  &.lazy--visible
+    visibility: visible
+    opacity: 1
+
+//transform none
+
+img[data-src],
+img[data-srcset]
+  //display: block;
+  min-height: 1px;
+
+.hidden
+  display: none
+
+#sprites
+  position: absolute
+  width: 0
+  height: 0
+  top: 0
+  left: 0
+
+.zoom
+  cursor: pointer;
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    z-index: 1
+    anim(.2s)
+    left: 50%
+    top: 50%
+    margin-left: -45px
+    margin-top: -45px
+    width: 90px
+    height: 90px
+    background: rgba(#e21d2b, .45) url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAACj0lEQVR4AZ3BTWgWdAAH4N/2zqjMDNIitUwyKy0VKskKjPQggYVKBSF1qcOIiEhbkPaB5UEvdkg3b+YxupaGX+ClUjoYZSK5VIpgfuB0uk23J/7bq++b2zL2PBmZJgtssM9RHTr8bpd15qnk/1DxkgOGuuR7S3I9Jtlh0Dl7tVprrS1+cFHRb5tbMzLTHFF0WuXeXKXRfdbpVPzq9gzPzQ6h3y4PZhhm26/YY3yGY4dis6aMwI2+UmzNUN7Shy/zn9zkR8UL+TcVf6PdXanSYL4WbdqsMkdjqozTjePGpp7XFM2pMs9uNb2+NStV3sEly1PPCVxIlff1Kbr95rBeRafmDDDVn2hLjYmKzUlijE36cdEnJhvrFvfYpEfxWQbYjl9SY4FiWZLYqDjq0cSrDjrkjcQzTqPPexoSH6EvNV5WzEo0K46Ykpip26AFiUe047InEysgNVYopiX2KJYmiUWueDdJtCi2JJZDaixRzE8sVZwyNzHdWYPmJJ51Guc8lGiG1JiteDtJrFScsiix0E77LE68ohd9Xk8SbTiZGo2KnUlijE360W2tyRpVTNWqR/FpkqjYj72p5zvFuAzQok/R7bAjLik6NWeAx3Thw9TzsGJrqjxut5pe35iVKttw3hOpp8FOdHk6VRrM16JVq1Vma8xVDmJ3ruUp53HchFyHOVa7LUNZr2g3N6Nhhp8N6rLG+FzDJCsty0hMcwyXbTfoL59b7H4TTPSApVqdRK+7MxwzdSg2Jhb6Sb9BPc44o8cVezRlKNO1K9ZngBu8aIdO9U772vMqGcoMHYqPNaWOKZ7zpjVWa7bQHRmeuY4rPshouNMJ9NuY0TDDH4otKhkNxxRfZLRccNYGTRmlfwD1xhxeJgRSzgAAAABJRU5ErkJggg==') 50% 50% no-repeat;
+    border-radius: 50%
+    opacity 0
+
+  &:hover:after
+    opacity 1
+
+
+.paroller
+  will-change: transform;
+  transition: transform 0.1s ease-out !important;
+  @media (pointer: coarse)
+    transition none !important
+
+//@import "stylus/blocks/hero.styl"
+@import "stylus/blocks/btn.styl";
+////@import "stylus/blocks/btnGroup.styl";
+//@import "stylus/blocks/btnSub.styl";
+//@import "stylus/blocks/lines.styl";
+//@import "stylus/blocks/navBtn.styl";
+//@import "stylus/blocks/videoFrame.styl";
+//@import "stylus/blocks/title.styl";
+//@import "stylus/blocks/form.styl";
+//@import "stylus/blocks/input.styl";
+//@import "stylus/blocks/card.styl";
+//@import "stylus/blocks/cardsList.styl";
+//@import "stylus/blocks/wpcf7.styl";
+//@import "stylus/blocks/tabs.styl";
+//@import "stylus/blocks/politic.styl";
+////@import "stylus/select.styl";
+
+@import "modules/header/header.styl"
+@import "modules/welcome/welcome.styl"
+@import "modules/advantages/advantages.styl"
+@import "modules/about/about.styl"
+@import "modules/variants/variants.styl"
+@import "modules/examples/examples.styl"
+@import "modules/bigForm/bigForm.styl"
+@import "modules/steps/steps.styl"
+@import "modules/certificates/certificates.styl"
+@import "modules/contacts/contacts.styl"
+@import "modules/footer/footer.styl"
+@import "modules/photoswipe/photoswipe.styl"

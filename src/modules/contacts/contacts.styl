@@ -1,0 +1,106 @@
+.contacts
+  background: url(img/contactsBg.jpg) calc(50% + 700px) 100% no-repeat;
+
+  &__container
+    padding: 93px 0 100px
+
+  &__content
+    display flex
+
+  &__info
+    flex: 1
+    position: relative
+    padding-bottom: 27px
+
+    p
+      margin-bottom: 23px
+
+  &__head
+    font-size: 24px
+    font-weight: 500
+    margin-bottom: 8px
+
+  &__sup
+    font-size: 36px
+    font-weight: 500
+    margin-bottom: 8px
+
+  &__title
+    width: 338px
+    height: 48px
+    margin-bottom: 9px
+    fill: #e43741
+
+  &__sub
+    font-weight: 500
+    margin-bottom: 25px
+
+  &__manager
+    position: absolute
+    bottom: 0
+    right: 40px
+
+  &__aside
+    position relative
+    flex: 1
+
+  &__folder
+    display block
+    position: absolute
+    top: -102px
+    left: -45px
+    pointer-events none
+
+  &__form
+    position: relative
+    z-index: 1
+    padding: 32px 70px 0 85px
+    text-align: center;
+
+  &__formTitle
+    font-size: 30px
+    font-weight: 500
+    margin-bottom: 20px
+
+  &__formText
+    font-weight: 500
+    margin-bottom: 20px
+
+  &__input
+    display: block
+    width: 100%
+    background: #f3f3f3;
+    border-radius: 4px
+    margin-bottom: 20px
+    padding: 17px 25px
+    font-size: 16px
+
+    &--textarea
+      resize: none
+      height: 105px
+      min-height: 105px
+      max-height: 105px
+      line-height: 1.2
+
+  &__map
+    position: relative
+    height: 488px
+    border: 13px solid #fff
+    background #fff
+    box-shadow: 0 16px 24px -21px rgba(0, 0, 0, 0.5)
+    z-index: 1
+
+    &:before
+      content: ''
+      display block
+      position: absolute
+      top: 5px
+      right: 5px
+      bottom: 5px
+      left: 5px
+      border: 5px solid #fff
+      pointer-events: none
+      z-index: 1
+
+  #map
+    height: 100%

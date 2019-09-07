@@ -1,0 +1,157 @@
+.casePopup
+  padding: 100px 0 20px
+  height: 100%
+  max-width $container-lg
+  margin: 0 auto
+  position: relative
+
+  .popup__close
+    margin-bottom: -80px
+
+  &__wrapper .mfp-content
+    height: 100%
+    overflow: hidden
+
+  &__inner
+    position: relative
+    display: flex
+    height: 100%
+
+  &__preview
+    flex: 1
+    min-width 0
+    position: relative
+
+    iframe
+      background: #ffffff
+      transform-origin 0 0
+
+    .baron__track
+      left: 100%
+      margin-left: 20px
+
+    img
+      max-width: 100%;
+      height: auto
+
+  &__info
+    height: 100%
+
+  &__content
+    height: 100%
+    overflow: auto
+
+    &::-webkit-scrollbar
+      width: 0;
+
+  &__track
+    position: absolute
+    left: 100%
+    margin-left: 20px
+    width: 9px
+    height: 100%
+    background: #c8dffa
+    top: 0
+    border-radius: 5px
+
+  &__bar
+    position: absolute
+    background: $black
+    width: 100%
+    border-radius: 5px
+
+  &__image
+    position: relative
+    padding: 20px
+    background: #ffffff
+    border-radius: 9px;
+    margin: 25px 0 50px
+
+    img
+      display: block
+      margin: 0 auto
+      max-width 100%
+      height: auto
+
+    &:before, &:after
+      content: ''
+      display: block
+      position: absolute
+      background: #ebf2fa
+      border-radius: 4px
+      width: 100%
+      left: 0
+      z-index: -1
+
+    &:before
+      background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAJCAYAAAC47pUJAAAAXklEQVR4AWPgLPwLwoxALAzEikCsCqWFoeIMaJhmemAKZIFYDQuWxWI4zfQwQF2mhgcLoxlKMz0gRYoEFCmiGUozPSBFqgQUqaIZSjM9gy5kREiMf5rpGVS5aVCVMwAtwuma5yWDUAAAAABJRU5ErkJggg==') 2% 9px no-repeat, url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAJCAYAAAAo/ezGAAAAHElEQVR4AWM4ef/Xf1pikAU0xUPfghEQB6NxAAC8JYCHEpezgQAAAABJRU5ErkJggg==') 98% 8px no-repeat, #ebf2fa
+      height: 36px
+      top: -25px
+
+    &:after
+      height: (15 + 9 + 4) px
+      bottom: -15px
+
+  &__image-content
+    margin-top: 33px
+    border-top: 1px solid #c3c3c3
+    padding-top: 30px
+
+    p
+      font-size: 24px
+      line-height: 36px
+      margin-bottom: 20px
+
+  &__bullets
+    display: flex
+    align-items center
+    justify-content space-between
+    margin-bottom: 12px
+
+    *
+      //flex: 1
+      font-size: 18px
+
+    span
+      display: block
+      width: 4px
+      height: 4px
+      border-radius: 50%
+      background: $black
+
+  &__block
+    color: #ffffff
+
+    p
+      font-size: 24px
+      line-height: 36px
+      margin-bottom: 12px
+
+    ul
+      margin-bottom: 40px
+
+    li
+      font-size: 18px
+      line-height: 36px
+
+      &:after
+        content: ''
+        display: block
+        width: 30px
+        height: 4px
+        background: #ffffff
+        margin: 4px 0
+
+      &:last-child:after
+        display: none
+
+  &__aside
+    width 405px
+    margin-left: 90px
+    flex-shrink 0
+
+  &__title
+    font-size: 30px
+    color: #ffffff
+    line-height: 36px
+    margin-bottom: 30px

@@ -1,0 +1,22 @@
+.bigForm
+  .c.bigForm__container
+    .bigForm__col
+      include ../steps/steps.pug
+      img.bigForm__manager(src='modules/bigForm/img/bigFormManager.png')
+    .bigForm__col
+      .bigForm__form
+        .bigForm__header Получите консультацию специалиста#[br]в течение 5 минут
+        .bigForm__body
+          form
+            .bigForm__block
+              .bigForm__label Выберите вариат изделия, который Вам необходим.
+              .bigForm__items
+                label.bigForm__checkbox
+                  input(type='checkbox' value='1')
+                  .bigForm__checkbox-text Забор
+                label.bigForm__checkbox
+                  input(type='checkbox' value='2')
+                  .bigForm__checkbox-text Забор
+                label.bigForm__checkbox
+                  input(type='checkbox' value='3')
+                  .bigForm__checkbox-text Забор

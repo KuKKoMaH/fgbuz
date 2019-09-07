@@ -1,0 +1,43 @@
+.thank
+  max-width 730px
+  background: #ffffff
+  margin: 0 auto
+  position: relative
+  border: 20px solid $black
+  height: 278px + (20 * 2) px
+  display: flex
+  align-items center
+  justify-content center
+  text-align: center
+  flex-direction column
+
+  .popup__close
+    margin-bottom: (23 + 20)px
+    margin-right: -20px
+
+  &:before, &:after
+    content: ''
+    display: block
+    position: absolute
+    height: 20px
+    left: 51px
+    right: 51px
+    background: #ffffff
+
+  &:before
+    bottom: 100%
+
+  &:after
+    top: 100%
+
+  &__title
+    font-size: 48px
+    font-weight: bold
+
+  &__text
+    font-size: 16px
+    line-height: 36px
+    font-weight: bold
+
+    span
+      color: $blue

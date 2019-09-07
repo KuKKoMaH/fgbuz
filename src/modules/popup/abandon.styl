@@ -1,0 +1,96 @@
+.abandon
+  max-width 880px
+  margin: 0 auto
+  position: relative
+  border 20px solid $black
+  border-top: 0
+  border-bottom: 0
+
+  &:before, &:after
+    content: ''
+    display: block
+    position: absolute
+    width: 54px
+    height: 20px
+    background: $black
+    top: 0
+    z-index: 1
+
+  &:before
+    left: 0
+
+  &:after
+    right: 0
+
+  &__inner
+    max-width 515px
+    padding: 48px 0 70px 39px
+
+    &:before, &:after
+      content: ''
+      display: block
+      position: absolute
+      width: 54px
+      height: 20px
+      background: $black
+      bottom: 0
+      z-index: 1
+
+    &:before
+      left: 0
+
+    &:after
+      right: 0
+
+  &__title
+    font-size: 30px
+    line-height: 48px
+    margin-bottom: 30px
+    span
+      color: $blue
+      font-weight: bold
+
+  &__plus
+    display: flex
+    font-size: 24px
+    color: $blue
+    align-items center
+    margin-bottom: 32px
+    &:before
+      content: ''
+      display: block
+      width: 47px
+      height: 47px
+      margin-right: 28px
+      background: $black url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAbCAYAAACJISRoAAAAOUlEQVR4AWMgCeT+c4FjqgOEJf9heNSSUUtGLRm1BLfG3SBNNMS7h5Mlo6mLqmDUklFLRi2hSwsSALuGXPSYIx4yAAAAAElFTkSuQmCC') 50% 50% no-repeat
+
+  &__input
+    display: block
+    position: relative
+    z-index: 1
+    width: 100%
+    font-size: 18px
+    padding: 21px 37px
+    margin-bottom: 23px
+    border: 1px solid $black
+
+  &__button
+    text-align: center
+
+  &__image
+    position: absolute
+    right: 0
+    opacity: 0
+    anim(.2s)
+    &.lazy--visible
+      opacity: 1
+
+    &--1
+      bottom: 0
+
+    &--2
+      top: 10px
+      right: 20px
+
+    &--3
+      bottom: 0
