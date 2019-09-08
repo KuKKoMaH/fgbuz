@@ -1,0 +1,8 @@
+.gallery
+  .c
+    .gallery__items
+      each val in [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+        .gallery__item
+          a.gallery__inner(href='modules/gallery/img/' + (val % 4) + '.jpg' data-width=270 data-height=217 data-index=val)
+            img(src='modules/gallery/img/' + (val % 4) + '.jpg')
+            .gallery__price от 10 000 руб

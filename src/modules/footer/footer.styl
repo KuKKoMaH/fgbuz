@@ -8,10 +8,21 @@
     padding: 50px 10px 45px
     font-size: 16px
 
+    ul
+      margin: 0
+
+    li
+      margin: 0
+      padding: 0
+
+      &:before
+        display: none
+
     & > ul
       display flex
 
       a
+        color: #2d2d2d
         anim()
 
         &:hover
@@ -23,6 +34,7 @@
         padding-left: 25px
 
         & > a
+          color: #2d2d2d
           font-weight: 500
           margin-bottom: 3px
           display: inline-block
@@ -61,6 +73,9 @@
       text-align: center
       line-height: 2
 
+      p
+        margin-bottom: 0
+
   &__bottom
     background: #302e30
     color: #ffffff
@@ -88,5 +103,6 @@
   &__link
     opacity .5
     anim()
+
     &:hover
       opacity 1

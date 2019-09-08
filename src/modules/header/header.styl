@@ -55,13 +55,20 @@
 
   &__menu
     border: 1px solid rgba(#1b1c20, .1)
-    border-left:0;
+    border-left: 0;
     border-right: 0
+
+    li
+      margin: 0
+      padding: 0
+      &:before
+       display: none
 
     ul
       display: flex;
       align-items stretch
       justify-content: space-between
+      margin: 0
 
     a
       position relative
@@ -84,5 +91,6 @@
         anim()
 
       &:hover, &.current-menu-item
+        text-decoration: none;
         &:after
           height: 3px

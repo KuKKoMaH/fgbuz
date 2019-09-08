@@ -36,6 +36,33 @@ h2
 b
   font-weight: bold
 
+p
+  margin-bottom: 1.55em
+
+a
+  color: #e21d2b
+  &:hover
+    color: darken(#e21d2b, 30%)
+    text-decoration: underline;
+
+ul
+  margin-bottom: 1.55em
+
+  li
+    padding-left: 22px
+    margin-bottom: 1em
+    position relative
+
+    &:before
+      content: ''
+      width: 7px
+      height: 7px
+      background: #e43641
+      border-radius: 50%
+      position absolute
+      top: .6em;
+      left: 2px;
+
 .c
   padding: 0 10px
   margin-left: auto
@@ -86,6 +113,7 @@ img[data-srcset]
 
 .zoom
   cursor: pointer;
+
   &:after
     content: ''
     display: block
@@ -121,7 +149,7 @@ img[data-srcset]
 //@import "stylus/blocks/videoFrame.styl";
 //@import "stylus/blocks/title.styl";
 //@import "stylus/blocks/form.styl";
-//@import "stylus/blocks/input.styl";
+@import "stylus/blocks/input.styl";
 //@import "stylus/blocks/card.styl";
 //@import "stylus/blocks/cardsList.styl";
 //@import "stylus/blocks/wpcf7.styl";
@@ -140,4 +168,11 @@ img[data-srcset]
 @import "modules/certificates/certificates.styl"
 @import "modules/contacts/contacts.styl"
 @import "modules/footer/footer.styl"
+@import "modules/gallery/gallery.styl"
+@import "modules/blogList/blogList.styl"
+@import "modules/pagination/pagination.styl"
+@import "modules/blog/blog.styl"
+@import "modules/blogTags/blogTags.styl"
+@import "modules/idea/idea.styl"
+@import "modules/blogRelated/blogRelated.styl"
 @import "modules/photoswipe/photoswipe.styl"

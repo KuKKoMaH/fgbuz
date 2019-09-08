@@ -1,6 +1,6 @@
 header.header
   .c.header__top
-    .header__left
+    a.header__left(href='index')
       svg.header__logo: use(xlink:href="#logo")
       svg.header__title: use(xlink:href="#title")
 
@@ -19,10 +19,10 @@ header.header
   .header__menu
     .c
       ul
-        li: a(href='#') О НАС
+        li: a(href='index') О НАС
         li: a(href='#') ВОРОТА
         li: a(href='#') ЗАБОРЫ
         li: a(href='#') НАВЕСЫ
-        li: a(href='#') НАШИ РАБОТЫ
-        li: a(href='#') БЛОГ
-        li: a(href='#') КОНТАКТЫ
+        li: a(href='gallery') НАШИ РАБОТЫ
+        li: a(href='blog') БЛОГ
+        li: a(href='#contacts') КОНТАКТЫ

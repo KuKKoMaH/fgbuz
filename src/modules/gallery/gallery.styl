@@ -1,0 +1,66 @@
+.gallery
+  padding: 38px 0 70px
+
+  &__items
+    display: flex;
+    flex-wrap wrap
+    margin: 0 -14px
+
+  &__item
+    width: 25%
+    flex-shrink 0
+    padding: 14px
+
+    img
+      width: 100%
+
+  &__inner
+    display block
+    position relative
+    border-radius: 4px
+    overflow hidden
+
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      bottom: 0
+      height: 60%
+      left: 0
+      width: 100%
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .9));
+      opacity: 0;
+      transform: translateY(10px)
+      anim(.2s)
+
+    &:hover
+      &:before
+        opacity: 1
+        transform: none
+
+      .gallery__price
+        opacity: 1;
+        transform: none
+
+  &__price
+    position absolute
+    font-size: 24px
+    font-weight: 500
+    color: #ffffff
+    bottom: 40px
+    left: 0
+    width: 100%
+    text-align: center
+    opacity: 0;
+    transform: translateY(10px)
+    anim(.2s)
+    z-index: 1
+
+    &:before
+      content: ''
+      display: inline-block
+      background: url(img/rouble.png)
+      width: 30px
+      height: 31px
+      vertical-align: middle;
+      margin-right: 10px

@@ -1,5 +1,5 @@
-.contacts
-  .contacts__container.lines: .c
+#contacts.contacts
+  .contacts__container(class=SHOW_CONTACTS_LINES ? 'lines' : ''): .c
     .contacts__content
       .contacts__info
         .contacts__sup Компания
@@ -20,8 +20,8 @@
           .contacts__formTitle Остались вопросы?
           .contacts__formText Введите свой вопрос ниже и наш специалист#[br]ответит на него в течение 5 минут.
           form
-            input.contacts__input(type='tel' placeholder='Ваш номер телефона:')
-            textarea.contacts__input.contacts__input--textarea(placeholder='Ваш вопрос:')
+            input.input__input.input__input--big(type='tel' placeholder='Ваш номер телефона:')
+            textarea.contacts__textarea.input__input.input__input--big.input__input--textarea(placeholder='Ваш вопрос:')
             button.btn ОТПРАВИТЬ ВОПРОС
     .contacts__map
       #map(data-center="[59.755204, 30.531607]" data-zoom=16 data-address="Улица Финляндская, д. 37")

@@ -2,8 +2,9 @@
   display: inline-flex
   align-items center
   justify-content center
+  border: 1px solid #e11b2a
   background: #e11b2a
-  padding: 0 40px
+  padding: 0 38px
   position: relative
   //font-size: 16px
   font-weight: bold
@@ -11,24 +12,29 @@
   cursor: pointer
   border-radius: 29px
   color: #ffffff
-  anim()
+  transition all 0.1s ease-in !important
 
   svg
     display: block
+    fill: #fff
     anim()
 
   &:focus
     outline 0
 
   &:hover, &--active
-    background: darken(#e11b2a, 15%)
+    text-decoration: none;
+    background: #ffffff
+    border-color: #e43641
+    color: #2a2a2a
+    //background: darken(#e11b2a, 15%)
 
     svg
-      fill: #ffffff
+      fill: #000
 
   &--sm
     height: 50px
-    padding: 0 58px
+    padding: 0 27px
     border-radius: 25px
 
   &--round
@@ -37,3 +43,6 @@
     padding: 0
     align-items center
     justify-content: center
+
+  &--block
+    width: 100%

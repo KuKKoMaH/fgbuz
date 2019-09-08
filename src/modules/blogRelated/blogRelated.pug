@@ -1,0 +1,14 @@
+.blogRelated
+  h2 Похожие статьи по теме
+  .c: .blogRelated__items
+    each val in [1,2,3]
+      .blogRelated__item
+        .blogRelated__inner
+          img.blogRelated__image(src='modules/blogRelated/img/blogRelated.jpg')
+          .blogRelated__content
+            .blogRelated__title Как строить навес
+            .blogRelated__text
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse .
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse .
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse .
+        a.blogRelated__btn.btn.btn--sm(href='blogSingle') Перейти

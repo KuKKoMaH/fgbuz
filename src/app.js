@@ -32,6 +32,7 @@ import './modules/about/about';
 import './modules/examples/examples';
 import './modules/certificates/certificates';
 import './modules/contacts/contacts';
+import './modules/gallery/gallery';
 
 import './js/lazyImages';
 

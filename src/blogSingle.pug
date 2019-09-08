@@ -1,0 +1,14 @@
+extends pug/_layout
+
+block body
+  include modules/blog/blog.pug
+  .gallery
+    .c
+      .gallery__items
+        each val in [0,1,2,3,4,5,6]
+          .gallery__item
+            a.gallery__inner(href='modules/gallery/img/' + (val % 4) + '.jpg' data-width=270 data-height=217 data-index=val)
+              img(src='modules/gallery/img/' + (val % 4) + '.jpg')
+  include modules/idea/idea.pug
+  include modules/blogRelated/blogRelated.pug
+
