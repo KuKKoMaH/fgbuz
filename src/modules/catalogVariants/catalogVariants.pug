@@ -1,0 +1,57 @@
+.catalogVariants
+  .catalogVariants__items
+    each i in [1,2,3]
+      form.catalogVariants__item.catalogVariants__item--w13: .panel
+        .catalogVariants__img: img.img(src='modules/catalogVariants/img/catalogVariants.jpg')
+        .catalogVariants__title М-образный 127 мм
+        table.catalogVariants__info
+          tbody
+            tr
+              td Цинк
+              td 44
+              td
+                label.radio
+                  input(type='radio' name='test' + i)
+                  .radio__label
+            tr
+              td Односторонняя
+              td 63
+              td
+                label.radio
+                  input(type='radio' name='test' + i)
+                  .radio__label
+            tr
+              td Двусторонняя
+              td 63
+              td
+                label.radio
+                  input(type='radio' name='test' + i)
+                  .radio__label
+            tr
+              td Под дерево
+              td 127
+              td
+                label.radio
+                  input(type='radio' name='test' + i)
+                  .radio__label
+        .catalogVariants__input: input.input__input.input__input--sm(placeholder='Ваш номер телефона:')
+        .catalogVariants__footer: button.btn Узнать подробнее
+  
+  .catalogVariants__navigation
+    .catalogVariants__button.catalogVariants__button--prev.btn.btn--round.btn--arrow-prev: svg: use(xlink:href="#arrow")
+    .catalogVariants__button.catalogVariants__button--next.btn.btn--round.btn--arrow-next: svg: use(xlink:href="#arrow")
+
+.catalogVariants
+  .catalogVariants__items
+    each i in [1,2,3,4]
+      form.catalogVariants__item.catalogVariants__item--w12: .panel
+        .catalogVariants__img: img.img(src='modules/catalogVariants/img/catalogVariants.jpg')
+        .catalogVariants__title М-образный 127 мм
+        .catalogVariants__footer
+          .catalogVariants__price #[.rub.rub--red] от 10 руб
+          input.input__input.input__input--sm(placeholder='Ваш номер телефона:')
+          button.btn Узнать подробнее
+
+  .catalogVariants__navigation
+    .catalogVariants__button.catalogVariants__button--prev.btn.btn--round.btn--arrow-prev: svg: use(xlink:href="#arrow")
+    .catalogVariants__button.catalogVariants__button--next.btn.btn--round.btn--arrow-next: svg: use(xlink:href="#arrow")

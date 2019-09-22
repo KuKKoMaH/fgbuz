@@ -1,6 +1,8 @@
 .bigForm
   padding-top: 55px
   position: relative
+  @media (max-width: $breakpoint-lg - 1)
+    padding-bottom: 65px
 
   //&:after
   //  content: ''
@@ -15,6 +17,8 @@
   &__container
     display: flex
     padding: 0
+    @media (max-width: $breakpoint-lg - 1)
+      flex-direction column
 
   &__col
     flex: 1
@@ -23,6 +27,8 @@
   &__manager
     display: block
     margin: 0 auto
+    @media (max-width: $breakpoint-lg - 1)
+      display: none;
 
   &__header
     background: linear-gradient(to right, #e21d2b, #fc3853)
@@ -47,3 +53,13 @@
   &__block
     padding: 25px 60px
     border-bottom: 1px solid #f0f0f0
+
+  &__btn
+    display: none;
+    @media (max-width: $breakpoint-lg - 1)
+      display: block
+      text-align: center;
+
+  &__form
+    @media (max-width: $breakpoint-lg - 1)
+      display: none;

@@ -7,10 +7,10 @@ Breakpoints({
   },
   md: {
     min: 768,
-    max: 1199,
+    max: 1219,
   },
   lg: {
-    min: 1200,
+    min: 1220,
     max: Infinity
   }
 });

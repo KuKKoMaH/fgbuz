@@ -1,5 +1,6 @@
 .blog
   padding-top: 30px
+
   &__back
     display inline-block
     color: #e21d2b
@@ -9,6 +10,8 @@
   &__head
     display: flex;
     margin-bottom: 35px
+    @media (max-width: $breakpoint-lg - 1)
+      flex-direction column
 
   &__image
     border: 2px solid #e53641
@@ -16,9 +19,13 @@
     overflow hidden
     margin-right: 27px
     flex-shrink: 0
+    @media (max-width: $breakpoint-lg - 1)
+      margin-right: 0
+      margin-bottom: 20px
 
     img
       display: block
+      width: 100%
 
   &__info
     padding-top: 8px

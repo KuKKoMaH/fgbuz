@@ -1,13 +1,20 @@
 .header
-  background: url(./header.jpg) 50% 0 no-repeat;
+  background: url(./header.jpg) 50% 100% no-repeat;
   //background-size: cover;
+  @media (max-width: $breakpoint-lg - 1)
+    background-position: 50% -6px
 
   &__top
-    display: flex;
-    align-items: center;
-    justify-content space-between
-    height: 134px
-    line-height: 1.35
+    border-bottom: 1px solid rgba(#1b1c20, .1)
+
+    .c
+      display: flex;
+      align-items: center;
+      justify-content space-between
+      height: 134px
+      line-height: 1.35
+      @media (max-width: $breakpoint-lg - 1)
+        height: 123px
 
   &__left
     display: flex;
@@ -22,6 +29,8 @@
     height: 21px
     margin-left: 16px
     fill: #1d1d1b
+    @media (max-width: $breakpoint-md - 1)
+      display: none;
 
   &__label
     font-size: 16px
@@ -31,6 +40,8 @@
 
   &__contacts
     position: relative
+    @media (max-width: $breakpoint-md - 1)
+      margin: 0 50px
 
     &-icon
       position: absolute
@@ -43,6 +54,8 @@
 
   &__working
     position: relative
+    @media (max-width: $breakpoint-lg - 1)
+      display: none;
 
     &-icon
       position: absolute
@@ -54,21 +67,64 @@
       top: 4px
 
   &__menu
-    border: 1px solid rgba(#1b1c20, .1)
-    border-left: 0;
-    border-right: 0
+    border-bottom: 1px solid rgba(#1b1c20, .1)
+    @media (max-width: $breakpoint-lg - 1)
+      opacity: 0;
+      pointer-events none
+      position fixed
+      left: 0
+      right: 0
+      top: 0
+      bottom: 0
+      //overflow: auto;
+      z-index: 10
+      anim()
+
+      &:before
+        content: ''
+        display: block;
+        position: fixed;
+        left: 0
+        right: 0
+        top: 0
+        bottom: 0
+        background: rgba(0, 0, 0, .3);
+
+      .c
+        position: absolute;
+        z-index: 1
+        right: 0
+        top: 0
+        max-width: 380px
+        background: #ffffff
+        transform translateX(50px)
+        padding: 0
+        height: 100%
+        anim()
+
+      &--active
+        opacity: 1
+        pointer-events all
+
+        .c
+          transform translateX(0)
 
     li
       margin: 0
       padding: 0
+      @media (max-width: $breakpoint-lg - 1)
+        border-bottom: 1px solid #e4e4e4
+
       &:before
-       display: none
+        display: none
 
     ul
       display: flex;
       align-items stretch
       justify-content: space-between
       margin: 0
+      @media (max-width: $breakpoint-lg - 1)
+        flex-direction column
 
     a
       position relative
@@ -92,5 +148,38 @@
 
       &:hover, &.current-menu-item
         text-decoration: none;
+
         &:after
           height: 3px
+
+      @media (max-width: $breakpoint-lg - 1)
+        //display: inline-block;
+        padding-left: 48px
+
+  &__cta
+    @media (max-width: $breakpoint-lg - 1)
+      display: none;
+
+  &__menu-header
+    display: none;
+    @media (max-width: $breakpoint-lg - 1)
+      display: flex;
+      align-items center
+      height: 65px
+      background: #fdeef0
+      font-size: 14px
+      color: #454545
+      padding: 0 25px
+      font-weight: 500
+      border-bottom: 1px solid #e3d7d8
+      cursor: pointer;
+
+      .hamburger
+        margin-left: auto;
+
+  &__menu-button
+    display: none;
+
+    @media (max-width: $breakpoint-lg - 1)
+      display: flex;
+      align-items center

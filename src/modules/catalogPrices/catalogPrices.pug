@@ -1,0 +1,29 @@
+.catalogPrices
+  .catalogPrices__row
+    .catalogPrices__main
+      img.img(src='modules/catalogPrices/img/catalogPrices.jpg')
+    .catalogPrices__aside
+      img(src='modules/catalogPrices/img/catalogPrices2.jpg')
+
+  .catalogPrices__row
+    .catalogPrices__main
+      .catalogPrices__head ЛАМЕЛЬ 124 ММ
+      table
+        thead
+          tr
+            td Окраска
+            td Цена за забор Р/мп
+        tbody
+          tr
+            td Односторонняя
+            td #[s 82] #[span.big 70]
+          tr
+            td Двусторонняя
+            td #[s 95] #[span.big 80]
+          tr
+            td Под дерево
+            td #[s 200] #[span.big 170]
+    .catalogPrices__aside
+      form
+        p: input.input__input(placeholder='Ваш номер телефона:', type='tel')
+        button.btn.btn--block.btn--inverse РАССЧИТАТЬ СТОИМОСТЬ

@@ -1,5 +1,5 @@
 header.header
-  .c.header__top
+  .header__top: .c
     a.header__left(href='index')
       svg.header__logo: use(xlink:href="#logo")
       svg.header__title: use(xlink:href="#title")
@@ -13,16 +13,22 @@ header.header
       svg.header__working-icon: use(xlink:href="#clock")
       .header__label Ежедневно
       .header__value с 9:00 до 18:00
-
-    button.btn ЗАКАЗАТЬ ЗВОНОК
+    .header__cta
+      button.btn ЗАКАЗАТЬ ЗВОНОК
+    button.header__menu-button
+      |МЕНЮ
+      .hamburger
 
   .header__menu
     .c
+      .header__menu-header
+        | ЗАКРЫТЬ
+        .hamburger.hamburger--active
       ul
         li: a(href='index') О НАС
-        li: a(href='#') ВОРОТА
-        li: a(href='#') ЗАБОРЫ
-        li: a(href='#') НАВЕСЫ
+        li: a(href='catalog') ВОРОТА
+        li: a(href='catalog') ЗАБОРЫ
+        li: a(href='catalog') НАВЕСЫ
         li: a(href='gallery') НАШИ РАБОТЫ
         li: a(href='blog') БЛОГ
         li: a(href='#contacts') КОНТАКТЫ

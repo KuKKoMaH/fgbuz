@@ -5,11 +5,16 @@
     display: flex;
     flex-wrap wrap
     margin: 0 -14px
+    justify-content center
 
   &__item
+    min-width 280px
     width: 25%
-    flex-shrink 0
     padding: 14px
+    @media (max-width: $breakpoint-lg - 1)
+      width: 50%
+    @media (max-width: $breakpoint-md - 1)
+      width: 100%
 
     img
       width: 100%
@@ -56,11 +61,7 @@
     anim(.2s)
     z-index: 1
 
-    &:before
-      content: ''
+    .rub
       display: inline-block
-      background: url(img/rouble.png)
-      width: 30px
-      height: 31px
       vertical-align: middle;
       margin-right: 10px

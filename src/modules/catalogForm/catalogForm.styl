@@ -1,0 +1,79 @@
+.catalogForm
+  margin-bottom: 30px
+
+  .rub
+    margin-right: 8px
+
+  &__img
+    position: relative;
+    margin-right: 35px
+
+  &__body
+    display: flex;
+    align-items flex-start
+    padding: 12px 28px 12px 12px
+    margin: 0
+    max-width none
+    @media (max-width: $breakpoint-md - 1)
+      flex-direction column
+
+  &__price
+    position: absolute;
+    bottom: 30px
+    left: 0
+    width: 100%
+    color: #ffffff
+    font-weight: 500
+    display: flex;
+    align-items center
+    justify-content center
+
+    &--dark
+      color: #1a1a1a
+
+  &__content
+    flex: 1
+
+  &__footer
+    display: flex;
+    align-items center
+    @media (max-width: $breakpoint-lg - 1)
+      flex-direction column
+
+    input
+      margin-right: 24px
+      margin-bottom: 0
+      @media (max-width: $breakpoint-lg - 1)
+        margin-right: 0
+        margin-bottom: 20px
+
+    .btn
+      flex-shrink 1
+      @media (max-width: $breakpoint-lg - 1)
+        align-self flex-end
+        width: auto;
+        padding-left: 20px
+        padding-right: 20px
+
+  &__row
+    display: flex;
+    margin: 0 -6px 5px
+    flex-wrap wrap
+
+  //@media (max-width: $breakpoint-lg - 1)
+  //  flex-direction column
+
+  &__col
+    margin: 0 6px
+    flex: 1
+    min-width 0
+    margin-bottom: 15px
+    @media (max-width: $breakpoint-lg - 1)
+      flex auto
+      width: 100%
+
+    &--shrink
+      flex auto 0
+      margin-right: 15px
+      @media (max-width: $breakpoint-lg - 1)
+        width: auto;

@@ -1,8 +1,8 @@
 /* ================================================ */
 /* Меню */
 /* ================================================ */
-const $menu        = $('.menu');
-const $menuTrigger = $('.header__button--menu, .menu__close');
+const $menu        = $('.header__menu');
+const $menuTrigger = $('.header__menu-button, .header__menu');
 // const $menuContent = $('.menu__content');
 let menuVisible    = false;
 
@@ -18,7 +18,7 @@ function toggleMenu() {
 
 function showMenu() {
   if (menuVisible) return;
-  $menu.addClass('menu--active');
+  $menu.addClass('header__menu--active');
   // $menu.addClass('menu--active');
   // $menuTrigger.addClass('menu__trigger--active');
   //
@@ -30,7 +30,7 @@ function showMenu() {
 
 function hideMenu() {
   if (!menuVisible) return;
-  $menu.removeClass('menu--active');
+  $menu.removeClass('header__menu--active');
 
   // $menu.removeClass('menu--visible');
   // $menu.one('transitionend', () => {

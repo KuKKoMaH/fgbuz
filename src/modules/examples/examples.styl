@@ -2,9 +2,14 @@
   background: url(img/examplesBg.jpg) 50% 50% no-repeat
   background-size: cover;
   padding: 80px 0 50px
+  @media (max-width: $breakpoint-lg - 1)
+    padding: 60px 0 50px
 
   &__items
     margin: 0 -15px
+    @media (max-width: $breakpoint-lg - 1)
+      display: flex;
+      margin: 0
 
     &:after
       content: ''
@@ -15,11 +20,21 @@
     float: left
     width: 25%
     position: relative
+    @media (max-width: $breakpoint-lg - 1)
+      float: none
+      width: auto;
+      flex-shrink 0
+      height: 360px
+      position: relative;
+    @media (max-width: $breakpoint-md - 1)
+      height: 320px
 
     &:before
       content: "";
       display: block;
       padding-top: 100%
+      @media (max-width: $breakpoint-lg - 1)
+        display: none;
 
     &--r2
       &:before
@@ -38,13 +53,24 @@
     bottom: 15px
     right: 15px
     overflow: hidden
+    display: block;
+    @media (max-width: $breakpoint-lg - 1)
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      //position: relative;
 
     img
       position: absolute
       top: 50%
       left: 50%
+      width: 100%
       transform translate(-50%, -50%) scale(1.2)
       anim(.2s)
+
+    //@media (max-width: $breakpoint-lg - 1)
+    //  position: static;
 
     &:before
       content: ''
@@ -71,3 +97,14 @@
   &__more
     text-align: center;
     margin-top: 35px
+
+  &__navigation
+    display: none;
+    @media (max-width: $breakpoint-md - 1)
+      display: flex;
+      align-items center
+      justify-content center
+      margin-top: 20px
+
+      .btn
+        margin: 0 15px

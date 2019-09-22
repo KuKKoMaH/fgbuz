@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta id="viewport" name="viewport" content="width=device-width, user-scalable=no">
+    <script>if (screen.width <= 480) document.getElementById('viewport').setAttribute('content', 'width=480, user-scalable=no')</script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,500,700&amp;display=swap&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" media="all" href="style.css">
     <!--link(rel="stylesheet" media="all" href="style.css")-->
@@ -13,36 +14,46 @@
   <body onunload="">
     <div class="page">
       <header class="header">
-        <div class="c header__top"><a class="header__left" href="index">
-            <svg class="header__logo">
-              <use xlink:href="#logo"></use>
-            </svg>
-            <svg class="header__title">
-              <use xlink:href="#title"></use>
-            </svg></a>
-          <div class="header__contacts">
-            <svg class="header__contacts-icon">
-              <use xlink:href="#call"></use>
-            </svg>
-            <div class="header__label">Есть вопросы? Звоните сейчас!</div>
-            <div class="header__value">+7 (812) 603-41-8</div>
+        <div class="header__top">
+          <div class="c"><a class="header__left" href="index">
+              <svg class="header__logo">
+                <use xlink:href="#logo"></use>
+              </svg>
+              <svg class="header__title">
+                <use xlink:href="#title"></use>
+              </svg></a>
+            <div class="header__contacts">
+              <svg class="header__contacts-icon">
+                <use xlink:href="#call"></use>
+              </svg>
+              <div class="header__label">Есть вопросы? Звоните сейчас!</div>
+              <div class="header__value">+7 (812) 603-41-8</div>
+            </div>
+            <div class="header__working">
+              <svg class="header__working-icon">
+                <use xlink:href="#clock"></use>
+              </svg>
+              <div class="header__label">Ежедневно</div>
+              <div class="header__value">с 9:00 до 18:00</div>
+            </div>
+            <div class="header__cta">
+              <button class="btn">ЗАКАЗАТЬ ЗВОНОК</button>
+            </div>
+            <button class="header__menu-button">МЕНЮ
+              <div class="hamburger"></div>
+            </button>
           </div>
-          <div class="header__working">
-            <svg class="header__working-icon">
-              <use xlink:href="#clock"></use>
-            </svg>
-            <div class="header__label">Ежедневно</div>
-            <div class="header__value">с 9:00 до 18:00</div>
-          </div>
-          <button class="btn">ЗАКАЗАТЬ ЗВОНОК</button>
         </div>
         <div class="header__menu">
           <div class="c">
+            <div class="header__menu-header">ЗАКРЫТЬ
+              <div class="hamburger hamburger--active"></div>
+            </div>
             <ul>
               <li><a href="index">О НАС</a></li>
-              <li><a href="#">ВОРОТА</a></li>
-              <li><a href="#">ЗАБОРЫ</a></li>
-              <li><a href="#">НАВЕСЫ</a></li>
+              <li><a href="catalog">ВОРОТА</a></li>
+              <li><a href="catalog">ЗАБОРЫ</a></li>
+              <li><a href="catalog">НАВЕСЫ</a></li>
               <li><a href="gallery">НАШИ РАБОТЫ</a></li>
               <li><a href="blog">БЛОГ</a></li>
               <li><a href="#contacts">КОНТАКТЫ</a></li>
@@ -112,9 +123,9 @@
       </div>
       <div class="idea">
         <div class="c">
-          <div class="idea__container"><img class="idea__img" src="img/modules-idea-img-ideaTree.png">
-            <div class="idea__header">У вас похожая задача? Мы сможем помочь Вам!</div>
-            <div class="idea__body">
+          <div class="panel"><img class="panel__img" src="img/modules-idea-img-ideaTree.png">
+            <div class="panel__header">У вас похожая задача? Мы сможем помочь Вам!</div>
+            <div class="panel__body">
               <div class="idea__text">Опишите свою задачу и компания АВИСОКМ поможет Вам с решением в течение 5 минут!</div>
               <form>
                 <div class="idea__form">
@@ -122,7 +133,9 @@
                     <textarea class="idea__message input__input input__input--textarea" placeholder="Опишите Вашу задачу:"></textarea>
                   </div>
                   <div class="idea__aside">
-                    <input class="input__input" type="tel" placeholder="Ваш номер телефона:">
+                    <p>
+                      <input class="input__input" type="tel" placeholder="Ваш номер телефона:">
+                    </p>
                     <button class="btn btn--block">Решим Вашу задачу</button>
                   </div>
                 </div>
@@ -131,45 +144,62 @@
           </div>
         </div>
       </div>
-      <div class="blogRelated">
+      <div class="related">
         <h2>Похожие статьи по теме</h2>
         <div class="c">
-          <div class="blogRelated__items">
-            <div class="blogRelated__item">
-              <div class="blogRelated__inner"><img class="blogRelated__image" src="img/modules-blogRelated-img-blogRelated.jpg">
-                <div class="blogRelated__content">
-                  <div class="blogRelated__title">Как строить навес</div>
-                  <div class="blogRelated__text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse .</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse .</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse .</p>
+          <div class="related__slider">
+            <div class="related__items">
+              <div class="related__item">
+                <div class="related__inner"><img class="related__image" src="img/modules-related-img-blogRelated.jpg">
+                  <div class="related__content">
+                    <div class="related__title">Как строить навес 1
+                    </div>
+                    <div class="related__text">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse .</p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse .</p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse .</p>
+                    </div>
                   </div>
-                </div>
-              </div><a class="blogRelated__btn btn btn--sm" href="blogSingle">Перейти</a>
+                </div><a class="related__btn btn btn--sm" href="blogSingle">Перейти</a>
+              </div>
+              <div class="related__item">
+                <div class="related__inner"><img class="related__image" src="img/modules-related-img-blogRelated.jpg">
+                  <div class="related__content">
+                    <div class="related__title">Как строить навес 2
+                    </div>
+                    <div class="related__text">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse .</p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse .</p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse .</p>
+                    </div>
+                  </div>
+                </div><a class="related__btn btn btn--sm" href="blogSingle">Перейти</a>
+              </div>
+              <div class="related__item">
+                <div class="related__inner"><img class="related__image" src="img/modules-related-img-blogRelated.jpg">
+                  <div class="related__content">
+                    <div class="related__title">Как строить навес 3
+                    </div>
+                    <div class="related__text">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse .</p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse .</p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse .</p>
+                    </div>
+                  </div>
+                </div><a class="related__btn btn btn--sm" href="blogSingle">Перейти</a>
+              </div>
             </div>
-            <div class="blogRelated__item">
-              <div class="blogRelated__inner"><img class="blogRelated__image" src="img/modules-blogRelated-img-blogRelated.jpg">
-                <div class="blogRelated__content">
-                  <div class="blogRelated__title">Как строить навес</div>
-                  <div class="blogRelated__text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse .</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse .</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse .</p>
-                  </div>
-                </div>
-              </div><a class="blogRelated__btn btn btn--sm" href="blogSingle">Перейти</a>
-            </div>
-            <div class="blogRelated__item">
-              <div class="blogRelated__inner"><img class="blogRelated__image" src="img/modules-blogRelated-img-blogRelated.jpg">
-                <div class="blogRelated__content">
-                  <div class="blogRelated__title">Как строить навес</div>
-                  <div class="blogRelated__text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse .</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse .</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse .</p>
-                  </div>
-                </div>
-              </div><a class="blogRelated__btn btn btn--sm" href="blogSingle">Перейти</a>
+            <div class="related__navigation">
+              <div class="related__button related__button--prev btn btn--round btn--arrow-prev">
+                <svg>
+                  <use xlink:href="#arrow"></use>
+                </svg>
+              </div>
+              <div class="related__button related__button--next btn btn--round btn--arrow-next">
+                <svg>
+                  <use xlink:href="#arrow"></use>
+                </svg>
+              </div>
             </div>
           </div>
         </div>
@@ -184,22 +214,36 @@
                   <use xlink:href="#title"></use>
                 </svg>
                 <div class="contacts__sub">Ваш надежный партнер по металлоизделям</div>
-                <div class="contacts__head">Производство:</div>
-                <p>Улица Финляндская, д. 37<br>Тел: 8 (812) 3333-870<br>м. Купчино</p>
-                <div class="contacts__head">Офис:</div>
-                <p>Улица Финляндская, д. 37<br>Тел: 8 (812) 3333-870<br>м. Купчино</p>
-                <div class="contacts__head">Почта:</div>
-                <p>mail@mail.ru</p><img class="contacts__manager" src="img/modules-contacts-img-contactsManager.png">
+                <div class="contacts__items">
+                  <div class="contacts__item">
+                    <div class="contacts__head">Производство:</div>
+                    <p>Улица Финляндская, д. 37<br>Тел: 8 (812) 3333-870<br>м. Купчино</p>
+                  </div>
+                  <div class="contacts__item">
+                    <div class="contacts__head">Офис:</div>
+                    <p>Улица Финляндская, д. 37<br>Тел: 8 (812) 3333-870<br>м. Купчино</p>
+                  </div>
+                  <div class="contacts__item">
+                    <div class="contacts__head">Почта:</div>
+                    <p>mail@mail.ru</p>
+                  </div>
+                </div><img class="contacts__manager" src="img/modules-contacts-img-contactsManager.png">
               </div>
               <div class="contacts__aside"><img class="contacts__folder" src="img/modules-contacts-img-contactsForm.png">
-                <div class="contacts__form">
-                  <div class="contacts__formTitle">Остались вопросы?</div>
-                  <div class="contacts__formText">Введите свой вопрос ниже и наш специалист<br>ответит на него в течение 5 минут.</div>
-                  <form>
-                    <input class="input__input input__input--big" type="tel" placeholder="Ваш номер телефона:">
-                    <textarea class="contacts__textarea input__input input__input--big input__input--textarea" placeholder="Ваш вопрос:"></textarea>
-                    <button class="btn">ОТПРАВИТЬ ВОПРОС</button>
-                  </form>
+                <div class="contacts__form panel">
+                  <div class="contacts__formTitle panel__header">Остались вопросы?</div>
+                  <div class="contacts__formBody panel__body">
+                    <div class="contacts__formText">Введите свой вопрос ниже и наш специалист<br>ответит на него в течение 5 минут.</div>
+                    <form>
+                      <p>
+                        <input class="input__input input__input--big" type="tel" placeholder="Ваш номер телефона:">
+                      </p>
+                      <p>
+                        <textarea class="contacts__textarea input__input input__input--big input__input--textarea" placeholder="Ваш вопрос:"></textarea>
+                      </p>
+                      <button class="btn">ОТПРАВИТЬ ВОПРОС</button>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>

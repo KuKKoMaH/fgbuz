@@ -1,12 +1,12 @@
 .idea
-  .c: .idea__container
-    img.idea__img(src='modules/idea/img/ideaTree.png')
-    .idea__header У вас похожая задача? Мы сможем помочь Вам!
-    .idea__body
+  .c: .panel
+    img.panel__img(src='modules/idea/img/ideaTree.png')
+    .panel__header У вас похожая задача? Мы сможем помочь Вам!
+    .panel__body
       .idea__text Опишите свою задачу и компания АВИСОКМ поможет Вам с решением в течение 5 минут!
       form
         .idea__form
           .idea__main: textarea.idea__message.input__input.input__input--textarea(placeholder='Опишите Вашу задачу:')
           .idea__aside
-            input.input__input(type='tel' placeholder='Ваш номер телефона:')
+            p: input.input__input(type='tel' placeholder='Ваш номер телефона:')
             button.btn.btn--block Решим Вашу задачу

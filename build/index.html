@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta id="viewport" name="viewport" content="width=device-width, user-scalable=no">
+    <script>if (screen.width <= 480) document.getElementById('viewport').setAttribute('content', 'width=480, user-scalable=no')</script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,500,700&amp;display=swap&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" media="all" href="style.css">
     <!--link(rel="stylesheet" media="all" href="style.css")-->
@@ -13,36 +14,46 @@
   <body onunload="">
     <div class="page">
       <header class="header">
-        <div class="c header__top"><a class="header__left" href="index">
-            <svg class="header__logo">
-              <use xlink:href="#logo"></use>
-            </svg>
-            <svg class="header__title">
-              <use xlink:href="#title"></use>
-            </svg></a>
-          <div class="header__contacts">
-            <svg class="header__contacts-icon">
-              <use xlink:href="#call"></use>
-            </svg>
-            <div class="header__label">Есть вопросы? Звоните сейчас!</div>
-            <div class="header__value">+7 (812) 603-41-8</div>
+        <div class="header__top">
+          <div class="c"><a class="header__left" href="index">
+              <svg class="header__logo">
+                <use xlink:href="#logo"></use>
+              </svg>
+              <svg class="header__title">
+                <use xlink:href="#title"></use>
+              </svg></a>
+            <div class="header__contacts">
+              <svg class="header__contacts-icon">
+                <use xlink:href="#call"></use>
+              </svg>
+              <div class="header__label">Есть вопросы? Звоните сейчас!</div>
+              <div class="header__value">+7 (812) 603-41-8</div>
+            </div>
+            <div class="header__working">
+              <svg class="header__working-icon">
+                <use xlink:href="#clock"></use>
+              </svg>
+              <div class="header__label">Ежедневно</div>
+              <div class="header__value">с 9:00 до 18:00</div>
+            </div>
+            <div class="header__cta">
+              <button class="btn">ЗАКАЗАТЬ ЗВОНОК</button>
+            </div>
+            <button class="header__menu-button">МЕНЮ
+              <div class="hamburger"></div>
+            </button>
           </div>
-          <div class="header__working">
-            <svg class="header__working-icon">
-              <use xlink:href="#clock"></use>
-            </svg>
-            <div class="header__label">Ежедневно</div>
-            <div class="header__value">с 9:00 до 18:00</div>
-          </div>
-          <button class="btn">ЗАКАЗАТЬ ЗВОНОК</button>
         </div>
         <div class="header__menu">
           <div class="c">
+            <div class="header__menu-header">ЗАКРЫТЬ
+              <div class="hamburger hamburger--active"></div>
+            </div>
             <ul>
               <li><a href="index">О НАС</a></li>
-              <li><a href="#">ВОРОТА</a></li>
-              <li><a href="#">ЗАБОРЫ</a></li>
-              <li><a href="#">НАВЕСЫ</a></li>
+              <li><a href="catalog">ВОРОТА</a></li>
+              <li><a href="catalog">ЗАБОРЫ</a></li>
+              <li><a href="catalog">НАВЕСЫ</a></li>
               <li><a href="gallery">НАШИ РАБОТЫ</a></li>
               <li><a href="blog">БЛОГ</a></li>
               <li><a href="#contacts">КОНТАКТЫ</a></li>
@@ -64,31 +75,45 @@
                 <div class="welcome__dot welcome__dot--2"></div></a></li>
             <li><a href="#"><span>Заборы</span> <sub>(лазерной резки)</sub>
                 <div class="welcome__dot welcome__dot--3"></div></a></li>
-          </ul>
+          </ul><img class="welcome__image" src="img/modules-welcome-welcomeImage.png">
         </div>
       </div>
-      <div class="advantages">
-        <h2>Преимущества</h2>
-        <div class="c advantages__items">
-          <div class="advantages__item">
-            <div class="advantages__img"><img src="img/modules-advantages-img-advantages-1.png"></div>
-            <div class="advantages__text">Бесплатный замер и<br>индивидуальное<br>изготовление</div>
+      <div class="advantages lines">
+        <h2 class="advantages__title">Преимущества</h2>
+        <div class="c advantages__slider">
+          <div class="advantages__items">
+            <div class="advantages__item">
+              <div class="advantages__img"><img src="img/modules-advantages-img-advantages-1.png"></div>
+              <div class="advantages__text">Бесплатный замер и<br>индивидуальное<br>изготовление</div>
+            </div>
+            <div class="advantages__item">
+              <div class="advantages__img"><img src="img/modules-advantages-img-advantages-2.png"></div>
+              <div class="advantages__text">Монтаж в любое<br>время года</div>
+            </div>
+            <div class="advantages__item">
+              <div class="advantages__img"><img src="img/modules-advantages-img-advantages-3.png"></div>
+              <div class="advantages__text">Гарантия<br>до 10 лет</div>
+            </div>
+            <div class="advantages__item">
+              <div class="advantages__img"><img src="img/modules-advantages-img-advantages-4.png"></div>
+              <div class="advantages__text">Лучшая цена<br>в Санкт-Петербурге</div>
+            </div>
+            <div class="advantages__item">
+              <div class="advantages__img"><img src="img/modules-advantages-img-advantages-5.png"></div>
+              <div class="advantages__text">Окраска в любой<br>цвет по RAL</div>
+            </div>
           </div>
-          <div class="advantages__item">
-            <div class="advantages__img"><img src="img/modules-advantages-img-advantages-2.png"></div>
-            <div class="advantages__text">Монтаж в любое<br>время года</div>
-          </div>
-          <div class="advantages__item">
-            <div class="advantages__img"><img src="img/modules-advantages-img-advantages-3.png"></div>
-            <div class="advantages__text">Гарантия<br>до 10 лет</div>
-          </div>
-          <div class="advantages__item">
-            <div class="advantages__img"><img src="img/modules-advantages-img-advantages-4.png"></div>
-            <div class="advantages__text">Лучшая цена<br>в Санкт-Петербурге</div>
-          </div>
-          <div class="advantages__item">
-            <div class="advantages__img"><img src="img/modules-advantages-img-advantages-5.png"></div>
-            <div class="advantages__text">Окраска в любой<br>цвет по RAL</div>
+          <div class="advantages__navigation">
+            <div class="advantages__button advantages__button--prev btn btn--round btn--arrow-prev">
+              <svg>
+                <use xlink:href="#arrow"></use>
+              </svg>
+            </div>
+            <div class="advantages__button advantages__button--next btn btn--round btn--arrow-next">
+              <svg>
+                <use xlink:href="#arrow"></use>
+              </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -102,13 +127,13 @@
             <p>Работает с 2010 года и за это время зарекомендовала себя как надежный и проверенный производитель металлоизделий.</p>
             <p>Благодаря собственному производству мы предлагаем нашим клиентам низкие цены и высокое качество. Дальше текст о компании....</p>
             <div class="about__navigation">
-              <div class="about__button about__button--prev btn btn--round">
+              <div class="about__button about__button--prev btn btn--round btn--arrow-prev">
                 <svg>
                   <use xlink:href="#arrow"></use>
                 </svg>
               </div>
               <div class="about__pagination"></div>
-              <div class="about__button about__button--next btn btn--round">
+              <div class="about__button about__button--next btn btn--round btn--arrow-next">
                 <svg>
                   <use xlink:href="#arrow"></use>
                 </svg>
@@ -165,13 +190,27 @@
       <div class="examples">
         <h2>Выполненные работы компании <span>АВИСКОМ</span></h2>
         <div class="c">
-          <div class="examples__items">
-            <div class="examples__grid examples__grid--r2"><a class="examples__item zoom" href="img/modules-examples-img-example-1.jpg" data-width="270" data-height="576" data-index="0"><img src="img/modules-examples-img-example-1.jpg"></a></div>
-            <div class="examples__grid"><a class="examples__item zoom" href="img/modules-examples-img-example-2.jpg" data-width="270" data-height="273" data-index="1"><img src="img/modules-examples-img-example-2.jpg"></a></div>
-            <div class="examples__grid examples__grid--c2"><a class="examples__item zoom" href="img/modules-examples-img-example-3.jpg" data-width="569" data-height="273" data-index="2"><img src="img/modules-examples-img-example-3.jpg"></a></div>
-            <div class="examples__grid"><a class="examples__item zoom" href="img/modules-examples-img-example-4.jpg" data-width="270" data-height="273" data-index="3"><img src="img/modules-examples-img-example-4.jpg"></a></div>
-            <div class="examples__grid"><a class="examples__item zoom" href="img/modules-examples-img-example-5.jpg" data-width="270" data-height="273" data-index="4"><img src="img/modules-examples-img-example-5.jpg"></a></div>
-            <div class="examples__grid"><a class="examples__item zoom" href="img/modules-examples-img-example-6.jpg" data-width="270" data-height="273" data-index="5"><img src="img/modules-examples-img-example-6.jpg"></a></div>
+          <div class="examples__slider">
+            <div class="examples__items">
+              <div class="examples__grid examples__grid--r2"><a class="examples__item zoom" href="img/modules-examples-img-example-1.jpg" data-width="270" data-height="576" data-index="0"><img src="img/modules-examples-img-example-1.jpg"></a></div>
+              <div class="examples__grid"><a class="examples__item zoom" href="img/modules-examples-img-example-2.jpg" data-width="270" data-height="273" data-index="1"><img src="img/modules-examples-img-example-2.jpg"></a></div>
+              <div class="examples__grid examples__grid--c2"><a class="examples__item zoom" href="img/modules-examples-img-example-3.jpg" data-width="569" data-height="273" data-index="2"><img src="img/modules-examples-img-example-3.jpg"></a></div>
+              <div class="examples__grid"><a class="examples__item zoom" href="img/modules-examples-img-example-4.jpg" data-width="270" data-height="273" data-index="3"><img src="img/modules-examples-img-example-4.jpg"></a></div>
+              <div class="examples__grid"><a class="examples__item zoom" href="img/modules-examples-img-example-5.jpg" data-width="270" data-height="273" data-index="4"><img src="img/modules-examples-img-example-5.jpg"></a></div>
+              <div class="examples__grid"><a class="examples__item zoom" href="img/modules-examples-img-example-6.jpg" data-width="270" data-height="273" data-index="5"><img src="img/modules-examples-img-example-6.jpg"></a></div>
+            </div>
+            <div class="examples__navigation">
+              <div class="examples__button examples__button--prev btn btn--round btn--arrow-prev">
+                <svg>
+                  <use xlink:href="#arrow"></use>
+                </svg>
+              </div>
+              <div class="examples__button examples__button--next btn btn--round btn--arrow-next">
+                <svg>
+                  <use xlink:href="#arrow"></use>
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
         <div class="examples__more"><a class="btn" href="gallery">СМОТРЕТЬ БОЛЬШЕ РАБОТ</a></div>
@@ -180,7 +219,7 @@
         <div class="c bigForm__container">
           <div class="bigForm__col">
             <div class="steps">
-              <div class="steps__step">
+              <div class="steps__step steps__step--list">
                 <div class="steps__border"></div>
                 <div class="steps__head">
                   <div class="steps__title">Сейчас</div>
@@ -189,28 +228,28 @@
                   <span>+7 (812) 603-41-83</span>
                 </div>
               </div>
-              <div class="steps__step">
+              <div class="steps__step steps__step--list">
                 <div class="steps__border"></div>
                 <div class="steps__head">
                   <div class="steps__title">В течение 15 минут</div>
                 </div>
                 <div class="steps__text">Менеджер консультирует Вас и помогает определится с выбором, исходя из Ваших пожеланий. Согласовывает выезд замерщика-инженера.</div>
               </div>
-              <div class="steps__step">
+              <div class="steps__step steps__step--list">
                 <div class="steps__border"></div>
                 <div class="steps__head">
                   <div class="steps__title">В течение 2 часов</div>
                 </div>
                 <div class="steps__text">На производстве начинают изготавливать Ваше изделие.</div>
               </div>
-              <div class="steps__step">
+              <div class="steps__step steps__step--list">
                 <div class="steps__border"></div>
                 <div class="steps__head">
                   <div class="steps__title">24 часа</div>
                 </div>
                 <div class="steps__text">Ваше изделие готово к доставке либо самовывозу. При необходимости производится доставка.</div>
               </div>
-              <div class="steps__step">
+              <div class="steps__step steps__step--list">
                 <div class="steps__border"></div>
                 <div class="steps__head">
                   <div class="steps__title">48 часов</div>
@@ -220,6 +259,9 @@
             </div><img class="bigForm__manager" src="img/modules-bigForm-img-bigFormManager.png">
           </div>
           <div class="bigForm__col">
+            <div class="bigForm__btn">
+              <button class="btn btn--inverse">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
+            </div>
             <div class="bigForm__form">
               <div class="bigForm__header">Получите консультацию специалиста<br>в течение 5 минут</div>
               <div class="bigForm__body">
@@ -249,7 +291,23 @@
       </div>
       <div class="certificates">
         <h2>За 10 лет работы мы<br>получили множество наград и сертификатов</h2>
-        <div class="c certificates__items"><a class="certificates__item zoom" href="img/modules-certificates-img-certificate-1.jpg" data-width="174" data-height="240" data-index="0"><img src="img/modules-certificates-img-certificate-1.jpg"></a><a class="certificates__item zoom" href="img/modules-certificates-img-certificate-1.jpg" data-width="174" data-height="240" data-index="1"><img src="img/modules-certificates-img-certificate-1.jpg"></a><a class="certificates__item zoom" href="img/modules-certificates-img-certificate-1.jpg" data-width="174" data-height="240" data-index="2"><img src="img/modules-certificates-img-certificate-1.jpg"></a><a class="certificates__item zoom" href="img/modules-certificates-img-certificate-1.jpg" data-width="174" data-height="240" data-index="3"><img src="img/modules-certificates-img-certificate-1.jpg"></a><a class="certificates__item zoom" href="img/modules-certificates-img-certificate-1.jpg" data-width="174" data-height="240" data-index="4"><img src="img/modules-certificates-img-certificate-1.jpg"></a><a class="certificates__item zoom" href="img/modules-certificates-img-certificate-1.jpg" data-width="174" data-height="240" data-index="5"><img src="img/modules-certificates-img-certificate-1.jpg"></a><a class="certificates__item zoom" href="img/modules-certificates-img-certificate-1.jpg" data-width="174" data-height="240" data-index="6"><img src="img/modules-certificates-img-certificate-1.jpg"></a><a class="certificates__item zoom" href="img/modules-certificates-img-certificate-1.jpg" data-width="174" data-height="240" data-index="7"><img src="img/modules-certificates-img-certificate-1.jpg"></a><a class="certificates__item zoom" href="img/modules-certificates-img-certificate-1.jpg" data-width="174" data-height="240" data-index="8"><img src="img/modules-certificates-img-certificate-1.jpg"></a><a class="certificates__item zoom" href="img/modules-certificates-img-certificate-1.jpg" data-width="174" data-height="240" data-index="9"><img src="img/modules-certificates-img-certificate-1.jpg"></a></div>
+        <div class="c">
+          <div class="certificates__slider">
+            <div class="certificates__items"><a class="certificates__item zoom" href="img/modules-certificates-img-certificate-1.jpg" data-width="174" data-height="240" data-index="0"><img src="img/modules-certificates-img-certificate-1.jpg"></a><a class="certificates__item zoom" href="img/modules-certificates-img-certificate-1.jpg" data-width="174" data-height="240" data-index="1"><img src="img/modules-certificates-img-certificate-1.jpg"></a><a class="certificates__item zoom" href="img/modules-certificates-img-certificate-1.jpg" data-width="174" data-height="240" data-index="2"><img src="img/modules-certificates-img-certificate-1.jpg"></a><a class="certificates__item zoom" href="img/modules-certificates-img-certificate-1.jpg" data-width="174" data-height="240" data-index="3"><img src="img/modules-certificates-img-certificate-1.jpg"></a><a class="certificates__item zoom" href="img/modules-certificates-img-certificate-1.jpg" data-width="174" data-height="240" data-index="4"><img src="img/modules-certificates-img-certificate-1.jpg"></a><a class="certificates__item zoom" href="img/modules-certificates-img-certificate-1.jpg" data-width="174" data-height="240" data-index="5"><img src="img/modules-certificates-img-certificate-1.jpg"></a><a class="certificates__item zoom" href="img/modules-certificates-img-certificate-1.jpg" data-width="174" data-height="240" data-index="6"><img src="img/modules-certificates-img-certificate-1.jpg"></a><a class="certificates__item zoom" href="img/modules-certificates-img-certificate-1.jpg" data-width="174" data-height="240" data-index="7"><img src="img/modules-certificates-img-certificate-1.jpg"></a><a class="certificates__item zoom" href="img/modules-certificates-img-certificate-1.jpg" data-width="174" data-height="240" data-index="8"><img src="img/modules-certificates-img-certificate-1.jpg"></a><a class="certificates__item zoom" href="img/modules-certificates-img-certificate-1.jpg" data-width="174" data-height="240" data-index="9"><img src="img/modules-certificates-img-certificate-1.jpg"></a></div>
+            <div class="certificates__navigation">
+              <div class="certificates__button certificates__button--prev btn btn--round btn--arrow-prev">
+                <svg>
+                  <use xlink:href="#arrow"></use>
+                </svg>
+              </div>
+              <div class="certificates__button certificates__button--next btn btn--round btn--arrow-next">
+                <svg>
+                  <use xlink:href="#arrow"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="contacts" id="contacts">
         <div class="contacts__container lines">
@@ -261,22 +319,36 @@
                   <use xlink:href="#title"></use>
                 </svg>
                 <div class="contacts__sub">Ваш надежный партнер по металлоизделям</div>
-                <div class="contacts__head">Производство:</div>
-                <p>Улица Финляндская, д. 37<br>Тел: 8 (812) 3333-870<br>м. Купчино</p>
-                <div class="contacts__head">Офис:</div>
-                <p>Улица Финляндская, д. 37<br>Тел: 8 (812) 3333-870<br>м. Купчино</p>
-                <div class="contacts__head">Почта:</div>
-                <p>mail@mail.ru</p><img class="contacts__manager" src="img/modules-contacts-img-contactsManager.png">
+                <div class="contacts__items">
+                  <div class="contacts__item">
+                    <div class="contacts__head">Производство:</div>
+                    <p>Улица Финляндская, д. 37<br>Тел: 8 (812) 3333-870<br>м. Купчино</p>
+                  </div>
+                  <div class="contacts__item">
+                    <div class="contacts__head">Офис:</div>
+                    <p>Улица Финляндская, д. 37<br>Тел: 8 (812) 3333-870<br>м. Купчино</p>
+                  </div>
+                  <div class="contacts__item">
+                    <div class="contacts__head">Почта:</div>
+                    <p>mail@mail.ru</p>
+                  </div>
+                </div><img class="contacts__manager" src="img/modules-contacts-img-contactsManager.png">
               </div>
               <div class="contacts__aside"><img class="contacts__folder" src="img/modules-contacts-img-contactsForm.png">
-                <div class="contacts__form">
-                  <div class="contacts__formTitle">Остались вопросы?</div>
-                  <div class="contacts__formText">Введите свой вопрос ниже и наш специалист<br>ответит на него в течение 5 минут.</div>
-                  <form>
-                    <input class="input__input input__input--big" type="tel" placeholder="Ваш номер телефона:">
-                    <textarea class="contacts__textarea input__input input__input--big input__input--textarea" placeholder="Ваш вопрос:"></textarea>
-                    <button class="btn">ОТПРАВИТЬ ВОПРОС</button>
-                  </form>
+                <div class="contacts__form panel">
+                  <div class="contacts__formTitle panel__header">Остались вопросы?</div>
+                  <div class="contacts__formBody panel__body">
+                    <div class="contacts__formText">Введите свой вопрос ниже и наш специалист<br>ответит на него в течение 5 минут.</div>
+                    <form>
+                      <p>
+                        <input class="input__input input__input--big" type="tel" placeholder="Ваш номер телефона:">
+                      </p>
+                      <p>
+                        <textarea class="contacts__textarea input__input input__input--big input__input--textarea" placeholder="Ваш вопрос:"></textarea>
+                      </p>
+                      <button class="btn">ОТПРАВИТЬ ВОПРОС</button>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>

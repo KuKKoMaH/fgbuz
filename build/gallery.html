@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta id="viewport" name="viewport" content="width=device-width, user-scalable=no">
+    <script>if (screen.width <= 480) document.getElementById('viewport').setAttribute('content', 'width=480, user-scalable=no')</script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,500,700&amp;display=swap&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" media="all" href="style.css">
     <!--link(rel="stylesheet" media="all" href="style.css")-->
@@ -13,36 +14,46 @@
   <body onunload="">
     <div class="page">
       <header class="header">
-        <div class="c header__top"><a class="header__left" href="index">
-            <svg class="header__logo">
-              <use xlink:href="#logo"></use>
-            </svg>
-            <svg class="header__title">
-              <use xlink:href="#title"></use>
-            </svg></a>
-          <div class="header__contacts">
-            <svg class="header__contacts-icon">
-              <use xlink:href="#call"></use>
-            </svg>
-            <div class="header__label">Есть вопросы? Звоните сейчас!</div>
-            <div class="header__value">+7 (812) 603-41-8</div>
+        <div class="header__top">
+          <div class="c"><a class="header__left" href="index">
+              <svg class="header__logo">
+                <use xlink:href="#logo"></use>
+              </svg>
+              <svg class="header__title">
+                <use xlink:href="#title"></use>
+              </svg></a>
+            <div class="header__contacts">
+              <svg class="header__contacts-icon">
+                <use xlink:href="#call"></use>
+              </svg>
+              <div class="header__label">Есть вопросы? Звоните сейчас!</div>
+              <div class="header__value">+7 (812) 603-41-8</div>
+            </div>
+            <div class="header__working">
+              <svg class="header__working-icon">
+                <use xlink:href="#clock"></use>
+              </svg>
+              <div class="header__label">Ежедневно</div>
+              <div class="header__value">с 9:00 до 18:00</div>
+            </div>
+            <div class="header__cta">
+              <button class="btn">ЗАКАЗАТЬ ЗВОНОК</button>
+            </div>
+            <button class="header__menu-button">МЕНЮ
+              <div class="hamburger"></div>
+            </button>
           </div>
-          <div class="header__working">
-            <svg class="header__working-icon">
-              <use xlink:href="#clock"></use>
-            </svg>
-            <div class="header__label">Ежедневно</div>
-            <div class="header__value">с 9:00 до 18:00</div>
-          </div>
-          <button class="btn">ЗАКАЗАТЬ ЗВОНОК</button>
         </div>
         <div class="header__menu">
           <div class="c">
+            <div class="header__menu-header">ЗАКРЫТЬ
+              <div class="hamburger hamburger--active"></div>
+            </div>
             <ul>
               <li><a href="index">О НАС</a></li>
-              <li><a href="#">ВОРОТА</a></li>
-              <li><a href="#">ЗАБОРЫ</a></li>
-              <li><a href="#">НАВЕСЫ</a></li>
+              <li><a href="catalog">ВОРОТА</a></li>
+              <li><a href="catalog">ЗАБОРЫ</a></li>
+              <li><a href="catalog">НАВЕСЫ</a></li>
               <li><a href="gallery">НАШИ РАБОТЫ</a></li>
               <li><a href="blog">БЛОГ</a></li>
               <li><a href="#contacts">КОНТАКТЫ</a></li>
@@ -54,37 +65,37 @@
         <div class="c">
           <div class="gallery__items">
             <div class="gallery__item"><a class="gallery__inner" href="img/modules-gallery-img-0.jpg" data-width="270" data-height="217" data-index="0"><img src="img/modules-gallery-img-0.jpg">
-                <div class="gallery__price">от 10 000 руб</div></a></div>
+                <div class="gallery__price"><span class="rub"></span> от 10 000 руб</div></a></div>
             <div class="gallery__item"><a class="gallery__inner" href="img/modules-gallery-img-1.jpg" data-width="270" data-height="217" data-index="1"><img src="img/modules-gallery-img-1.jpg">
-                <div class="gallery__price">от 10 000 руб</div></a></div>
+                <div class="gallery__price"><span class="rub"></span> от 10 000 руб</div></a></div>
             <div class="gallery__item"><a class="gallery__inner" href="img/modules-gallery-img-2.jpg" data-width="270" data-height="217" data-index="2"><img src="img/modules-gallery-img-2.jpg">
-                <div class="gallery__price">от 10 000 руб</div></a></div>
+                <div class="gallery__price"><span class="rub"></span> от 10 000 руб</div></a></div>
             <div class="gallery__item"><a class="gallery__inner" href="img/modules-gallery-img-3.jpg" data-width="270" data-height="217" data-index="3"><img src="img/modules-gallery-img-3.jpg">
-                <div class="gallery__price">от 10 000 руб</div></a></div>
+                <div class="gallery__price"><span class="rub"></span> от 10 000 руб</div></a></div>
             <div class="gallery__item"><a class="gallery__inner" href="img/modules-gallery-img-0.jpg" data-width="270" data-height="217" data-index="4"><img src="img/modules-gallery-img-0.jpg">
-                <div class="gallery__price">от 10 000 руб</div></a></div>
+                <div class="gallery__price"><span class="rub"></span> от 10 000 руб</div></a></div>
             <div class="gallery__item"><a class="gallery__inner" href="img/modules-gallery-img-1.jpg" data-width="270" data-height="217" data-index="5"><img src="img/modules-gallery-img-1.jpg">
-                <div class="gallery__price">от 10 000 руб</div></a></div>
+                <div class="gallery__price"><span class="rub"></span> от 10 000 руб</div></a></div>
             <div class="gallery__item"><a class="gallery__inner" href="img/modules-gallery-img-2.jpg" data-width="270" data-height="217" data-index="6"><img src="img/modules-gallery-img-2.jpg">
-                <div class="gallery__price">от 10 000 руб</div></a></div>
+                <div class="gallery__price"><span class="rub"></span> от 10 000 руб</div></a></div>
             <div class="gallery__item"><a class="gallery__inner" href="img/modules-gallery-img-3.jpg" data-width="270" data-height="217" data-index="7"><img src="img/modules-gallery-img-3.jpg">
-                <div class="gallery__price">от 10 000 руб</div></a></div>
+                <div class="gallery__price"><span class="rub"></span> от 10 000 руб</div></a></div>
             <div class="gallery__item"><a class="gallery__inner" href="img/modules-gallery-img-0.jpg" data-width="270" data-height="217" data-index="8"><img src="img/modules-gallery-img-0.jpg">
-                <div class="gallery__price">от 10 000 руб</div></a></div>
+                <div class="gallery__price"><span class="rub"></span> от 10 000 руб</div></a></div>
             <div class="gallery__item"><a class="gallery__inner" href="img/modules-gallery-img-1.jpg" data-width="270" data-height="217" data-index="9"><img src="img/modules-gallery-img-1.jpg">
-                <div class="gallery__price">от 10 000 руб</div></a></div>
+                <div class="gallery__price"><span class="rub"></span> от 10 000 руб</div></a></div>
             <div class="gallery__item"><a class="gallery__inner" href="img/modules-gallery-img-2.jpg" data-width="270" data-height="217" data-index="10"><img src="img/modules-gallery-img-2.jpg">
-                <div class="gallery__price">от 10 000 руб</div></a></div>
+                <div class="gallery__price"><span class="rub"></span> от 10 000 руб</div></a></div>
             <div class="gallery__item"><a class="gallery__inner" href="img/modules-gallery-img-3.jpg" data-width="270" data-height="217" data-index="11"><img src="img/modules-gallery-img-3.jpg">
-                <div class="gallery__price">от 10 000 руб</div></a></div>
+                <div class="gallery__price"><span class="rub"></span> от 10 000 руб</div></a></div>
             <div class="gallery__item"><a class="gallery__inner" href="img/modules-gallery-img-0.jpg" data-width="270" data-height="217" data-index="12"><img src="img/modules-gallery-img-0.jpg">
-                <div class="gallery__price">от 10 000 руб</div></a></div>
+                <div class="gallery__price"><span class="rub"></span> от 10 000 руб</div></a></div>
             <div class="gallery__item"><a class="gallery__inner" href="img/modules-gallery-img-1.jpg" data-width="270" data-height="217" data-index="13"><img src="img/modules-gallery-img-1.jpg">
-                <div class="gallery__price">от 10 000 руб</div></a></div>
+                <div class="gallery__price"><span class="rub"></span> от 10 000 руб</div></a></div>
             <div class="gallery__item"><a class="gallery__inner" href="img/modules-gallery-img-2.jpg" data-width="270" data-height="217" data-index="14"><img src="img/modules-gallery-img-2.jpg">
-                <div class="gallery__price">от 10 000 руб</div></a></div>
+                <div class="gallery__price"><span class="rub"></span> от 10 000 руб</div></a></div>
             <div class="gallery__item"><a class="gallery__inner" href="img/modules-gallery-img-3.jpg" data-width="270" data-height="217" data-index="15"><img src="img/modules-gallery-img-3.jpg">
-                <div class="gallery__price">от 10 000 руб</div></a></div>
+                <div class="gallery__price"><span class="rub"></span> от 10 000 руб</div></a></div>
           </div>
         </div>
       </div>
@@ -98,22 +109,36 @@
                   <use xlink:href="#title"></use>
                 </svg>
                 <div class="contacts__sub">Ваш надежный партнер по металлоизделям</div>
-                <div class="contacts__head">Производство:</div>
-                <p>Улица Финляндская, д. 37<br>Тел: 8 (812) 3333-870<br>м. Купчино</p>
-                <div class="contacts__head">Офис:</div>
-                <p>Улица Финляндская, д. 37<br>Тел: 8 (812) 3333-870<br>м. Купчино</p>
-                <div class="contacts__head">Почта:</div>
-                <p>mail@mail.ru</p><img class="contacts__manager" src="img/modules-contacts-img-contactsManager.png">
+                <div class="contacts__items">
+                  <div class="contacts__item">
+                    <div class="contacts__head">Производство:</div>
+                    <p>Улица Финляндская, д. 37<br>Тел: 8 (812) 3333-870<br>м. Купчино</p>
+                  </div>
+                  <div class="contacts__item">
+                    <div class="contacts__head">Офис:</div>
+                    <p>Улица Финляндская, д. 37<br>Тел: 8 (812) 3333-870<br>м. Купчино</p>
+                  </div>
+                  <div class="contacts__item">
+                    <div class="contacts__head">Почта:</div>
+                    <p>mail@mail.ru</p>
+                  </div>
+                </div><img class="contacts__manager" src="img/modules-contacts-img-contactsManager.png">
               </div>
               <div class="contacts__aside"><img class="contacts__folder" src="img/modules-contacts-img-contactsForm.png">
-                <div class="contacts__form">
-                  <div class="contacts__formTitle">Остались вопросы?</div>
-                  <div class="contacts__formText">Введите свой вопрос ниже и наш специалист<br>ответит на него в течение 5 минут.</div>
-                  <form>
-                    <input class="input__input input__input--big" type="tel" placeholder="Ваш номер телефона:">
-                    <textarea class="contacts__textarea input__input input__input--big input__input--textarea" placeholder="Ваш вопрос:"></textarea>
-                    <button class="btn">ОТПРАВИТЬ ВОПРОС</button>
-                  </form>
+                <div class="contacts__form panel">
+                  <div class="contacts__formTitle panel__header">Остались вопросы?</div>
+                  <div class="contacts__formBody panel__body">
+                    <div class="contacts__formText">Введите свой вопрос ниже и наш специалист<br>ответит на него в течение 5 минут.</div>
+                    <form>
+                      <p>
+                        <input class="input__input input__input--big" type="tel" placeholder="Ваш номер телефона:">
+                      </p>
+                      <p>
+                        <textarea class="contacts__textarea input__input input__input--big input__input--textarea" placeholder="Ваш вопрос:"></textarea>
+                      </p>
+                      <button class="btn">ОТПРАВИТЬ ВОПРОС</button>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>

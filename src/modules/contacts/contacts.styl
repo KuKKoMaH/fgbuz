@@ -3,14 +3,20 @@
 
   &__container
     padding: 93px 0 100px
+    @media (max-width: $breakpoint-lg - 1)
+      padding: 45px 0 40px
 
   &__content
     display flex
+    @media (max-width: $breakpoint-lg - 1)
+      flex-direction column
 
   &__info
     flex: 1
     position: relative
     padding-bottom: 27px
+    @media (max-width: $breakpoint-lg - 1)
+      text-align: center;
 
     p
       margin-bottom: 23px
@@ -34,15 +40,32 @@
   &__sub
     font-weight: 500
     margin-bottom: 25px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 49px
+    @media (max-width: $breakpoint-md - 1)
+      margin-bottom: 30px
+
+  &__items
+    @media (max-width: $breakpoint-lg - 1)
+      display: flex;
+      justify-content space-between
+      text-align: left;
+    @media (max-width: $breakpoint-md - 1)
+      flex-direction column
+      align-items center
+      text-align: center;
 
   &__manager
     position: absolute
     bottom: 0
     right: 40px
+    @media (max-width: $breakpoint-lg - 1)
+      display: none;
 
   &__aside
     position relative
     flex: 1
+    z-index: 1
 
   &__folder
     display block
@@ -50,17 +73,45 @@
     top: -102px
     left: -45px
     pointer-events none
+    @media (max-width: $breakpoint-lg - 1)
+      display: none;
 
   &__form
     position: relative
     z-index: 1
     padding: 32px 70px 0 85px
     text-align: center;
+    @media (min-width: $breakpoint-lg)
+      border: 0
+      border-radius: 0
+      box-shadow none
+      background-color: transparent;
+      &:after
+        display: none;
+
+    @media (max-width: $breakpoint-lg - 1)
+      padding: 0
+      z-index: auto;
+      margin-bottom: 55px
 
   &__formTitle
     font-size: 30px
     font-weight: 500
     margin-bottom: 20px
+    justify-content center
+    @media (min-width: $breakpoint-lg)
+      background: transparent;
+      color: #2d2d2d
+      padding: 0
+      height: auto;
+
+    @media (max-width: $breakpoint-lg - 1)
+      padding: 0
+      margin: 0
+
+  &__formBody
+    @media (min-width: $breakpoint-lg)
+      padding: 0
 
   &__formText
     font-weight: 500
@@ -78,6 +129,13 @@
     background #fff
     box-shadow: 0 16px 24px -21px rgba(0, 0, 0, 0.5)
     z-index: 1
+    @media (max-width: $breakpoint-lg - 1)
+      width: 100vw
+      margin-left: calc(-50vw + 373px)
+      border-left: 0
+      border-right: 0
+    @media (max-width: $breakpoint-lg - 1)
+      margin-left: calc(-50vw + 50%)
 
     &:before
       content: ''
@@ -90,6 +148,9 @@
       border: 5px solid #fff
       pointer-events: none
       z-index: 1
+      @media (max-width: $breakpoint-lg - 1)
+        border-left: 0
+        border-right: 0
 
   #map
     height: 100%

@@ -12,7 +12,7 @@ import './js/init';
 // import './js/smoke';
 // import './js/tabs';
 // import './js/saveUTM';
-// import './modules/header/header';
+import './modules/header/header';
 // import './modules/team/team';
 // import './modules/problems/problems';
 // import './modules/progress/progress';
@@ -28,11 +28,19 @@ import './js/init';
 // import './modules/siteTypes/siteTypes';
 // import './modules/smmHero/smmHero';
 // import './modules/contextHero/contextHero';
+import './modules/advantages/advantages';
+import './modules/blogList/blogList';
 import './modules/about/about';
 import './modules/examples/examples';
 import './modules/certificates/certificates';
 import './modules/contacts/contacts';
 import './modules/gallery/gallery';
+import './modules/testimonials/testimonials';
+import './modules/related/related';
+import './modules/catalogMenu/catalogMenu';
+import './modules/menu/menu';
+import './modules/catalogAdvantages/catalogAdvantages';
+import './modules/catalogVariants/catalogVariants';
 
 import './js/lazyImages';
 

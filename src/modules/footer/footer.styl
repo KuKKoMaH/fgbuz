@@ -7,6 +7,8 @@
     position: relative
     padding: 50px 10px 45px
     font-size: 16px
+    @media (max-width: $breakpoint-lg - 1)
+      padding-top: 40px
 
     ul
       margin: 0
@@ -20,6 +22,7 @@
 
     & > ul
       display flex
+      flex-wrap wrap
 
       a
         color: #2d2d2d
@@ -32,6 +35,13 @@
       & > li
         flex 1
         padding-left: 25px
+        @media (max-width: $breakpoint-lg - 1)
+          flex: auto 0
+          width: 50%
+          margin-bottom: 20px
+        @media (max-width: $breakpoint-md - 1)
+          width: 100%
+          text-align: center;
 
         & > a
           color: #2d2d2d
@@ -61,6 +71,11 @@
     background: #ffffff
     border-radius: 4px
     padding: 20px 20px 39px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-top: -245px
+    @media (max-width: $breakpoint-md - 1)
+      position: static;
+      margin: 10px auto 0
 
     &Header
       padding: 12px 0 12px
@@ -86,19 +101,38 @@
     align-items: center
     padding: 45px 10px
     max-width 780px
+    @media (max-width: $breakpoint-lg - 1)
+      padding-top: 105px
+    @media (max-width: $breakpoint-md - 1)
+      flex-direction column
+      padding: 35px 0
 
   &__company
     display: flex
     align-items: center
     margin-bottom: 40px
+    @media (max-width: $breakpoint-lg - 1)
+      font-size: 14px
+    @media (max-width: $breakpoint-md - 1)
+      flex-direction column
 
   &__logo
     width: 44px
     height: 44px
     margin-right: 47px
+    @media (max-width: $breakpoint-md - 1)
+      display: block;
+      margin: 0 auto 25px
+
+  &__info
+    @media (max-width: $breakpoint-md - 1)
+      text-align: center;
 
   &__right
     margin-left: 45px
+    @media (max-width: $breakpoint-md - 1)
+      margin-left: 0
+      margin-top: 30px
 
   &__link
     opacity .5

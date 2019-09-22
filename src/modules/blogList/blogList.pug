@@ -2,18 +2,25 @@
   .c.blogList__items
     each i in [1,2,3]
       .blogList__item
-        a.blogList__images(href='blogSingle')
-          .blogList__image: img(src='modules/blogList/img/blogsList1.jpg')
-          .blogList__image: img(src='modules/blogList/img/blogsList2.jpg')
-          .blogList__image: img(src='modules/blogList/img/blogsList2.jpg')
-          .blogList__image: img(src='modules/blogList/img/blogsList1.jpg')
+        a.blogList__slider(href='blogSingle')
+          .blogList__images
+            .blogList__image: img(src='modules/blogList/img/blogsList1.jpg')
+            .blogList__image: img(src='modules/blogList/img/blogsList2.jpg')
+            .blogList__image: img(src='modules/blogList/img/blogsList2.jpg')
+            .blogList__image: img(src='modules/blogList/img/blogsList1.jpg')
+          .blogList__navigation
+            .blogList__button.blogList__button--prev.btn.btn--round.btn--arrow-prev: svg: use(xlink:href="#arrow")
+            .blogList__button.blogList__button--next.btn.btn--round.btn--arrow-next: svg: use(xlink:href="#arrow")
+
         .blogList__content
-          a.blogList__title(href='blogSingle') Как мы устанавливали забор в поселке Озерки
-          .blogList__text
-            p Прокладка электрики осуществляется на усмотрение потребителя. Кабеля могут прятаться в землю, или же максимально располагаться над грунтом. Первый вариант более эстетичен, второй – максимально практичен (удобно ремонтировать, не проводя земляных работ).
-            p Следует отметить, что перед проведением сварочных и покрасочных мероприятий рекомендуется пользоваться растворителями, средствами для обезжиривания, грунтовкой.
-          .blogList__more
-            a.btn.btn--sm(href='blogSingle') Читать далее
-          include ../blogTags/blogTags.pug
+          div.blogList__description
+            a.blogList__title(href='blogSingle') Как мы устанавливали забор в поселке Озерки
+            .blogList__text
+              p Прокладка электрики осуществляется на усмотрение потребителя. Кабеля могут прятаться в землю, или же максимально располагаться над грунтом. Первый вариант более эстетичен, второй – максимально практичен (удобно ремонтировать, не проводя земляных работ).
+              p Следует отметить, что перед проведением сварочных и покрасочных мероприятий рекомендуется пользоваться растворителями, средствами для обезжиривания, грунтовкой.
+          .blogList__footer
+            .blogList__more
+              a.btn.btn--sm(href='blogSingle') Читать далее
+            include ../blogTags/blogTags.pug
 
     include ../pagination/pagination

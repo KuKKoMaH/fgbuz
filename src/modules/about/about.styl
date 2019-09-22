@@ -1,21 +1,33 @@
 .about
   padding: 88px 0 155px
   background-color: #fbfbfb
+  @media (max-width: $breakpoint-lg - 1)
+    padding: 49px 0 97px
 
   &__container
     display: flex
     align-items center
+    @media (max-width: $breakpoint-lg - 1)
+      flex-direction column
+      position: relative;
+      padding-bottom: 180px
 
   &__content
     max-width: 550px
     flex: 1
     position: relative;
     z-index: 1
+    @media (max-width: $breakpoint-lg - 1)
+      text-align: center;
+      margin: 0 auto
+      position: static;
 
   &__sup
     text-align: left
     margin-bottom: 20px
     margin-left: -3px
+    @media (max-width: $breakpoint-lg - 1)
+      text-align: center;
 
   &__title
     width: 426px
@@ -23,6 +35,8 @@
     fill: #e43741
     margin-bottom: 47px
     margin-left: -3px
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 19px
 
   p
     margin-bottom: 32px
@@ -31,6 +45,8 @@
   &__aside
     flex: 1
     min-width: 0
+    @media (max-width: $breakpoint-lg - 1)
+      width: 100%
 
   &__slides
     display: flex
@@ -54,6 +70,9 @@
       display: block
       position: relative;
       anim(.3s)
+      @media (max-width: $breakpoint-lg - 1)
+        margin: 0 auto
+        max-width 100%
 
   &__round
     display: block
@@ -65,6 +84,15 @@
     top: 0
     right: 0
     anim(.3s)
+    @media (max-width: $breakpoint-lg - 1)
+      left: 50%
+      margin-left: -150px
+      right: auto;
+    @media (max-width: $breakpoint-lg - 1)
+      width: 340px
+      height: 340px
+      top: 50%
+      transform translateY(-50%)
 
   &__label
     position: absolute
@@ -72,6 +100,8 @@
     bottom: 44px;
     width: 117px
     height: 117px
+    @media (max-width: $breakpoint-lg - 1)
+      right: 50%
 
     &-text
       position: relative;
@@ -103,24 +133,19 @@
     top: 100%;
     margin-top: 20px;
     right: 110px;
+    @media (max-width: $breakpoint-lg - 1)
+      right: auto
+      left: 50%
+      transform translateX(-50%)
 
   &__navigation
     display: flex
     align-items: center
-
-  &__button
-    svg
-      width: 12px
-      height: 22px
-
-    &--prev
-      svg
-        margin-right: 4px
-
-    &--next
-      svg
-        transform: rotate(180deg)
-        margin-left: 4px
+    @media (max-width: $breakpoint-lg - 1)
+      position absolute
+      bottom: 0
+      left: 50%
+      transform translateX(-50%)
 
   &__pagination
     width: 150px
