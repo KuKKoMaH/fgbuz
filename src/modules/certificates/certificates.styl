@@ -8,7 +8,7 @@
   &__items
     display flex
     flex-wrap wrap
-    justify-content space-between
+    justify-content center
     @media (max-width: $breakpoint-lg - 1)
       flex-wrap nowrap
       justify-content flex-start
@@ -17,9 +17,10 @@
     width: 212px
     height: 276px
     position: relative;
-    margin-bottom: 23px
+    //margin-bottom: 23px
+    margin: 0 10px 23px
     padding: 20px
-    background: url(img/frame.png);
+    background: url(img/sprite-frame.png);
 
     &:before
       content: ''

@@ -36,9 +36,7 @@
               <div class="header__label">Ежедневно</div>
               <div class="header__value">с 9:00 до 18:00</div>
             </div>
-            <div class="header__cta">
-              <button class="btn">ЗАКАЗАТЬ ЗВОНОК</button>
-            </div>
+            <div class="header__cta"><a class="btn popup__opener" href="#callback">ЗАКАЗАТЬ ЗВОНОК</a></div>
             <button class="header__menu-button">МЕНЮ
               <div class="hamburger"></div>
             </button>
@@ -191,8 +189,7 @@
                 <p><b>Для консультации - Звоните:<br></b></p>
                 <p><b>Тел:</b> +7 (812) 603-41-8</p>
                 <p><b>Пишите:</b> info@info.ru</p>
-                <p>Ежедневно с 8:00 до 22:00</p><br>
-                <button class="btn">ЗАКАЗАТЬ ЗВОНОК</button>
+                <p>Ежедневно с 8:00 до 22:00</p><br><a class="btn popup__opener" href="#callback">ЗАКАЗАТЬ ЗВОНОК</a>
               </div>
             </div>
           </div>
@@ -217,44 +214,98 @@
         </div>
       </footer>
     </div>
-    <div class="hidden"></div>
-    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="pswp__bg"></div>
-      <div class="pswp__scroll-wrap">
-        <div class="pswp__container">
-          <div class="pswp__item"></div>
-          <div class="pswp__item"></div>
-          <div class="pswp__item"></div>
-        </div>
-        <div class="pswp__ui pswp__ui--hidden">
-          <div class="pswp__top-bar">
-            <div class="pswp__counter"></div>
-            <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-            <!--button.pswp__button.pswp__button--share(title="Share")-->
-            <!--button.pswp__button.pswp__button--fs(title="Toggle fullscreen")-->
-            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-            <div class="pswp__preloader">
-              <div class="pswp__preloader__icn">
-                <div class="pswp__preloader__cut">
-                  <div class="pswp__preloader__donut"></div>
+    <div class="hidden">
+      <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+          <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+          </div>
+          <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+              <div class="pswp__counter"></div>
+              <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+              <!--button.pswp__button.pswp__button--share(title="Share")-->
+              <!--button.pswp__button.pswp__button--fs(title="Toggle fullscreen")-->
+              <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+              <div class="pswp__preloader">
+                <div class="pswp__preloader__icn">
+                  <div class="pswp__preloader__cut">
+                    <div class="pswp__preloader__donut"></div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-            <div class="pswp__share-tooltip"></div>
-          </div>
-          <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
-          <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
-          <div class="pswp__caption">
-            <div class="pswp__caption__center"></div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+              <div class="pswp__share-tooltip"></div>
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+            <div class="pswp__caption">
+              <div class="pswp__caption__center"></div>
+            </div>
           </div>
         </div>
       </div>
+      <div class="thank" id="thank">
+        <div class="thank__icon">
+          <svg>
+            <use xlink:href="#check"></use>
+          </svg>
+        </div>
+        <div class="thank__title">Спасибо за Вашу заявку!</div>
+        <div class="thank__text">Наш менеджер свяжется с Вами в течение 5 минут</div>
+      </div>
+      <div class="popup" id="callback">
+        <div class="panel">
+          <div class="panel__header">Укажите контактные данные и удобное время для звонка</div>
+          <div class="panel__body">
+            <p class="center"><b>Эксперт АВИСКОМ позвонит вам прямо сейчас или в другое рабочее время</b></p>
+            <p>
+              <input class="input__input input__input--sm" placeholder="Ваше имя:">
+            </p>
+            <p>
+              <input class="input__input input__input--sm" placeholder="Ваш номер телефона:">
+            </p>
+            <p class="center"><b>Выберите время для звонка:</b></p>
+            <p class="popup__buttons">
+              <button class="btn btn--sm btn--active popup__now">Позвонить сейчас</button>
+              <button class="btn btn--sm popup__later">Позвонить позже</button>
+            </p>
+            <p class="popup__time">
+              <input class="input__input input__input--sm" placeholder="Например 27 марта в 13.00:">
+            </p>
+            <p class="center">
+              <button class="btn btn--sm">Позвоните мне</button>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="akcii" id="akcii">
+        <div class="akcii__label">акция</div>
+        <div class="akcii__header">
+          <h3>Мы все Вам понятно объясним и расскажет стоимость наших пакетов.</h3>
+        </div>
+        <div class="akcii__body">
+          <p class="center">Мы понимаем что у вас могут возникнуть 100 вопросов.<br>
+            Для грамотного понимания и объяснения всех вариантов франшизы мы предлагаем Вам Заполнить форму справа, или позвонить по номеру.
+          </p>
+          <h3>Если Вам интересна эта акция и Вы хотите забронировать ее на свое имя заполните форму ниже</h3>
+          <p>
+            <input class="input__input input__input--sm" placeholder="Ваше имя:">
+          </p>
+          <p>
+            <input class="input__input input__input--sm" placeholder="Ваш номер телефона:">
+          </p>
+          <p class="center">
+            <button class="btn">Учавствовать в акции</button>
+          </p>
+        </div>
+      </div>
     </div>
-    <!--  include ../modules/popup/popup-callback-->
     <!--  include ../modules/popup/popup-partnership-->
-    <!--  include ../modules/popup/popup-thank-->
     <!--  include ../modules/popup/popup-abandon1-->
     <!--  include ../modules/popup/popup-abandon2-->
     <!--  include ../modules/popup/popup-abandon3-->
@@ -274,5 +325,6 @@
     <symbol id="clock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 573"><path d="M504.11 216a15 15 0 0 1-8.22 19.57l-146.75 59.92a24.16 24.16 0 0 1-30.75-9L245.6 175.67a25 25 0 0 1 41.82-27.46L360 258.67l124.59-50.89a15 15 0 0 1 19.52 8.22zM339.3.07c-92.19 0-173.78 46-223.16 116.25 10.22 6.67 20.18 15.81 29.82 27.57 36.83-55.09 96.41-93.74 165.33-102.05l28 47.38 28-47.38c106 12.77 190.17 97 202.95 202.93l-47.39 28 47.39 28c-8.54 70.84-49.11 131.82-106.66 168.37a70.8 70.8 0 0 1 6.1 25.71 68.13 68.13 0 0 1-1.73 18.3C553.61 467.12 612 376.65 612 272.78 612 122.4 489.67.07 339.3.07zm69.59 449.12c-62.86-50.52-80.44-25.69-109 2.83-19.89 19.92-70.28-21.68-113.79-65.19S101 292.92 120.9 273c28.53-28.52 53.35-46.11 2.82-109s-84.2-14.6-111.83 13C-20 209 10.21 327.8 127.66 445.27S364 592.92 395.84 561c27.63-27.63 75.91-61.31 13-111.86zM78.47 198.13l-3.68 1.5c-3 1.15-6.58 2.45-10.57 4.18a59 59 0 0 0-5.85 3.06 33.07 33.07 0 0 0-5.7 4.17 39 39 0 0 0-5.17 5.66c-1.29 2.31-3 4.67-3.86 7.51-1.31 2.68-1.78 5.77-2.56 8.82-.6 3.09-.71 6.29-1.09 9.43a112.7 112.7 0 0 0 1 17.6c.43 5.27 1.76 9.72 2.29 12.8l1 4.86-2.61-4.23c-1.58-2.77-4.26-6.33-6.61-11.4a121.54 121.54 0 0 1-7.64-17.8c-.85-3.52-2-7.17-2.66-11.08-.45-4-1.2-8-.9-12.32-.13-4.29.75-8.62 1.54-13a65.13 65.13 0 0 1 4.68-12.36 60.83 60.83 0 0 1 6.7-10.53 87.71 87.71 0 0 1 7.18-8.2c4.64-4.56 8.67-7.9 11-9.95 1.34-1.12 1.89-1.73 2.49-2.27l.81-.76 21.56 33.72-1.37.58zM402 518.45c-2.11 2.63-5.43 6.71-9.93 11.32a91.53 91.53 0 0 1-7.95 7.06 72.23 72.23 0 0 1-10 6.68 64 64 0 0 1-11.73 5 60.33 60.33 0 0 1-12.51 2.59l-6.2.44-6-.32c-4 0-7.65-1.1-11.2-1.7s-6.76-2-9.83-2.86-5.83-2.35-8.39-3.35a101.9 101.9 0 0 1-11.66-5.89l-4.31-2.37 4.86.75a98.15 98.15 0 0 0 12.76 1.49c2.62.05 5.3.51 8.27.23s6-.08 9.06-.63 6.2-.78 9.13-1.89l4.4-1.35 4.08-1.91c10.78-5.22 16.65-14.42 20-22.1 1.68-4 2.89-7.46 3.8-10.19l1.55-4.53 34.92 19.56-3.12 3.97z"></path></symbol>
     <symbol id="arrow" viewBox="0 0 12 22" xmlns="http://www.w3.org/2000/svg"><path d="m11.803 3.317-7.682 7.682 7.682 7.682a1.5 1.5 0 0 1 -2.121 2.122l-8.486-8.486c-.359-.36-.471-.852-.389-1.318-.082-.466.03-.958.389-1.318l8.486-8.485a1.5 1.5 0 1 1 2.121 2.121z" fill-rule="evenodd"></path></symbol>
     <symbol id="chevron" viewBox="0 0 17 18" xmlns="http://www.w3.org/2000/svg"><path d="m0 18 9.2-9-9.2-9h7.8l9.2 9-9.2 9z" fill="#e21d2b"></path></symbol>
+    <symbol id="check" viewBox="0 0 45 44" xmlns="http://www.w3.org/2000/svg"><path d="m12.58 20.28 6.11 11.86s9.91-24.14 25.55-32.14c-.38 5.74-1.91 10.71.76 16.84-6.86 1.53-21 18.74-25.55 27.16-6.45-8-14.11-14.16-19.45-16.07z" fill="#fff"></path></symbol>
   </svg>
 </html>

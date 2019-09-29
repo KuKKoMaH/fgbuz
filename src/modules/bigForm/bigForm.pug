@@ -4,20 +4,72 @@
       include ../steps/steps.pug
       img.bigForm__manager(src='modules/bigForm/img/bigFormManager.png')
     .bigForm__col
-      .bigForm__btn: button.btn.btn--inverse ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
-      .bigForm__form
-        .bigForm__header Получите консультацию специалиста#[br]в течение 5 минут
-        .bigForm__body
-          form
-            .bigForm__block
-              .bigForm__label Выберите вариат изделия, который Вам необходим.
-              .bigForm__items
-                label.bigForm__checkbox
-                  input(type='checkbox' value='1')
-                  .bigForm__checkbox-text Забор
-                label.bigForm__checkbox
-                  input(type='checkbox' value='2')
-                  .bigForm__checkbox-text Забор
-                label.bigForm__checkbox
-                  input(type='checkbox' value='3')
-                  .bigForm__checkbox-text Забор
+      .panel
+        .panel__header Получите консультацию специалиста в течение 5 минут
+        .panel__body
+          p.center: b Выберите вариат изделия, который Вам необходим.
+          .bigForm__block: .bigForm__type
+            label.radio
+              input.radio__input(type="radio" name="form-type" value='Забор' checked)
+              .radio__label
+                .icon.icon--zabor
+                | Забор
+            label.radio
+              input.radio__input(type="radio" name="form-type" value='Ворота')
+              .radio__label
+                .icon.icon--vorota
+                | Ворота
+            label.radio
+              input.radio__input(type="radio" name="form-type" value='Навес')
+              .radio__label
+                .icon.icon--naves
+                | Навес
+          .bigForm__forms.bigForm__block
+            .bigForm__form.bigForm__form--active(data-type='Забор')
+              p.center: b Выберите вариат изделия, который Вам необходим.
+              p.bigForm__row
+                input.input__input.input__input--sm(placeholder='Длина забора:')
+                input.input__input.input__input--sm(placeholder='Высота забора:')
+              .bigForm__variants
+                label.radio
+                  input.radio__input(type="radio" name="zabor")
+                  .radio__label
+                    .icon.icon--metal
+                    | Металлоштакетник
+                label.radio
+                  input.radio__input(type="radio" name="zabor")
+                  .radio__label
+                    .icon.icon--jaluzi
+                    | Забор-жалюзи
+                label.radio
+                  input.radio__input(type="radio" name="zabor")
+                  .radio__label
+                    .icon.icon--lazer
+                    | Премиум забор лазерной резки
+
+            .bigForm__form(data-type='Ворота')
+              p.center: b Выберите вариат изделия, который Вам необходим.
+              p.bigForm__row
+                input.input__input.input__input--sm(placeholder='Длина забора:')
+                input.input__input.input__input--sm(placeholder='Высота забора:')
+              .bigForm__variants
+                label.radio
+                  input.radio__input(type="radio" name="zabor")
+                  .radio__label
+                    .icon.icon--metal
+                    | Металлоштакетник
+                label.radio
+                  input.radio__input(type="radio" name="zabor")
+                  .radio__label
+                    .icon.icon--jaluzi
+                    | Забор-жалюзи
+                label.radio
+                  input.radio__input(type="radio" name="zabor")
+                  .radio__label
+                    .icon.icon--lazer
+                    | Премиум забор лазерной резки
+
+          .bigForm__phone
+            input.input__input.input__input--sm(placeholder='Ваш номер телефона:')
+
+          div.center: button.btn.btn--inverse Получить консультацию

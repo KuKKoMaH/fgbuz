@@ -3,8 +3,6 @@
  */
 
 @import "destyle.css/destyle.css"
-@import "baron/baron.css";
-@import "baron/skins/styles.css";
 
 @import "stylus/_fonts.styl";
 @import "stylus/_vars.styl";
@@ -39,6 +37,13 @@ h2
 
   span
     color: #e53641
+
+h3
+  font-size: 24px
+  line-height: 1.25
+  text-align: center
+  font-weight: 500
+  margin-bottom: 1em
 
 b
   font-weight: bold
@@ -150,6 +155,7 @@ ol
 
     &:before
       width: 60%
+
     &:after
       width: 50%
 
@@ -183,9 +189,9 @@ img[data-srcset]
     top: 50%
     margin-left: -45px
     margin-top: -45px
+    background: rgba(#e21d2b, .45) url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAACj0lEQVR4AZ3BTWgWdAAH4N/2zqjMDNIitUwyKy0VKskKjPQggYVKBSF1qcOIiEhbkPaB5UEvdkg3b+YxupaGX+ClUjoYZSK5VIpgfuB0uk23J/7bq++b2zL2PBmZJgtssM9RHTr8bpd15qnk/1DxkgOGuuR7S3I9Jtlh0Dl7tVprrS1+cFHRb5tbMzLTHFF0WuXeXKXRfdbpVPzq9gzPzQ6h3y4PZhhm26/YY3yGY4dis6aMwI2+UmzNUN7Shy/zn9zkR8UL+TcVf6PdXanSYL4WbdqsMkdjqozTjePGpp7XFM2pMs9uNb2+NStV3sEly1PPCVxIlff1Kbr95rBeRafmDDDVn2hLjYmKzUlijE36cdEnJhvrFvfYpEfxWQbYjl9SY4FiWZLYqDjq0cSrDjrkjcQzTqPPexoSH6EvNV5WzEo0K46Ykpip26AFiUe047InEysgNVYopiX2KJYmiUWueDdJtCi2JJZDaixRzE8sVZwyNzHdWYPmJJ51Guc8lGiG1JiteDtJrFScsiix0E77LE68ohd9Xk8SbTiZGo2KnUlijE360W2tyRpVTNWqR/FpkqjYj72p5zvFuAzQok/R7bAjLik6NWeAx3Thw9TzsGJrqjxut5pe35iVKttw3hOpp8FOdHk6VRrM16JVq1Vma8xVDmJ3ruUp53HchFyHOVa7LUNZr2g3N6Nhhp8N6rLG+FzDJCsty0hMcwyXbTfoL59b7H4TTPSApVqdRK+7MxwzdSg2Jhb6Sb9BPc44o8cVezRlKNO1K9ZngBu8aIdO9U772vMqGcoMHYqPNaWOKZ7zpjVWa7bQHRmeuY4rPshouNMJ9NuY0TDDH4otKhkNxxRfZLRccNYGTRmlfwD1xhxeJgRSzgAAAABJRU5ErkJggg==') 50% 50% no-repeat;
     width: 90px
     height: 90px
-    background: rgba(#e21d2b, .45) url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAACj0lEQVR4AZ3BTWgWdAAH4N/2zqjMDNIitUwyKy0VKskKjPQggYVKBSF1qcOIiEhbkPaB5UEvdkg3b+YxupaGX+ClUjoYZSK5VIpgfuB0uk23J/7bq++b2zL2PBmZJgtssM9RHTr8bpd15qnk/1DxkgOGuuR7S3I9Jtlh0Dl7tVprrS1+cFHRb5tbMzLTHFF0WuXeXKXRfdbpVPzq9gzPzQ6h3y4PZhhm26/YY3yGY4dis6aMwI2+UmzNUN7Shy/zn9zkR8UL+TcVf6PdXanSYL4WbdqsMkdjqozTjePGpp7XFM2pMs9uNb2+NStV3sEly1PPCVxIlff1Kbr95rBeRafmDDDVn2hLjYmKzUlijE36cdEnJhvrFvfYpEfxWQbYjl9SY4FiWZLYqDjq0cSrDjrkjcQzTqPPexoSH6EvNV5WzEo0K46Ykpip26AFiUe047InEysgNVYopiX2KJYmiUWueDdJtCi2JJZDaixRzE8sVZwyNzHdWYPmJJ51Guc8lGiG1JiteDtJrFScsiix0E77LE68ohd9Xk8SbTiZGo2KnUlijE360W2tyRpVTNWqR/FpkqjYj72p5zvFuAzQok/R7bAjLik6NWeAx3Thw9TzsGJrqjxut5pe35iVKttw3hOpp8FOdHk6VRrM16JVq1Vma8xVDmJ3ruUp53HchFyHOVa7LUNZr2g3N6Nhhp8N6rLG+FzDJCsty0hMcwyXbTfoL59b7H4TTPSApVqdRK+7MxwzdSg2Jhb6Sb9BPc44o8cVezRlKNO1K9ZngBu8aIdO9U772vMqGcoMHYqPNaWOKZ7zpjVWa7bQHRmeuY4rPshouNMJ9NuY0TDDH4otKhkNxxRfZLRccNYGTRmlfwD1xhxeJgRSzgAAAABJRU5ErkJggg==') 50% 50% no-repeat;
     border-radius: 50%
     opacity 0
 
@@ -193,12 +199,10 @@ img[data-srcset]
     opacity 1
 
 .rub
-  background: url(images/rouble.png)
-  width: 30px
-  height: 31px
+  background: url(images/sprite-rouble.png)
 
   &--red
-    background: url(images/rouble-red.png)
+    background: url(images/sprite-rouble-red.png)
 
 .img
   border: 2px solid #e43641;
@@ -219,6 +223,15 @@ del, s
   @media (pointer: coarse)
     transition none !important
 
+icons = jaluzi kovannaves lazer metal naves obicnaves otkat premnaves raspash vorota zabor
+.icon
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px
+  for sprite in icons
+    &--{sprite}
+      background: url('./images/sprite-bigForm-' + sprite + '.png')
+
 //@import "stylus/blocks/hero.styl"
 @import "stylus/blocks/btn.styl";
 ////@import "stylus/blocks/btnGroup.styl";
@@ -233,7 +246,7 @@ del, s
 @import "stylus/blocks/panel.styl";
 //@import "stylus/blocks/card.styl";
 //@import "stylus/blocks/cardsList.styl";
-//@import "stylus/blocks/wpcf7.styl";
+@import "stylus/blocks/wpcf7.styl";
 //@import "stylus/blocks/tabs.styl";
 //@import "stylus/blocks/politic.styl";
 ////@import "stylus/select.styl";
@@ -269,3 +282,7 @@ del, s
 @import "modules/catalogForm/catalogForm.styl"
 @import "modules/catalogVariants/catalogVariants.styl"
 @import "modules/photoswipe/photoswipe.styl"
+@import "modules/popup/mfp.styl"
+@import "modules/popup/popup.styl"
+@import "modules/popup/thank.styl"
+@import "modules/popup/akcii.styl"

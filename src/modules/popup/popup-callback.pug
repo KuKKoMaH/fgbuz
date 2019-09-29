@@ -1,8 +1,13 @@
-#callback.popup.popup--underline.noise
-  .form.form--black-border
-    div
-    .form__title.form__title--centered Получите четкие гарантии#[br]результатов#[br]Просто заполните форму ниже
-    .form__text.form__text--compact Заполнение заявки Вас ни к чему не обязывает. Вся информация носит ознакомительных характер.
-    form
-      .input.form__input: input.input__input(placeholder='Введите ваш номер телефона:' type='tel')
-      .form__button: button.btn.btn--lineIcon ПОЛУЧИТЬ ГАРАНТИИ
+#callback.popup
+  .panel
+    .panel__header Укажите контактные данные и удобное время для звонка
+    .panel__body
+      p.center: b Эксперт АВИСКОМ позвонит вам прямо сейчас или в другое рабочее время
+      p: input.input__input.input__input--sm(placeholder='Ваше имя:')
+      p: input.input__input.input__input--sm(placeholder='Ваш номер телефона:')
+      p.center: b Выберите время для звонка:
+      p.popup__buttons
+        button.btn.btn--sm.btn--active.popup__now Позвонить сейчас
+        button.btn.btn--sm.popup__later Позвонить позже
+      p.popup__time: input.input__input.input__input--sm(placeholder='Например 27 марта в 13.00:')
+      p.center: button.btn.btn--sm Позвоните мне

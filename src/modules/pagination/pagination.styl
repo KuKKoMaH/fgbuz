@@ -1,34 +1,19 @@
 .pagination
   border: 1px solid #f0f0f0;
   background: #ffffff
-  padding: 10px
+  padding: 12px 180px
   border-radius: 5px
   display: flex
   align-items center
-  justify-content space-around
+  justify-content center
+  position: relative;
+  flex-wrap wrap
+  @media (max-width: $breakpoint-lg - 1)
+    padding: 12px 110px
+  @media (max-width: $breakpoint-md - 1)
+    padding: 12px 70px
 
-  &__btn
-    flex-shrink 0
-    svg
-      width: 12px
-      height: 22px
-
-    &--prev
-      svg
-        margin-right: 4px
-
-    &--next
-      svg
-        transform: rotate(180deg)
-        margin-left: 4px
-
-  &__items
-    display: flex
-    align-items center
-    flex-wrap wrap
-    justify-content center
-
-  &__item
+  .page-numbers
     display: block
     line-height: 1
     text-align: center
@@ -41,7 +26,53 @@
     border-radius: 50%
     anim()
 
-    &:hover, &--active
+    &:hover, &.current
       background: #e43641
       text-decoration: none;
       color: #ffffff
+
+  .prev, .next
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e11b2a;
+    background: #e11b2a;
+    border-radius: 29px;
+    top: 50%
+    margin-top: -26px
+
+    svg
+      fill: #fff
+      width: 12px
+      height: 22px
+
+    &:hover
+      background: #ffffff
+
+      svg
+        fill: #000
+
+  .prev
+    left: 110px
+    @media (max-width: $breakpoint-lg - 1)
+      left: 40px
+    @media (max-width: $breakpoint-md - 1)
+      left: 10px
+
+    svg
+      margin-right: 4px
+
+  .next
+    right: 110px
+    @media (max-width: $breakpoint-lg - 1)
+      right: 40px
+    @media (max-width: $breakpoint-md - 1)
+      right: 10px
+
+    svg
+      transform: rotate(180deg)
+      margin-left: 4px

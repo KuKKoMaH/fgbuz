@@ -5,6 +5,8 @@
   padding: 25px 40px 30px 22px
   position: relative;
   margin-bottom: 30px
+  @media (max-width: $breakpoint-lg - 1)
+    padding: 24px 12px
 
   &:before
     content: ''
@@ -21,10 +23,17 @@
   &__row
     display: flex;
     align-items center
+    @media (max-width: $breakpoint-md - 1)
+      flex-direction column
 
   &__main
     flex 2
     margin-right: 30px
+    @media (max-width: $breakpoint-lg - 1)
+      flex: 1
+    @media (max-width: $breakpoint-md - 1)
+      margin-right: 0
+      margin-bottom: 24px
 
     img
       width: 100%
@@ -32,6 +41,8 @@
   &__aside
     flex: 1
     text-align: center;
+    @media (max-width: $breakpoint-md - 1)
+      margin-bottom: 24px
 
   &__head
     text-align: center;
@@ -52,7 +63,13 @@
   tr
     td:last-child
       text-align: right;
+      white-space nowrap
 
   td
     padding: 6px 15px
     border-bottom: 1px dashed #cfcfd2
+
+  &__form
+    @media (max-width: $breakpoint-md - 1)
+      width: 100%
+      max-width 320px

@@ -7,7 +7,7 @@ import SmoothScroll from 'smooth-scroll';
 import './js/init';
 // import './js/cartsList';
 // import './js/initAbandonPopup';
-// import './js/popups';
+import './js/popups';
 // import './js/paroller';
 // import './js/smoke';
 // import './js/tabs';
@@ -41,6 +41,7 @@ import './modules/catalogMenu/catalogMenu';
 import './modules/menu/menu';
 import './modules/catalogAdvantages/catalogAdvantages';
 import './modules/catalogVariants/catalogVariants';
+import './modules/bigForm/bigForm';
 
 import './js/lazyImages';
 
