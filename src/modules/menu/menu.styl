@@ -30,6 +30,16 @@
       pointer-events all
       transform translateX(0)
 
+  &--fixed
+    @media (min-width: $breakpoint-lg)
+      position: fixed;
+      top: 100px
+      width: 270px
+
+  &--bottom
+    @media (min-width: $breakpoint-lg)
+      position: absolute;
+      bottom: 0
 
   &__header
     display: none;

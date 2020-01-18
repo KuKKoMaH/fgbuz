@@ -1,12 +1,18 @@
-/* ================================================ */
-/* Меню */
-/* ================================================ */
-const $menu        = $('.header__menu');
+const $menu = $('.header__menu');
 const $menuTrigger = $('.header__menu-button, .header__menu');
-// const $menuContent = $('.menu__content');
-let menuVisible    = false;
+const $placeholder = $('.header__placeholder');
+const $menuTop = $('.header__top');
+let menuOffset = $placeholder.offset().top;
+const $document = $(document);
 
-$menuTrigger.on('click', () => toggleMenu());
+const activeClass = 'header__menu--active';
+const fixedClass = 'header__menu--fixed';
+const topFixedClass = 'header__top--fixed';
+
+let menuVisible = false;
+let menuFixed = false;
+
+$menuTrigger.on('click', toggleMenu);
 
 function toggleMenu() {
   if (menuVisible) {
@@ -18,28 +24,41 @@ function toggleMenu() {
 
 function showMenu() {
   if (menuVisible) return;
-  $menu.addClass('header__menu--active');
-  // $menu.addClass('menu--active');
-  // $menuTrigger.addClass('menu__trigger--active');
-  //
-  // setTimeout(() => {
-  //   $menu.addClass('menu--visible');
-    menuVisible = true;
-  // }, 0);
+  $menu.addClass(activeClass);
+  menuVisible = true;
 }
 
 function hideMenu() {
   if (!menuVisible) return;
-  $menu.removeClass('header__menu--active');
-
-  // $menu.removeClass('menu--visible');
-  // $menu.one('transitionend', () => {
-  //   $menu.removeClass('menu--active');
-  // });
-  // $menuTrigger.removeClass('menu__trigger--active');
+  $menu.removeClass(activeClass);
   menuVisible = false;
 }
 
 $menu.find('a[href*="#"]').on('click', () => hideMenu());
 
-/* ================================================ */
+$(window).on('scroll', checkMenuFixed);
+$(window).on('resize', () => {
+  menuOffset = $placeholder.offset().top;
+  checkMenuFixed();
+});
+
+function checkMenuFixed() {
+  const scrollTop = $document.scrollTop();
+  if (scrollTop > menuOffset && !menuFixed) {
+    $menu.addClass(fixedClass);
+    menuFixed = true;
+  } else if (scrollTop < menuOffset && menuFixed) {
+    $menu.removeClass(fixedClass);
+    menuFixed = false;
+  }
+
+  if(scrollTop > 0) {
+    $menuTop.addClass(topFixedClass)
+  } else {
+    $menuTop.removeClass(topFixedClass)
+
+  }
+}
+
+checkMenuFixed();
+

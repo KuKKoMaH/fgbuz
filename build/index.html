@@ -37,6 +37,7 @@
               <div class="header__value">с 9:00 до 18:00</div>
             </div>
             <div class="header__cta"><a class="btn popup__opener" href="#callback">ЗАКАЗАТЬ ЗВОНОК</a></div>
+            <!--.header__menu-button-placeholder-->
             <button class="header__menu-button">МЕНЮ
               <div class="hamburger"></div>
             </button>
@@ -56,8 +57,13 @@
               <li><a href="blog">БЛОГ</a></li>
               <li><a href="#contacts">КОНТАКТЫ</a></li>
             </ul>
+            <div class="header__phone-wrapper"><a class="header__phone" href="tel:123">
+                <svg class="header__phone-icon">
+                  <use xlink:href="#call"></use>
+                </svg>+7 (812) 603-41-8</a></div>
           </div>
         </div>
+        <div class="header__placeholder"></div>
       </header>
       <div class="welcome">
         <div class="c">
@@ -263,34 +269,34 @@
             </div><img class="bigForm__manager" src="img/modules-bigForm-img-bigFormManager.png">
           </div>
           <div class="bigForm__col">
-            <div class="panel">
+            <div class="panel"><img class="bigForm__decor2" src="img/modules-bigForm-img-bigForm-decor2.jpg">
               <div class="panel__header">Получите консультацию специалиста в течение 5 минут</div>
               <div class="panel__body">
-                <p class="center"><b>Выберите вариат изделия, который Вам необходим.</b></p>
                 <div class="bigForm__block">
                   <div class="bigForm__type">
+                    <p class="center"><b>Выберите вариат изделия, который Вам необходим.</b></p>
                     <label class="radio">
-                      <input class="radio__input" type="radio" name="form-type" value="Забор" checked="">
+                      <input class="radio__input" type="checkbox" name="form-type" value="Забор" checked="">
                       <div class="radio__label">
                         <div class="icon icon--zabor"></div>Забор
                       </div>
                     </label>
                     <label class="radio">
-                      <input class="radio__input" type="radio" name="form-type" value="Ворота">
+                      <input class="radio__input" type="checkbox" name="form-type" value="Ворота">
                       <div class="radio__label">
                         <div class="icon icon--vorota"></div>Ворота
                       </div>
                     </label>
                     <label class="radio">
-                      <input class="radio__input" type="radio" name="form-type" value="Навес">
+                      <input class="radio__input" type="checkbox" name="form-type" value="Навес">
                       <div class="radio__label">
                         <div class="icon icon--naves"></div>Навес
                       </div>
                     </label>
                   </div>
                 </div>
-                <div class="bigForm__forms bigForm__block">
-                  <div class="bigForm__form bigForm__form--active" data-type="Забор">
+                <div class="bigForm__form" data-type="Забор">
+                  <div class="bigForm__block">
                     <p class="center"><b>Выберите вариат изделия, который Вам необходим.</b></p>
                     <p class="bigForm__row">
                       <input class="input__input input__input--sm" placeholder="Длина забора:">
@@ -317,7 +323,9 @@
                       </label>
                     </div>
                   </div>
-                  <div class="bigForm__form" data-type="Ворота">
+                </div>
+                <div class="bigForm__form" data-type="Ворота">
+                  <div class="bigForm__block">
                     <p class="center"><b>Выберите вариат изделия, который Вам необходим.</b></p>
                     <p class="bigForm__row">
                       <input class="input__input input__input--sm" placeholder="Длина забора:">
@@ -354,7 +362,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div><img class="bigForm__decor1" src="img/modules-bigForm-img-bigForm-decor1.png">
       </div>
       <div class="certificates">
         <h2>За 10 лет работы мы<br>получили множество наград и сертификатов</h2>
@@ -452,7 +460,7 @@
                   <li><a href="#">Забор-жалюзи из ламелей</a></li>
                   <li><a href="#">Заборы лазерной резки премиум</a></li>
                   <li><a href="#">Комплектующие для забора</a></li>
-                  <li><a href="#">Навесы</a></li>
+                  <li class="highlight"><a href="#">Навесы</a></li>
                   <li><a href="#">Навесы эконом класса</a></li>
                   <li><a href="#">Навесы с элементами ковки</a></li>
                   <li><a href="#">Навесы премиум класса</a></li>

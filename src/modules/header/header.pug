@@ -15,6 +15,7 @@ header.header
       .header__value с 9:00 до 18:00
     .header__cta
       a.btn.popup__opener(href='#callback') ЗАКАЗАТЬ ЗВОНОК
+    //.header__menu-button-placeholder
     button.header__menu-button
       |МЕНЮ
       .hamburger
@@ -32,3 +33,8 @@ header.header
         li: a(href='gallery') НАШИ РАБОТЫ
         li: a(href='blog') БЛОГ
         li: a(href='#contacts') КОНТАКТЫ
+      .header__phone-wrapper: a.header__phone(href='tel:123')
+        svg.header__phone-icon: use(xlink:href="#call")
+        | +7 (812) 603-41-8
+
+  .header__placeholder

@@ -31,10 +31,10 @@
       display: none;
 
   &__block
-    margin: 0 -52px 25px
+    margin: 0 -52px
     //display: flex;
     //justify-content space-between
-    padding: 0 52px 25px
+    padding: 25px 52px 25px
     border-bottom: 1px solid #f0f0f0
 
   &__type
@@ -58,23 +58,26 @@
 
   &__phone
     max-width 245px
-    margin: 0 auto 25px
+    margin: 25px auto
 
-  &__forms
-    position: relative;
-    padding: 0
 
   &__form
-    position: absolute;
-    opacity: 0
-    z-index: -1
-    width: 100%
-    left: 0
-    top: 0
-    padding: 0 52px 25px
+    padding: 0 52px
+    margin: 0 -52px
+    overflow: hidden;
+    height 0
     anim()
 
-    &--active
-      z-index: 1
-      position: static;
-      opacity: 1
+  &__decor1
+    position: absolute;
+    width: 158px
+    bottom: -105px
+    left: 0
+    @media (max-width: $breakpoint-md - 1)
+      display: none;
+
+  &__decor2
+    position: absolute;
+    left: 100%
+    bottom: 0
+    z-index: -1

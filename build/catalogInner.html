@@ -37,6 +37,7 @@
               <div class="header__value">с 9:00 до 18:00</div>
             </div>
             <div class="header__cta"><a class="btn popup__opener" href="#callback">ЗАКАЗАТЬ ЗВОНОК</a></div>
+            <!--.header__menu-button-placeholder-->
             <button class="header__menu-button">МЕНЮ
               <div class="hamburger"></div>
             </button>
@@ -56,8 +57,13 @@
               <li><a href="blog">БЛОГ</a></li>
               <li><a href="#contacts">КОНТАКТЫ</a></li>
             </ul>
+            <div class="header__phone-wrapper"><a class="header__phone" href="tel:123">
+                <svg class="header__phone-icon">
+                  <use xlink:href="#call"></use>
+                </svg>+7 (812) 603-41-8</a></div>
           </div>
         </div>
+        <div class="header__placeholder"></div>
       </header>
       <div class="catalog lines">
         <div class="c catalog__container">
@@ -238,11 +244,9 @@
             <div class="panel catalogForm">
               <div class="panel__header">Калькулятор стоимости забора-жалюзи из ламелей</div>
               <div class="panel__body catalogForm__body">
-                <div class="catalogForm__img"><img class="img" src="img/modules-catalogForm-img-catalogForm.jpg">
-                  <div class="catalogForm__price">
-                    <div class="rub"></div> Цена: 10 000 руб
-                  </div>
-                </div>
+                <!--.catalogForm__img-->
+                <!--  img.img(src='modules/catalogForm/img/catalogForm.jpg')-->
+                <!--  .catalogForm__price #[.rub] Цена: 10 000 руб-->
                 <div class="catalogForm__content">
                   <p class="center"><b>Введите размеры желаемых ворот и мы рассчитаем стоимость Вашего проекта</b></p>
                   <div class="catalogForm__row">
@@ -266,9 +270,14 @@
             <div class="panel catalogForm">
               <div class="panel__header">Калькулятор стоимости забора из металлоштакетника</div>
               <div class="panel__body catalogForm__body">
-                <div class="catalogForm__img"><img class="img" src="img/modules-catalogForm-img-catalogForm2.jpg">
-                  <div class="catalogForm__price catalogForm__price--dark">
-                    <div class="rub rub--red"></div> Цена: 10 000 руб
+                <div class="catalogForm__aside">
+                  <div class="catalogForm__img" data-type="test1" style="background-image: url(img/modules-catalogForm-img-catalogForm2.jpg)">
+                    <div class="catalogForm__price">Введите размеры желаемых ворот и мы рассчитаем<br>стоимость Вашего проекта</div>
+                  </div>
+                  <div class="catalogForm__img" data-type="test2" style="background-image: url(img/modules-catalogForm-img-catalogForm.jpg)">
+                    <div class="catalogForm__price catalogForm__price--dark">
+                      <div class="rub rub--red"></div> Цена: 10 000 руб
+                    </div>
                   </div>
                 </div>
                 <div class="catalogForm__content">
@@ -280,36 +289,39 @@
                     <div class="catalogForm__col">
                       <input class="input__input input__input--sm" placeholder="Необходимая ширина ворот:">
                     </div>
+                    <div class="catalogForm__col">
+                      <input class="input__input input__input--sm" placeholder="Ваш номер телефона:">
+                    </div>
                   </div>
                   <p class="center"><b>Вариант металлоштакетника</b></p>
                   <div class="catalogForm__row">
                     <div class="catalogForm__col catalogForm__col--shrink">
                       <label class="radio">
-                        <input class="radio__input" type="radio" name="test">
+                        <input class="radio__input" type="radio" name="form-type" value="test1" checked="">
                         <div class="radio__label">П-образный</div>
                       </label>
                     </div>
                     <div class="catalogForm__col catalogForm__col--shrink">
                       <label class="radio">
-                        <input class="radio__input" type="radio" name="test">
+                        <input class="radio__input" type="radio" name="form-type" value="test2">
                         <div class="radio__label">М-образный</div>
                       </label>
                     </div>
                     <div class="catalogForm__col catalogForm__col--shrink">
                       <label class="radio">
-                        <input class="radio__input" type="radio" name="test">
+                        <input class="radio__input" type="radio" name="form-type" value="test1">
                         <div class="radio__label">Полукруглый</div>
                       </label>
                     </div>
                     <div class="catalogForm__col catalogForm__col--shrink">
                       <label class="radio">
-                        <input class="radio__input" type="radio" name="test">
+                        <input class="radio__input" type="radio" name="form-type" value="test2">
                         <div class="radio__label">Пристенный</div>
                       </label>
                     </div>
                     <div class="catalogForm__col catalogForm__col--shrink">
                       <label class="radio">
-                        <input class="radio__input" type="radio" name="test">
+                        <input class="radio__input" type="radio" name="form-type" value="test1">
                         <div class="radio__label">Промышленный</div>
                       </label>
                     </div>
@@ -863,7 +875,7 @@
                   <li><a href="#">Забор-жалюзи из ламелей</a></li>
                   <li><a href="#">Заборы лазерной резки премиум</a></li>
                   <li><a href="#">Комплектующие для забора</a></li>
-                  <li><a href="#">Навесы</a></li>
+                  <li class="highlight"><a href="#">Навесы</a></li>
                   <li><a href="#">Навесы эконом класса</a></li>
                   <li><a href="#">Навесы с элементами ковки</a></li>
                   <li><a href="#">Навесы премиум класса</a></li>
@@ -980,24 +992,24 @@
       </div>
       <div class="akcii" id="akcii">
         <div class="akcii__label">акция</div>
-<div class="akcii__header">
-  <h3>Мы все Вам понятно объясним и расскажет стоимость наших пакетов.</h3>
-</div>
-<div class="akcii__body">
-  <p class="center">Мы понимаем что у вас могут возникнуть 100 вопросов.<br>
-    Для грамотного понимания и объяснения всех вариантов франшизы мы предлагаем Вам Заполнить форму справа, или позвонить по номеру.
-  </p>
-  <h3>Если Вам интересна эта акция и Вы хотите забронировать ее на свое имя заполните форму ниже</h3>
-  <p>
-    <input class="input__input input__input--sm" placeholder="Ваше имя:">
-  </p>
-  <p>
-    <input class="input__input input__input--sm" placeholder="Ваш номер телефона:">
-  </p>
-  <p class="center">
-    <button class="btn">Учавствовать в акции</button>
-  </p>
-</div>
+        <div class="akcii__header">
+          <h3>Мы все Вам понятно объясним и расскажет стоимость наших пакетов.</h3>
+        </div>
+        <div class="akcii__body">
+          <p class="center">Мы понимаем что у вас могут возникнуть 100 вопросов.<br>
+            Для грамотного понимания и объяснения всех вариантов франшизы мы предлагаем Вам Заполнить форму справа, или позвонить по номеру.
+          </p>
+          <h3>Если Вам интересна эта акция и Вы хотите забронировать ее на свое имя заполните форму ниже</h3>
+          <p>
+            <input class="input__input input__input--sm" placeholder="Ваше имя:">
+          </p>
+          <p>
+            <input class="input__input input__input--sm" placeholder="Ваш номер телефона:">
+          </p>
+          <p class="center">
+            <button class="btn">Учавствовать в акции</button>
+          </p>
+        </div>
       </div>
     </div>
     <!--  include ../modules/popup/popup-partnership-->

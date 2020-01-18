@@ -1,7 +1,21 @@
-const $forms      = $('.bigForm__form');
+const $forms = $('.bigForm__form');
 const activeClass = 'bigForm__form--active';
+const $items = $(".bigForm__type input");
 
-$(".bigForm [name='form-type']").on('change', e => {
-  $forms.removeClass(activeClass);
-  $forms.filter('[data-type="' + e.target.value + '"]').addClass(activeClass);
+const show = ($el) => {
+    $el.css('height', $el.find('.bigForm__block').outerHeight());
+};
+
+const hide = ($el) => {
+    $el.css('height', '');
+};
+
+$items.on('change', e => {
+    const $el = $forms.filter('[data-type="' + e.target.value + '"]');
+    e.target.checked ? show($el) : hide($el);
 });
+
+$items.each((i, el) => {
+    if (el.checked) show($forms.filter('[data-type="' + el.value + '"]'));
+});
+
