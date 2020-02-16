@@ -1,0 +1,94 @@
+.frontMenu
+  margin: 5rem 0
+
+  h2
+    color: #42bde4
+
+  &__cols
+    display: flex;
+    margin: 0 -15px
+    @media (max-width: $breakpoint-lg - 1)
+      flex-direction column
+      margin: 0
+
+  &__col
+    flex: 1
+    margin: 0 15px
+    @media (max-width: $breakpoint-lg - 1)
+      margin: 0 0 10px
+
+  &__block
+    border: 1px solid #eef0f0
+    border-radius: 7px
+    margin-bottom: 30px
+    padding: 32px 37px 41px
+    anim()
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 10px
+      padding: 24px 30px
+
+    &:last-child
+      margin-bottom: 0
+
+    ul
+      margin: 2rem 0 0
+
+    li
+      padding: 0
+
+      &:before
+        display: none;
+
+
+    &--hasChildren
+      @media (max-width: $breakpoint-lg - 1)
+        position: relative;
+        &:hover
+          border-color: #42bde4
+
+        &:after
+          content: ''
+          position: absolute;
+          right: 29px
+          top: 32px
+          background: url(../../images/sprite-menu-arrow.png)
+
+    &--active
+      &:after
+        transform rotate(180deg)
+
+  &__submenu
+    @media (min-width: $breakpoint-lg)
+      height: auto !important
+    @media (max-width: $breakpoint-lg - 1)
+      height 0
+      overflow: hidden;
+      anim(.2s)
+
+  &__header
+    font-size: 1.4rem
+    line-height: 1.5
+
+  &__cards
+    margin-top: 5rem
+    position: relative;
+
+  &__slider
+    overflow: hidden;
+
+  &__items
+    display: flex;
+
+  &__item
+    flex-shrink 0
+    @media (max-width: $breakpoint-lg - 1)
+      .card
+        margin: 0 auto
+
+  .arrowButton
+    @media (min-width: $breakpoint-lg)
+      &--left
+        left: -80px
+
+      &--right
+        right: -80px

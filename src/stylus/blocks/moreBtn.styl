@@ -1,0 +1,31 @@
+.moreBtn
+  border: 0
+
+  span
+    display: none;
+    anim()
+
+  svg
+    width: 20px
+    height: 20px
+    fill #43bde4
+    anim()
+
+  &:hover
+    svg
+      fill #e7533b
+    span
+      color #e7533b
+
+  @media (max-width: $breakpoint-lg - 1)
+    border: 1px solid #42bde4
+    border-radius: 5px
+    text-align: center;
+    display: flex;
+    justify-content center
+    align-items center
+    height: 40px
+
+    span
+      display: block;
+      margin-left: 20px

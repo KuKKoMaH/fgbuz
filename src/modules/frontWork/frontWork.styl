@@ -1,0 +1,139 @@
+.frontWork
+  background: #f5fcfe
+  padding: 5rem 0
+  @media (max-width: $breakpoint-lg - 1)
+    padding: 2rem 0
+
+  .c
+    display: flex;
+    align-items flex-start
+    @media (max-width: $breakpoint-lg - 1)
+      flex-direction column
+
+  h2
+    margin-bottom: 2rem
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 2.5rem
+
+  &__left
+    width: 470px
+    flex-shrink 0
+    @media (max-width: $breakpoint-lg - 1)
+      width: 100%
+
+  &__row
+    display: flex;
+    margin: 2rem 0px 2.5rem
+    align-items center
+
+    svg
+      width: 20px
+      height: 20px
+      fill: url(#icon-blue-gradient)
+
+  &__address
+    margin-left: 12px
+
+  &__map
+    margin-left: auto;
+    flex-shrink 0
+
+  &__phones
+    height: 295px
+    background: #ffffff
+    border-radius: 7px
+    position: relative;
+    @media (max-width: $breakpoint-lg - 1)
+      height: 220px
+
+    &._scrollbar
+      .frontWork__track
+        display: block;
+
+  &__inner
+    padding: 34px 82px 34px 39px
+    height: 100%
+    @media (max-width: $breakpoint-lg - 1)
+      padding: 27px 30px
+
+  &__info
+    display: flex;
+    padding-bottom: 2rem
+    margin-bottom: 2rem
+    border-bottom: 1px solid #eef0f0
+
+  &__label
+    font-size: .85em
+    opacity: .5
+
+  &__phone
+    font-size: 1.25rem
+    font-weight: 500
+
+  &__aside
+    margin-left: auto;
+    text-align: right;
+
+  &__days
+    @media (max-width: $breakpoint-lg - 1)
+      font-size: .9rem
+
+  &__hours
+    font-size: 1.25rem
+    color: #42bde4
+
+  &__right
+    flex: 1
+    display: flex;
+    margin: 0 -10px
+    padding-left: 80px
+    @media (max-width: $breakpoint-lg - 1)
+      flex-direction column
+      margin: 0
+      padding: 0
+
+  &__item
+    flex: 1
+    margin: 0 10px
+    background: #ffffff
+    border-radius: 7px
+    padding: 30px 40px 40px
+    display: flex;
+    flex-direction column
+    @media (max-width: $breakpoint-lg - 1)
+      margin: 10px 0px 0
+      padding: 25px 30px 30px
+
+    .btn
+      margin-top: auto;
+      width: 100%
+
+  &__header
+    font-size: 1.25rem
+    color: #e7533b
+    margin-bottom: 1.5rem
+    line-height: 1.7
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 1rem
+
+  &__track
+    position: absolute;
+    width: 4px
+    background: #f5fcfe
+    top: 40px;
+    bottom: 40px;
+    right: 40px;
+    border-radius: 3px
+    display: none;
+    @media (max-width: $breakpoint-lg - 1)
+      right: 13px
+      top: 27px
+      bottom: 27px
+
+  &__bar
+    position: absolute;
+    width: 6px
+    background: linear-gradient(to top, #42bde4, #76dbfc);
+    left: -1px
+    cursor: pointer;
+    border-radius: 3px

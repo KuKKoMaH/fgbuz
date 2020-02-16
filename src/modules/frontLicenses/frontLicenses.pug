@@ -1,0 +1,56 @@
+.frontLicenses
+  .c
+    .frontLicenses__container
+      .frontLicenses__documents
+        h2 Лицензии и документы
+        a.frontLicenses__document(href='#')
+          svg: use(xlink:href="#icon-file")
+          span Послание президента Российской Федерации федеральному собранию Российской Федерации от 12 декабря 2012 года
+        a.frontLicenses__document(href='#')
+          svg: use(xlink:href="#icon-file")
+          span Обзор изменений Федерального закона от 29.11.2010 N 326-ФЗ "Об обязательном медицинском страховании в Российской Федерации"
+        a.frontLicenses__document(href='#')
+          svg: use(xlink:href="#icon-file")
+          span Выступление Президента РФ с ежегодным Посланием Федеральному Собранию
+        a.frontLicenses__document(href='#')
+          svg: use(xlink:href="#icon-file")
+          span Проект Резолюции первого национального съезда врачей Российской Федерации. Москва. 05.10.2012 г.
+        a.frontLicenses__document(href='#')
+          svg: use(xlink:href="#icon-file")
+          span Проект кодекса профессиональной этики врача Российской Федерации
+
+        a.moreBtn(href='#')
+          svg: use(xlink:href="#icon-more")
+          span Все документы
+
+      .frontLicenses__rating
+        h2 Рейтинг врачей
+        .frontLicenses__item
+          img.lazy.frontLicenses__photo(data-src='modules/frontLicenses/frontLicenses-01.jpg')
+          img.lazy.frontLicenses__cup(data-src='images/cup1.svg')
+          .frontLicenses__label 01
+          .frontLicenses__name
+            | Петров#[br]
+            | Николай Олегович
+          .frontLicenses__position старший фельдшер
+        .frontLicenses__item
+          img.lazy.frontLicenses__photo(data-src='modules/frontLicenses/frontLicenses-01.jpg')
+          img.lazy.frontLicenses__cup(data-src='images/cup2.svg')
+          .frontLicenses__label 02
+          .frontLicenses__name
+            | Чичасова#[br]
+            | Анна Александровна
+          .frontLicenses__position старшая медсестра
+        .frontLicenses__item
+          img.lazy.frontLicenses__photo(data-src='modules/frontLicenses/frontLicenses-01.jpg')
+          img.lazy.frontLicenses__cup(data-src='images/cup3.svg')
+          .frontLicenses__label 03
+          .frontLicenses__name
+            | Сидоркина#[br]
+            | Татьяна Викторовна
+          .frontLicenses__position ‘ндокринолог
+
+        .frontLicenses__button
+          a.moreBtn(href='#')
+            svg: use(xlink:href="#icon-more")
+            span Весь рейтинг

@@ -1,78 +1,86 @@
 .btn
-  display: inline-flex
-  align-items center
-  justify-content center
-  border: 1px solid #e11b2a
-  background: #e11b2a
-  padding: 0 38px
+  display: inline-block
   position: relative
-  //font-size: 16px
-  font-weight: bold
-  height: 58px
-  cursor: pointer
-  border-radius: 29px
   color: #ffffff
-  transition all 0.1s ease-in !important
+  font-weight: 500
+  height: 55px
+  //background: linear-gradient(to top, #4cc2e9, #a6e7fd);
+  border-radius: 6px
+  padding: 2px 2px 7px
+  border: 0
+  line-height: 1.25
+  @media (max-width: $breakpoint-lg - 1)
+    font-size: 1.4rem
 
-  svg
-    display: block
-    fill: #fff
+  //border-bottom: 5px solid #3aa6ca;
+
+  &:before, &:after
+    content: ''
+    position: absolute;
+    left: 0
+    right: 0
+
+  &:before
+    bottom: 0
+    height: 20px
+    border-radius: 6px
+    background: #3aa6ca
+    z-index: 1
+
+  &:after
+    top: 0
+    bottom: 5px
+    background: linear-gradient(to top, #4cc2e9, #a6e7fd);
+    border-radius: 6px
+    z-index: 2
     anim()
+
+  span
+    position: relative;
+    display: flex;
+    align-items center
+    justify-content center
+    text-align: center
+    height: 100%
+    background: linear-gradient(to top, #41bce4, #76dbfc);
+    padding: 0 20px
+    border-radius: 6px
+    z-index: 3
+    anim()
+    transform translateY(0)
+
+    &:after
+      content ''
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      border-radius: 6px
+      position: absolute;
+      background: #ffffff
+      opacity: 0
+      z-index: 4
+      anim()
+
+  //z-index: 1
+  //transform translateY(-4px)
 
   &:focus
     outline 0
 
-  &:hover, &--active
+  &:hover
+    span:after
+      opacity: .2
+
+  &:active, &--active
     text-decoration: none;
-    background: #ffffff
-    border-color: #e43641
-    color: #2a2a2a
-    //background: darken(#e11b2a, 15%)
 
-    svg
-      fill: #000
+    span, &:after
+      transform translateY(3px)
 
-  &--sm
-    height: 50px
-    padding: 0 27px
-    border-radius: 25px
-
-  &--round
-    width: 52px
-    height: 52px
-    padding: 0
-    align-items center
-    justify-content: center
-
-    &^[0]--sm
-      width: 37px
-      height: 37px
+    span:after
+      opacity: .2
 
   &--block
     width: 100%
     padding: 0
-
-  &--inverse
-    background: #ffffff
-    color: #2a2a2a
-    font-size: 16px
-    border-color: #e43641
-
-    &:hover
-      border: 1px solid #e11b2a
-      background: #e11b2a
-      color: #ffffff
-
-  &--arrow-prev, &--arrow-next
-    svg
-      width: 12px
-      height: 22px
-
-  &--arrow-prev
-    svg
-      margin-right: 4px
-
-  &--arrow-next
-    svg
-      transform: rotate(180deg)
-      margin-left: 4px

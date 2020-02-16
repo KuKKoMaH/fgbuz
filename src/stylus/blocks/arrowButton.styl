@@ -1,0 +1,60 @@
+.arrowButton
+  position: absolute;
+  z-index: 2
+  top: 50%
+  width: 60px
+  height: 60px
+  //background: #ffffff
+  background: #f5fcfe
+  transform translateY(-50%)
+  cursor: pointer;
+  anim()
+
+  &:hover
+    svg
+      fill #e7533b
+
+  @media (max-width: $breakpoint-lg - 1)
+    background: linear-gradient(to top, #41bce4, #76dbfc);
+    width: 40px
+    height: 40px
+    top: 100%
+    &:hover
+      background: linear-gradient(to top, #66cae9, #8fe2fc);
+
+      svg
+        fill: #fff
+
+  svg
+    fill: #42bde4
+    position: absolute;
+    left: 50%
+    top: 50%
+    transform translate(-50%, -50%)
+    width: 16px
+    height: 16px
+    anim()
+    @media (max-width: $breakpoint-lg - 1)
+      fill #fff
+
+  &--left
+    left: 0
+    border-radius: 0 7px 7px 0
+    @media (max-width: $breakpoint-lg - 1)
+      left: auto;
+      right: 50%
+      border-radius: 5px 0 0 5px
+      border-right: 1px solid #7dd8f3;
+
+  &--right
+    right: 0
+    border-radius: 7px 0 0 7px
+    cursor: pointer;
+    @media (max-width: $breakpoint-lg - 1)
+      right: auto;
+      left: 50%
+      border-radius: 0 5px 5px 0
+
+    svg
+      transform translate(-50%, -50%) rotate(180deg)
+

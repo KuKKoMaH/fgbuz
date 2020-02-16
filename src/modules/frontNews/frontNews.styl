@@ -1,0 +1,35 @@
+.frontNews
+  margin: 5rem 0px 4rem
+  @media (max-width: $breakpoint-lg - 1)
+    margin: 5rem 0px 6rem
+
+  h2
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 3rem
+
+  &__items
+    display: flex;
+    flex-wrap wrap
+    margin: 0 -15px 4rem
+    @media (max-width: $breakpoint-lg - 1)
+      flex-direction column
+      //max-width 400px
+      margin: 0 auto 3rem
+
+  &__item
+    width: 33.3333%
+    padding: 0 15px
+    @media (max-width: $breakpoint-lg - 1)
+      width: 100%
+      padding: 0
+      margin-bottom: 3.5rem
+      &:last-child
+        margin-bottom: 0
+
+  &__btn
+    text-align: center;
+    & .btn
+      height: 70px
+      width: 250px
+      @media (max-width: $breakpoint-lg - 1)
+        width: 100%

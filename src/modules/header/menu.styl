@@ -1,0 +1,287 @@
+.menu
+  position: fixed;
+  top: 184px
+  bottom: 0
+  left: 0
+  right: 0
+  background: #fff;
+  padding: 70px 0
+  pointer-events none
+  opacity: 0
+  visibility: hidden;
+  z-index: 3
+  anim(.2s)
+  @media (max-width: $breakpoint-lg - 1)
+    top: 45px
+    padding: 0
+
+  &--active
+    opacity: 1
+    visibility: visible;
+    pointer-events all
+    transform none
+
+    .menu
+      &__container
+        transform none
+
+  & .c
+    height: 100%
+
+  &__container
+    transform translateY(-50px)
+    height: 100%
+    position: relative;
+    anim(.3s)
+
+    &._scrollbar
+      .menu__track
+        display: block;
+
+
+    @media (max-width: $breakpoint-lg - 1)
+      overflow: hidden;
+      padding: 51px 0 0
+
+      &--step2
+        & .menu__content
+          transform translateX(-100%)
+
+      &--step3
+        & .menu__content
+          transform translateX(-200%)
+
+      &--step2, &--step3
+        & .menu__back
+          opacity: 1
+          pointer-events all
+          visibility: visible;
+
+  &__content
+    width: 100%
+    height: 100%
+    display: flex;
+    -webkit-overflow-scrolling: touch;
+    @media (max-width: $breakpoint-lg - 1)
+      flex-direction column
+      anim(.3s)
+
+  li
+    padding-left: 0
+
+    &:before
+      display: none;
+
+  &__aside
+    flex: 1
+    @media (max-width: $breakpoint-lg - 1)
+      flex 0
+      margin-bottom: 4rem
+
+    ul
+      @media (max-width: $breakpoint-lg - 1)
+        display: flex;
+        flex-wrap wrap
+        max-width 400px
+        margin: 0 auto
+
+    li
+      margin-bottom: 1.3rem
+      @media (max-width: $breakpoint-lg - 1)
+        width: 50%
+        margin-bottom: 1.7em
+
+    a
+      font-size: 1.4rem
+      font-weight: 500
+
+
+  &__primary
+    flex: 2
+
+    & > ul
+      display: flex;
+      @media (max-width: $breakpoint-lg - 1)
+        flex-direction column
+
+      & > li
+        flex: 1
+
+        & > a
+          font-size: 1.4rem
+          font-weight: 500
+          border: 0
+          color: $black
+          @media (max-width: $breakpoint-lg - 1)
+            position: relative;
+            flex: auto
+            height: 6.3rem
+            display: flex;
+            align-items center
+            border-bottom: 1px solid #eef0f0;
+            &:after
+              content ''
+              position: absolute;
+              background: url(../../images/sprite-menu-arrow.png)
+              right: 0
+              top: 50%
+              transform translateY(-50%) rotate(-90deg)
+
+        & > ul
+          margin-top: 1.5rem
+          @media (max-width: $breakpoint-lg - 1)
+            position: absolute;
+            top: 0
+            left: 100%
+            width: 200%
+            height: 100%
+            display: none;
+            margin: 0
+            padding: 0
+            overflow: auto;
+            margin-top: 20px
+            padding-right: 100%
+            padding-bottom: 20px
+            &.activeStep
+              display: block;
+
+          & > li
+            margin-bottom: 1rem
+
+            &.menu-item-has-children > a:after
+              content: ''
+              display: inline-block;
+              vertical-align: middle;
+              margin-left: 9px
+              background: url(../../images/sprite-menu-arrow.png)
+
+            &.active
+              > ul
+                margin: 1rem 0
+                max-height 300px
+
+              > a:after
+                transform rotate(180deg)
+
+            & > ul
+              padding-left: 1.65rem
+              overflow: hidden;
+              max-height 0
+              anim(.2s)
+              @media (max-width: $breakpoint-lg - 1)
+                max-height none !important
+                display: none;
+                position: absolute;
+                top: 0
+                right: 0
+                width: 50%
+                height: 100%
+                margin: 0 !important
+                padding: 0
+                overflow-y: auto;
+                padding-bottom: 20px
+                &.activeStep
+                  display: block;
+
+              li
+                margin-bottom: .4rem
+
+              a
+                font-size: .85rem
+                border: 0
+
+    a
+      @media (max-width: $breakpoint-lg - 1)
+        position: relative;
+        flex: auto
+        height: 6.3rem
+        display: flex;
+        align-items center
+        border-bottom: 1px solid #eef0f0 !important
+        font-size: 1.4em !important
+        font-weight: 500
+
+    li
+      @media (max-width: $breakpoint-lg - 1)
+        position: static;
+        margin: 0 !important
+        &:first-child > a
+          border-top: 1px solid #eef0f0;
+
+        &.menu-item-has-children > a:after
+          content ''
+          position: absolute;
+          background: url(../../images/sprite-menu-arrow.png)
+          right: 0
+          top: 50%
+          transform translateY(-50%) rotate(-90deg) !important
+
+  &__submenu
+    width: 100%
+
+    & > ul
+      display: flex;
+      justify-content: center
+
+      & > li
+        flex: 0 0 auto
+        margin: 0 1.5rem
+
+        & > a
+          display: none;
+
+        & > ul
+
+          & > li
+            margin-bottom: 2rem
+
+            & > a
+              font-size: 1.4rem
+              font-weight: 500
+              border: 0
+              color: $black
+
+  &__track
+    position: absolute;
+    width: 5px
+    background: #f5fcfe
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    border-radius: 3px
+    display: none;
+    @media (max-width: $breakpoint-lg - 1)
+      display: none;
+
+  &__bar
+    position: absolute;
+    width: 5px
+    background: #45bde5
+    left: 0px
+    cursor: pointer;
+    border-radius: 3px
+
+  &__back
+    display: none;
+    @media (max-width: $breakpoint-lg - 1)
+      display: block;
+      position: absolute;
+      top: 20px
+      left: 0
+      width: 100%
+      border: 1px solid #42bde4
+      border-radius: 5px
+      background: #f5fcfe
+      padding: 5px 0
+      opacity: 0
+      pointer-events none
+      visibility: hidden;
+      anim()
+
+      &:before
+        content: ''
+        position: absolute;
+        left: 5px
+        background: url(../../images/sprite-menu-arrow.png)
+        top: 50%
+        transform translateY(-50%) rotate(90deg)

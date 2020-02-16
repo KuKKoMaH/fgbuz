@@ -1,0 +1,129 @@
+.frontInfo
+  margin: 5rem 0
+
+  .c
+    display: flex;
+    flex-direction column
+    align-items center
+
+
+  &__title
+    font-size: 1.4rem
+    margin-bottom: 1.5rem
+    font-weight: 600
+    width: 100%
+    @media (max-width: $breakpoint-lg - 1)
+      font-size: 1.6rem
+      margin-bottom: .5rem
+
+  &__text
+    margin-bottom: 2.4rem
+    width: 100%
+    @media (max-width: $breakpoint-lg - 1)
+      margin-bottom: 5rem
+
+  &__buttons
+    display: flex;
+    margin-bottom: 5.5rem
+    width: 100%
+    @media (max-width: $breakpoint-lg - 1)
+      flex-direction column
+      max-width 400px
+      margin-bottom: 0
+
+  &__button
+    border: 1px solid #eef0f0
+    border-radius: 7px
+    margin-right: 30px
+    font-weight: 500
+    position: relative;
+    min-height: 110px
+    display: flex;
+    padding: 10px 32px 10px 103px
+    justify-content center
+    flex-direction column
+    @media (max-width: $breakpoint-lg - 1)
+      min-height auto
+      margin-right: 0
+      margin-bottom: 10px
+      text-align: center
+      padding: 10px 15px 12px 70px
+
+    a&:hover
+      color: #e7533b
+
+    img
+      position: absolute;
+      left: 35px
+      top: 50%
+      transform translate(-50%, -50%)
+
+  &__narrow
+    line-height: 1.4
+
+  &__links
+    margin-top: .1rem
+
+    a
+      font-size: .85em
+      margin-right: 1rem
+
+  &__cards
+    display: flex;
+    justify-content space-between
+    width: 100%
+    @media (max-width: $breakpoint-lg - 1)
+      flex-direction column
+      max-width 400px
+
+  &__card
+    position: relative;
+    height: 310px
+    width: 570px
+    border-radius: 7px
+    overflow: hidden;
+    display: flex;
+    flex-direction column
+    justify-content center
+    padding-left: 50px
+    @media (max-width: $breakpoint-lg - 1)
+      height: 280px
+      width: 100%
+      margin-bottom: 10px
+      text-align: center;
+      padding: 0
+      align-items center
+
+    img
+      position: absolute;
+      bottom: 0
+      opacity: 0
+      anim()
+      @media (max-width: $breakpoint-lg - 1)
+        position: static;
+        width: auto;
+        max-height 110px
+        margin-bottom: -5px
+
+    .btn
+      width: 220px
+
+    &--1
+      background: url(modules/frontInfo/img/card-bg-1.jpg)
+
+      img
+        right: -44px
+
+    &--2
+      background: url(modules/frontInfo/img/card-bg-2.jpg)
+
+      img
+        right: 37px
+
+  &__cardText
+    font-size: 2rem
+    line-height: 1.35
+    font-weight: 500
+    margin-bottom: 1.5rem
+    @media (max-width: $breakpoint-lg - 1)
+      font-size: 1.6rem

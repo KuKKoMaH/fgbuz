@@ -1,40 +1,163 @@
 header.header
-  .header__top: .c
-    a.header__left(href='index')
-      svg.header__logo: use(xlink:href="#logo")
-      svg.header__title: use(xlink:href="#title")
+  .c
+    .header__top
+      button.header__blind
+        svg: use(xlink:href="#icon-view")
+        | ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ
+      .header__logo
+        | ФГБУЗ МСЧ №59#[br]
+        | ФМБА России
+      .header__address
+        svg: use(xlink:href="#icon-geo")
+        | г. Заречный
 
-    .header__contacts
-      svg.header__contacts-icon: use(xlink:href="#call")
-      .header__label Есть вопросы? Звоните сейчас!
-      .header__value +7 (812) 603-41-8
+      .header__buttons
+        a.outlineBtn(href='#')
+          svg: use(xlink:href="#icon-stethoscope")
+          svg.hover: use(xlink:href="#icon-stethoscope")
+          | Запись на прием
+        a.outlineBtn(href='#')
+          svg: use(xlink:href="#icon-aid")
+          svg.hover: use(xlink:href="#icon-aid")
+          | Вызвать врача
 
-    .header__working
-      svg.header__working-icon: use(xlink:href="#clock")
-      .header__label Ежедневно
-      .header__value с 9:00 до 18:00
-    .header__cta
-      a.btn.popup__opener(href='#callback') ЗАКАЗАТЬ ЗВОНОК
-    //.header__menu-button-placeholder
-    button.header__menu-button
-      |МЕНЮ
-      .hamburger
+      button.header__search
+        svg: use(xlink:href="#icon-glass")
+        svg.hover: use(xlink:href="#icon-glass")
+        svg.close: use(xlink:href="#icon-close")
 
-  .header__menu
+      .header__contacts
+        .header__label по всем вопросам
+        a.header__phone(href='tel:123') +7 (8412) 60-10-14
+
+  .header__bottom
     .c
-      .header__menu-header
-        | ЗАКРЫТЬ
-        .hamburger.hamburger--active
-      ul
-        li: a(href='index') О НАС
-        li: a(href='catalog') ВОРОТА
-        li: a(href='catalog') ЗАБОРЫ
-        li: a(href='catalog') НАВЕСЫ
-        li: a(href='gallery') НАШИ РАБОТЫ
-        li: a(href='blog') БЛОГ
-        li: a(href='#contacts') КОНТАКТЫ
-      .header__phone-wrapper: a.header__phone(href='tel:123')
-        svg.header__phone-icon: use(xlink:href="#call")
-        | +7 (812) 603-41-8
+      .header__menu
+        button.header__hamburger
+          svg: use(xlink:href="#icon-menu")
+          svg.close: use(xlink:href="#icon-close")
 
-  .header__placeholder
+        ul
+          li: a(href='#') ГЛАВНАЯ
+          li.menu-item-has-children
+            a(href='#') О НАС
+            .menu
+              .c
+                .menu__container
+                  .menu__content
+                    .menu__submenu
+                      ul
+                        li.menu-item-has-children
+                          a(href='#')
+                          ul
+                            li: a(href='#') История
+                            li
+                              a(href='#') Спорт, культура, отдых
+                              ul
+                                li: a(href='#') ASD
+                            li: a(href='#') Даты и события коллектива
+                            li: a(href='#') Врачебне династии
+                            li: a(href='#') Наши ветераны ВОВ
+
+                  .menu__track
+                    .menu__bar
+
+          li.menu-item-has-children: a(href='#') СТРУКТУРА ПОДРАЗДЕЛЕНИЯ
+            li: a(href='#') НОВОСТИ
+            li: a(href='#') КОНТАКЫ
+            li: a(href='#') ВОПРОС-ОТВЕТ
+    .menu
+      .c
+        .menu__container
+          button.menu__back Назад
+          .menu__content
+            .menu__aside
+              ul
+                li: a(href='#') Главная
+                li: a(href='#') Новости
+                li: a(href='#') Контакты
+                li: a(href='#') Вопрос-ответ
+                li: a(href='#') Вакансии
+                li: a(href='#') Блог
+                li: a(href='#') Документы
+                li: a(href='#') Гостевая книга
+            .menu__primary
+              ul
+                li.menu-item-has-children
+                  a(href='#') О нас
+                  ul
+                    li: a(href='#') История
+                    li: a(href='#') Спорт, культура, отдых
+                    li: a(href='#') Даты и события коллектива
+                    li: a(href='#') Врачебне династии
+                    li: a(href='#') Наши ветераны ВОВ
+                li.menu-item-has-children
+                  a(href='#') Структура подразделения
+                  ul
+                    li: a(href='#') Управление
+                    li.menu-item-has-children
+                      a(href='#') Детская поликлиника
+                      ul
+                        li: a(href='#') Отделение участковой службы
+                        li: a(href='#') Кабинет профилактики
+                        li: a(href='#') Узкие специалисты и др. кабинеты
+                        li: a(href='#') Фотогалерея детской поликлиники
+                        li: a(href='#') О грудном вскармливании
+                        li: a(href='#') Информация для родителей
+                        li: a(href='#') Информация для родителей
+                        li: a(href='#') Информация для родителей
+                        li: a(href='#') Информация для родителей
+                        li: a(href='#') Информация для родителей
+                        li: a(href='#') Информация для родителей
+                        li: a(href='#') Информация для родителей
+                        li: a(href='#') Информация для родителей
+                    li.menu-item-has-children
+                      a(href='#') Городская поликлиника
+                      ul
+                        li: a(href='#') Жменская консультация
+                        li: a(href='#') Социально-психологическая помощь
+                        li: a(href='#') Узкие специалисты и др. кабинеты
+                        li: a(href='#') Фотогалерея детской поликлиники
+                        li: a(href='#') О грудном вскармливании
+                        li: a(href='#') Информация для родителей
+                    li.menu-item-has-children
+                      a(href='#') Перинатальный центр
+                      ul
+                        li: a(href='#') Жменская консультация
+                        li: a(href='#') Социально-психологическая помощь
+                        li: a(href='#') Узкие специалисты и др. кабинеты
+                        li: a(href='#') Фотогалерея детской поликлиники
+                        li: a(href='#') О грудном вскармливании
+                        li: a(href='#') Информация для родителей
+                    li: a(href='#') Центр психоневрологии и наркологии
+                    li.menu-item-has-children
+                      a(href='#') Платные медицинские услуги
+                      ul
+                        li: a(href='#') Жменская консультация
+                        li: a(href='#') Социально-психологическая помощь
+                        li: a(href='#') Узкие специалисты и др. кабинеты
+                        li: a(href='#') Фотогалерея детской поликлиники
+                        li: a(href='#') О грудном вскармливании
+                        li: a(href='#') Информация для родителей
+
+
+          .menu__track
+            .menu__bar
+
+  .search
+    .search__container
+      .c
+        .search__label Введите ключевые слова для поиска
+        .search__block
+          .search__input
+            input
+            .search__tags
+              a.search__tag(href='#') Запись к врачу
+              a.search__tag(href='#') Контакты
+              a.search__tag(href='#') Время работы
+              a.search__tag(href='#') Запись к врачу
+              a.search__tag(href='#') Контакты
+              a.search__tag(href='#') Время работы
+          .search__button: button.btn: span Поиск
+
+        button.search__close: svg: use(xlink:href="#icon-close")

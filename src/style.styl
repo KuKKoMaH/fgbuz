@@ -1,5 +1,5 @@
 /*!!
- * Theme Name: aviscom
+ * Theme Name: fgbuz
  */
 
 @import "destyle.css/destyle.css"
@@ -9,54 +9,38 @@
 @import "stylus/_mixins.styl";
 
 html
-  font-family: 'Roboto', sans-serif;
-  color: #2d2d2d
-  font-size: 18px
-  line-height: 1.65
-  font-weight: 300
+  font-family: 'Montserrat', sans-serif;
+  color: $black
+  font-size: 14px
+  letter-spacing 0.025em
+  line-height: 1.85
+  @media (max-width: $breakpoint-lg - 1)
+    font-size: 10px
+    line-height: 1.8
 
 html, body
   overflow-x: hidden
 
-.lines
-  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABJMAAAABCAQAAADAmydUAAAAHklEQVR4Ae3BAQ0AAAzDoDqYf7fPfQC1gLeAt4C3AxuqAD3B4Pz6AAAAAElFTkSuQmCC') calc(50% - 1px) 0 repeat-y;
-  @media (max-width: $breakpoint-lg - 1)
-    background: none;
-
-
 h2
-  font-size: 36px
-  line-height: 1.35
-  text-align: center
+  font-size: 2rem
+  line-height: 1.4
   font-weight: 500
-  margin-bottom: 64px
-  @media (max-width: $breakpoint-lg - 1)
-    margin-bottom: 54px
-  @media (max-width: $breakpoint-md - 1)
-    margin-bottom: 43px
-
-  span
-    color: #e53641
-
-h3
-  font-size: 24px
-  line-height: 1.25
-  text-align: center
-  font-weight: 500
-  margin-bottom: 1em
+  margin-bottom: 4rem
 
 b
   font-weight: bold
 
 p
-  margin-bottom: 1.55em
+  margin-bottom: 1rem
 
 a
-  color: #e21d2b
+  color: $black
+  border-bottom: 1px solid #42bde4
+  padding-bottom: 2px
+  anim()
 
   &:hover
-    color: darken(#e21d2b, 30%)
-    text-decoration: underline;
+    border-color: #e7533b
 
 ul, ol
   margin-bottom: 1.55em
@@ -95,7 +79,7 @@ ol
       font-weight: bold;
 
 .c
-  padding: 0 10px
+  padding: 0 15px
   margin-left: auto
   margin-right: auto
   max-width: $container-lg
@@ -106,16 +90,12 @@ ol
   @media (max-width: $breakpoint-md - 1)
     max-width: 100%
 
-.page
-  //anim(.2s)
-  min-height 100vh
-  display: flex
-  flex-direction column
-  will-change filter
-
-  &.mfp-body-open
-    filter: blur(10px)
-    overflow: hidden
+//.page
+//  //anim(.2s)
+//  min-height 100vh
+//  display: flex
+//  flex-direction column
+//  will-change filter
 
 .lazy
   visibility: hidden
@@ -124,42 +104,6 @@ ol
   &.lazy--visible
     visibility: visible
     opacity: 1
-
-.hamburger
-  width: 30px
-  height: 3px
-  background: #e00614
-  position: relative;
-  margin: 10px
-  margin-right: 0
-  anim()
-
-  &:before, &:after
-    content: ''
-    position: absolute;
-    display: block;
-    width: 100%
-    height: 100%
-    right: 0
-    background: #e00614
-    anim()
-
-  &:before
-    top: -9px
-
-  &:after
-    bottom: -9px
-
-  &--active
-    width: 40px
-
-    &:before
-      width: 60%
-
-    &:after
-      width: 50%
-
-//transform none
 
 img[data-src],
 img[data-srcset]
@@ -198,92 +142,37 @@ img[data-srcset]
   &:hover:after
     opacity 1
 
-.rub
-  background: url(images/sprite-rouble.png)
-
-  &--red
-    background: url(images/sprite-rouble-red.png)
-
-.img
-  border: 2px solid #e43641;
-  border-radius: 5px;
-
 del, s
   text-decoration: line-through
-
-.big
-  font-size: 135%
 
 .center
   text-align: center;
 
-.paroller
-  will-change: transform;
-  transition: transform 0.1s ease-out !important;
-  @media (pointer: coarse)
-    transition none !important
-
-icons = jaluzi kovannaves lazer metal naves obicnaves otkat premnaves raspash vorota zabor
-.icon
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 8px
-  for sprite in icons
-    &--{sprite}
-      background: url('./images/sprite-bigForm-' + sprite + '.png')
-
-//@import "stylus/blocks/hero.styl"
 @import "stylus/blocks/btn.styl";
-////@import "stylus/blocks/btnGroup.styl";
-//@import "stylus/blocks/btnSub.styl";
-//@import "stylus/blocks/lines.styl";
-//@import "stylus/blocks/navBtn.styl";
-//@import "stylus/blocks/videoFrame.styl";
-//@import "stylus/blocks/title.styl";
-//@import "stylus/blocks/form.styl";
+@import "stylus/blocks/input.styl";
 @import "stylus/blocks/input.styl";
 @import "stylus/blocks/radio.styl";
 @import "stylus/blocks/panel.styl";
-//@import "stylus/blocks/card.styl";
-//@import "stylus/blocks/cardsList.styl";
 @import "stylus/blocks/wpcf7.styl";
-//@import "stylus/blocks/tabs.styl";
-//@import "stylus/blocks/politic.styl";
-////@import "stylus/select.styl";
+@import "stylus/blocks/card.styl";
+@import "stylus/blocks/arrowButton.styl";
+@import "stylus/blocks/moreBtn.styl";
+@import "stylus/blocks/select.styl";
+@import "stylus/blocks/newsCard.styl";
+@import "stylus/blocks/outlineBtn.styl";
 
 @import "modules/header/header.styl"
-@import "modules/welcome/welcome.styl"
-@import "modules/advantages/advantages.styl"
-@import "modules/about/about.styl"
-@import "modules/variants/variants.styl"
-@import "modules/examples/examples.styl"
-@import "modules/bigForm/bigForm.styl"
-@import "modules/steps/steps.styl"
-@import "modules/certificates/certificates.styl"
-@import "modules/contacts/contacts.styl"
+@import "modules/frontSlider/frontSlider.styl"
+@import "modules/frontInfo/frontInfo.styl"
+@import "modules/frontMenu/frontMenu.styl"
+@import "modules/frontLicenses/frontLicenses.styl"
+@import "modules/frontWork/frontWork.styl"
+@import "modules/frontNews/frontNews.styl"
+@import "modules/frontLinks/frontLinks.styl"
+
 @import "modules/footer/footer.styl"
-@import "modules/gallery/gallery.styl"
-@import "modules/blogList/blogList.styl"
-@import "modules/pagination/pagination.styl"
-@import "modules/blog/blog.styl"
-@import "modules/blogTags/blogTags.styl"
-@import "modules/idea/idea.styl"
-@import "modules/related/related.styl"
-@import "modules/catalog/catalog.styl"
-@import "modules/menu/menu.styl"
-@import "modules/testimonials/testimonials.styl"
-@import "modules/consult/consult.styl"
-@import "modules/catalogWelcome/catalogWelcome.styl"
-@import "modules/catalogMenu/catalogMenu.styl"
-@import "modules/catalogContent/catalogContent.styl"
-@import "modules/catalogAdvantages/catalogAdvantages.styl"
-@import "modules/catalogSelect/catalogSelect.styl"
-@import "modules/catalogPrices/catalogPrices.styl"
-@import "modules/catalogForm/catalogForm.styl"
-@import "modules/catalogVariants/catalogVariants.styl"
 @import "modules/photoswipe/photoswipe.styl"
 @import "modules/popup/mfp.styl"
 @import "modules/popup/popup.styl"
 @import "modules/popup/thank.styl"
 @import "modules/popup/akcii.styl"
-@import "modules/notFound/notFound.styl"

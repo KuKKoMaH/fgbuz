@@ -1,0 +1,59 @@
+.newsCard
+  display: block;
+  border: 0
+
+  &__image
+    height: 208px
+    overflow: hidden;
+    border-radius: 7px
+    position: relative;
+    margin-bottom: 1rem
+    @media (max-width: $breakpoint-lg - 1)
+      height: 157px
+
+    img
+      position: absolute;
+      top: 50%
+      left: 50%
+      transform translate(-50%, -50%)
+      min-width 100%
+      min-height 100%
+      width: auto;
+      height: auto;
+      transition: transform .3s ease-out, opacity .1s ease-out
+      opacity: 0
+
+      &.lazy--visible
+        opacity: 1
+
+  &__date
+    font-size: .85rem
+    opacity: .5
+    margin-bottom: 1rem
+
+  &__title
+    font-size: 1.25rem
+    color: #42bde4
+    line-height: 1.55
+    margin-bottom: .7rem
+    anim()
+
+  &__tags
+    margin-top: 1.2rem
+    display: flex;
+
+  &__tag
+    background: #fdedeb
+    border-radius: 3px
+    color: #e7533b
+    font-size: .85rem
+    margin-right: 7px
+    padding: 0 7px
+
+  &:hover
+    .newsCard
+      &__title
+        color: #e7533b
+      &__image img
+        transform translate(-50%, -50%) scale(1.1)
+

@@ -1,0 +1,57 @@
+.outlineBtn
+  position: relative;
+  display: inline-flex;
+  align-items center
+  justify-content center
+  border-radius: 7px
+  background: #ffffff
+  font-size: .85rem
+  color: #11262d
+  height: 48px
+  width: 178px
+  padding-left: 30px
+  border: 0
+  anim()
+  @media (max-width: $breakpoint-lg - 1)
+    height: 38px
+    font-size: .9rem
+    margin: 0 10px
+    flex: 1
+
+  &:before
+    content: ''
+    border-radius: 7px
+    position: absolute;
+    top: -1px
+    right: -1px
+    bottom: -1px
+    left: -1px
+    background: linear-gradient(to top, #42bde4, #76dbfc);
+    z-index: -1
+
+  &:hover
+    background: transparent !important
+    color: #ffffff
+    text-decoration: none;
+
+    svg
+      opacity: 0
+
+      &.hover
+        opacity: 1
+
+  svg
+    position: absolute;
+    top: 23px
+    left: 24px
+    width: 21px
+    height: 22px
+    fill: url(#icon-blue-gradient)
+    transform translate(-50%, -50%)
+    anim();
+    @media (max-width: $breakpoint-lg - 1)
+      top: 19px
+
+    &.hover
+      opacity: 0
+      fill #fff

@@ -1,56 +1,48 @@
 footer.footer
-  .footer__top.lines
-    .c.footer__menu
-      ul
-        li
-          a(href='#') Ворота
-          ul
-            li: a(href='#') Откатные ворота
-            li: a(href='#') Откатные ворота утепленные
-            li: a(href='#') Откатные ворота кованные
-            li: a(href='#') Откатные ворота лазерной резки премиум
-            li: a(href='#') Распашные ворота
-            li: a(href='#') Распашные ворота утепленные
-            li: a(href='#') Распашные ворота кованные
-            li: a(href='#') Распашные ворота лазерной резки премиум
-        li
-          a(href='#') Заборы
-          ul
-            li: a(href='#') Металлоштакетник
-            li: a(href='#') Забор-жалюзи из ламелей
-            li: a(href='#') Заборы лазерной резки премиум
-            li: a(href='#') Комплектующие для забора
-            li.highlight: a(href='#') Навесы
-            li: a(href='#') Навесы эконом класса
-            li: a(href='#') Навесы с элементами ковки
-            li: a(href='#') Навесы премиум класса
-        li
-          a(href='#') О нас
-          ul
-            li: a(href='#') Наш блог
-            li: a(href='#') Наши работы
-            li: a(href='#') Платежная информация
-            li: a(href='#') Онлайн оплата заказа
-
-      .footer__contacts
-        .footer__contactsHeader Контакты
-        .footer__contactsBody
-          p: b Для консультации - Звоните:#[br]
-          p #[b Тел:] +7 (812) 603-41-8
-          p #[b Пишите:] info@info.ru
-          p Ежедневно с 8:00 до 22:00
-          br
-          a.btn.popup__opener(href='#callback') ЗАКАЗАТЬ ЗВОНОК
-
-  .footer__bottom
-    .c: .footer__sup
+  .c
+    .footer__top
       .footer__left
-        .footer__company
-          svg.footer__logo: use(xlink:href="#logo")
-          .footer__info
-            |ООО "АВИСКОМ"#[br]
-            |ИНН 9999999999 | КПП 7999999999 | ОГРН 999999999
-        .footer__info Вся предоставленная на сайте информация ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 (2) Гражданского кодекса РФ
+        .footer__logo
+          | ФГБУЗ МСЧ №59#[br]
+          | ФМБА России
+        .footer__text Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+
+      .footer__menu
+        ul
+          li
+            a(href='#') qwe
+            ul
+              li: a(href='#') ГЛАВНАЯ
+              li: a(href='#') О НАС
+              li: a(href='#') НОВОСТИ
+              li: a(href='#') КОНТАКЫ
+              li: a(href='#') ВОПРОС-ОТВЕТ
+          li
+            a(href='#') qwe
+            ul
+              li: a(href='#') УПРАВЛЕНИЕ
+              li: a(href='#') ДЕТСКАЯ ПОЛИКЛИНИКА
+              li: a(href='#') ГОРОДСКАЯ ПОЛИКЛИНИКА
+              li: a(href='#') ПЕРИНАТАЛЬНЫЙ ЦЕНТР
+              li: a(href='#') ЦЕНТР ПСИХОНЕВРОЛОГИИ И НАРКОЛОГИИ
+              li: a(href='#') СТАЦИОНАР
+              li: a(href='#') ПЛАТНЫЕ МЕДИЦИНСКИЕ УСЛУГИ
+
       .footer__right
-        a.footer__link(href='https://gen-marketing.ru/' target='_blank'): img(src='modules/footer/making.png')
+        .footer__buttons
+          a.outlineBtn(href='#')
+            svg: use(xlink:href="#icon-stethoscope")
+            svg.hover: use(xlink:href="#icon-stethoscope")
+            | Запись на прием
+          a.outlineBtn(href='#')
+            svg: use(xlink:href="#icon-aid")
+            svg.hover: use(xlink:href="#icon-aid")
+            | Вызвать врача
+        .footer__contacts
+          .footer__label по всем вопросам
+          a.footer__phone(href='tel:123') +7 (8412) 60-10-14
+
+    .footer__bottom
+      .footer__counters
+      .footer__copyright ФГБУЗ МСЧ №59  ФМБА России @ 2019
 
