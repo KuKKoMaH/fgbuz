@@ -1,0 +1,72 @@
+.heads
+  @media screen and (max-width: $breakpoint-lg - 1)
+    margin-bottom: 4rem
+
+  &__card
+    font-size: 1px rem
+    margin-bottom: 1.5rem
+    padding: 32px 168px 36px 37px
+    border-radius: 7px
+    border: 1px solid #eef0f0
+    position: relative;
+    page-break-inside: avoid;
+    @media screen and (max-width: $breakpoint-lg - 1)
+      padding: 24px 28px 26px 28px
+
+    &--red
+      border-color: #e7533b
+
+    &--blue
+      border-color: #72d9fb
+
+  &__image
+    width: 113px
+    height: 113px
+    position: absolute;
+    right: 39px
+    top: 39px
+    border-radius: 50%
+    anim(.2s)
+    @media screen and (max-width: $breakpoint-lg - 1)
+      width: 70px
+      height: 70px
+      right: 29px
+      top: 29px
+
+  &__head
+    @media screen and (max-width: $breakpoint-lg - 1)
+      padding-right: 90px
+
+  &__name
+    font-size: 1.4rem
+    line-height: 1.5
+    font-weight: 500
+
+  &__position
+    font-size: .85rem
+    opacity: .5
+    @media screen and (max-width: $breakpoint-lg - 1)
+      font-size: 1rem
+
+  &__contacts
+    display: flex;
+    flex-wrap wrap
+    @media screen and (max-width: $breakpoint-lg - 1)
+      flex-direction column
+
+  &__contact
+    margin-top: 2rem
+    width: 50%
+    padding-right: 20
+    @media screen and (max-width: $breakpoint-lg - 1)
+      width: 100%
+      padding-right: 0
+
+  &__label
+    color: #42bde4
+    line-height: 1.55
+
+  &__value
+    font-size: 1.15rem
+    line-height: 1.5
+

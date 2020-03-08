@@ -71,7 +71,11 @@ gulp.task('css', function () {
     plugins = plugins.concat([
       cssnext({ browsers: ['last 10 versions', 'IE > 8'] }),
       mqpacker({ sort: require('../assets/sortMediaQueries') }),
-      cssnano()
+      cssnano({
+        preset: ['default', {
+          calc: false,
+        }],
+      })
     ]);
   }
 

@@ -1,0 +1,221 @@
+.record3
+  &__date
+    display: flex;
+    margin-top: 50px
+    @media screen and (max-width: $breakpoint-lg - 1)
+      margin-top: 28px
+
+  &__dateBtn
+    position: relative;
+    width: 70px
+    height: 70px
+    border-radius: 7px
+    border: 1px solid #c8ecf7
+    background: #ffffff
+    anim()
+    cursor: pointer;
+    @media screen and (max-width: $breakpoint-lg - 1)
+      width: 30px
+      height: 50px
+
+    svg
+      position: absolute;
+      width: 12px
+      height: 12px
+      top: 50%
+      left: 50%
+      margin-top: -6px
+      margin-left: -6px
+      fill #c8ecf7
+      anim()
+
+    &--next
+      svg
+        transform rotate(180deg)
+
+    &:hover
+      border-color: $blue
+
+      svg
+        fill $blue
+
+  &__dateInput
+    margin: 0 10px
+    position: relative;
+    width: 270px
+    border-radius: 7px
+    border: 1px solid #c8ecf7
+    background: #ffffff
+    display: flex;
+    padding-left: 28px
+    align-items center
+    font-size: 1.25rem
+    font-weight: 500
+    @media screen and (max-width: $breakpoint-lg - 1)
+      width: auto;
+      flex: 1
+      margin: 0 5px
+      font-size: 1rem
+      padding-left: 17px
+
+    svg
+      position: absolute;
+      width: 18px
+      height: 18px
+      top: 50%
+      margin-top: -9px
+      right: 20px
+      fill $blue
+
+  &__calendar
+    margin-top: 50px
+    @media screen and (max-width: $breakpoint-lg - 1)
+      margin-top: 10px
+      display: flex;
+
+  &__head
+    display: flex;
+    border-radius: 7px 7px 0 0
+    background: linear-gradient(to top, #42bde4, #76dbfc);
+    height: 64px
+    color: #ffffff
+    @media screen and (max-width: $breakpoint-lg - 1)
+      flex-direction column
+      height: auto;
+      width: 47px
+      border-radius: 7px 0 0 7px
+      background: linear-gradient(to right, #42bde4, #76dbfc);
+
+    > div
+      margin: 0
+      border: 0
+      border-left: 1px solid #7cd7f3
+      background: transparent
+      @media screen and (max-width: $breakpoint-lg - 1)
+        flex-shrink 0
+        border-left: 0
+        border-top: 1px solid #7cd7f3
+
+      &:first-child
+        border-left: 0
+        @media screen and (max-width: $breakpoint-lg - 1)
+          border-top: 0
+
+  &__body
+    //border-radius: 0 0 7px 7px
+    @media screen and (max-width: $breakpoint-lg - 1)
+      display: flex;
+
+  //  border-radius: 0 7px 7px 0
+
+  &__row
+    display: flex;
+    height: 44px
+    margin-top: -1px
+    @media screen and (max-width: $breakpoint-lg - 1)
+      flex-direction column
+      height: auto
+      width: 43px
+      margin-top: 1px
+      margin-left: -1px
+
+    &:last-child
+      div
+        &:first-child
+          border-radius: 0 0 0 7px
+          @media screen and (max-width: $breakpoint-lg - 1)
+            border-radius: 0 7px 0 0
+
+        &:last-child
+          border-radius: 0 0 7px 0
+
+    .record3
+      &__cell--available:hover
+        border-color: #27af4a
+        background: #27af4a
+        z-index: 3
+        color: #ffffff
+
+  &__cell
+    flex: 1
+    display: flex;
+    align-items center
+    justify-content center
+    height: 100%
+    font-size: 1.15rem
+    font-weight: 500
+    opacity: .5
+    border: 1px solid #eef0f0;
+    margin: 0 0 0 -1px
+    position: relative;
+    background: #fff
+    anim()
+    @media screen and (max-width: $breakpoint-lg - 1)
+      flex: auto
+      height: 45px
+      margin: -1px 0 0
+
+    &--active, &--available
+      opacity: 1
+
+    &--available
+      border-color: #27af4a
+      z-index: 1
+      cursor: pointer;
+
+    &--selected
+      border-color: #27af4a
+      background: #27af4a
+      z-index: 3
+      color: #ffffff
+
+    &--unavailable
+      opacity: 1
+      position: relative;
+      z-index: 2
+      border-color: #e9563e
+      background: #e9563e
+      color: rgba(#ffffff, .5)
+
+  &__legend
+    display: flex;
+    margin-top: 1.5rem
+    @media screen and (max-width: $breakpoint-lg - 1)
+      flex-direction column
+      margin-top: 1rem
+
+  &__legendItem
+    margin-right: 2rem
+    @media screen and (max-width: $breakpoint-lg - 1)
+      margin-right: 0
+      margin-top: 1rem
+
+    &:before
+      content ''
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 8px
+      width: 21px
+      height: 21px
+      border-radius: 3px
+      @media screen and (max-width: $breakpoint-lg - 1)
+        width: 16px
+        height: 16px
+
+    &--available:before
+      background: #ffffff
+      border: 1px solid #27af4a
+
+    &--unavailable:before
+      background: #e9563e
+
+    &--selected:before
+      background: #27af4a
+
+  &__selected
+    color: #27af4a
+    margin-top: 3rem
+    font-weight: 500
+    @media screen and (max-width: $breakpoint-lg - 1)
+      font-size: 1.2rem
+      margin-top: 2rem

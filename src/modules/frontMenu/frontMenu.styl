@@ -7,14 +7,14 @@
   &__cols
     display: flex;
     margin: 0 -15px
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       flex-direction column
       margin: 0
 
   &__col
     flex: 1
     margin: 0 15px
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       margin: 0 0 10px
 
   &__block
@@ -23,7 +23,7 @@
     margin-bottom: 30px
     padding: 32px 37px 41px
     anim()
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       margin-bottom: 10px
       padding: 24px 30px
 
@@ -41,7 +41,7 @@
 
 
     &--hasChildren
-      @media (max-width: $breakpoint-lg - 1)
+      @media screen and (max-width: $breakpoint-lg - 1)
         position: relative;
         &:hover
           border-color: #42bde4
@@ -58,9 +58,9 @@
         transform rotate(180deg)
 
   &__submenu
-    @media (min-width: $breakpoint-lg)
+    @media screen and (min-width: $breakpoint-lg)
       height: auto !important
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       height 0
       overflow: hidden;
       anim(.2s)
@@ -81,12 +81,12 @@
 
   &__item
     flex-shrink 0
-    @media (max-width: $breakpoint-lg - 1)
-      .card
+    @media screen and (max-width: $breakpoint-lg - 1)
+      .bannerCard
         margin: 0 auto
 
   .arrowButton
-    @media (min-width: $breakpoint-lg)
+    @media screen and (min-width: $breakpoint-lg)
       &--left
         left: -80px
 

@@ -1,0 +1,285 @@
+.record
+  letter-spacing 0.01em
+  @media screen and (max-width: $breakpoint-lg - 1)
+    margin-bottom: 4rem
+
+  &__progress
+    display: flex;
+    margin-bottom: 1rem
+
+  &__item
+    position: relative;
+    flex: 1
+    margin: 0 -1px
+    height: 70px
+    background: #fff0ed
+    text-align: center;
+    border-bottom: 5px solid #ece0de;
+    @media screen and (max-width: $breakpoint-lg - 1)
+      display: none;
+
+    &:first-child
+      &
+        border-radius: 6px 0 0 6px;
+
+      &:before
+        border-radius: 6px 0 0 0;
+
+    &:last-child
+      &
+        border-radius: 0 6px 6px 0;
+
+      &:before
+        border-radius: 0 6px 0 0;
+
+    &:before
+      content ''
+      position: absolute;
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      background: linear-gradient(to top, #eb5941, #faa497)
+      opacity: 0
+
+    &:after
+      content ''
+      position: absolute;
+      left: 2px
+      top: 2px
+      right: 2px
+      bottom: 2px
+      background: linear-gradient(to top, #e7533b, #fe735d)
+      opacity: 0
+
+    span
+      position: relative;
+      width: 100%
+      height: 100%
+      display: flex;
+      justify-content center
+      align-items center
+      font-weight: 500
+      color: #f3ada3
+      z-index: 1
+
+      &:before
+        content: ''
+        position: absolute;
+        top: 0
+        left: 0
+        bottom: 0
+        width 1px
+        background: #f5e8e5
+
+      &:after
+        content: ''
+        position: absolute;
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAQAAABKfvVzAAAAU0lEQVR42u3Suw3AIBRDUW9Bw1ZpWTtNRokiXQqE8hfPPa7P7SxWkj5H4eA1eZxNHidPPnn+e43FWeRxdnkc5PFnMOT3IMCvQYifQZD3IMxbYHCo0qxE5OWtnIAAAAAASUVORK5CYII=')
+        opacity: 0
+
+    &--complete, &--active
+      border-bottom: 5px solid #c84d3a;
+
+      &:before
+        opacity: 1
+
+      &:after
+        opacity: 1
+
+      span
+        color: #ffffff
+
+        &:before
+          opacity: 0
+
+    &--active
+      span
+        &:after
+          opacity: .07
+      @media screen and (max-width: $breakpoint-lg - 1)
+        display: block;
+        &
+          border-radius: 6px
+
+        &:before, &:after
+          border-radius: 6px 6px 0 0
+
+  &__steps
+    position: relative;
+    overflow: hidden;
+
+  &__step
+    position: absolute;
+    left: 0
+    width: 100%
+    opacity: 0
+    z-index: -1
+    pointer-events none;
+    visibility: hidden;
+    anim(.3s)
+
+    &--active
+      opacity: 1
+      z-index: 1
+      visibility: visible;
+      pointer-events all
+      position: static;
+
+  &__body
+    background: #f5fcfe
+    border-radius: 7px
+    padding: 39px 50px 50px
+    @media screen and (max-width: $breakpoint-lg - 1)
+      padding: 24px 31px 30px
+
+  &__header
+    font-size: 1.4rem
+
+  &__note
+    color: #e7533b
+    @media screen and (max-width: $breakpoint-lg - 1)
+      margin-top: .5rem
+
+  &__info
+    margin-top: 2.5rem
+    display: flex;
+    @media screen and (max-width: $breakpoint-lg - 1)
+      flex-direction column
+      margin-top: 2rem
+
+  &__infoItem
+    margin-right: 4rem
+    @media screen and (max-width: $breakpoint-lg - 1)
+      margin-right: 0
+      margin-bottom: 1.5rem
+
+  &__infoLabel
+    font-size: .85rem
+    opacity: .5
+    margin-bottom: -0.5rem
+    @media screen and (max-width: $breakpoint-lg - 1)
+      margin: 0
+
+  &__infoValue
+    color: #42bde4
+    text-decoration: underline;
+
+  &__summary
+    margin-top: 2.5rem
+    @media screen and (max-width: $breakpoint-lg - 1)
+      margin-top: 1.5rem
+      margin-bottom: 2rem
+
+  &__summaryItem
+    margin-bottom: 1.5rem
+    @media screen and (max-width: $breakpoint-lg - 1)
+      margin-bottom: 1rem
+
+  &__summaryLabel
+    opacity: .5
+
+  &__summaryValue
+    font-size: 1.15rem
+    @media screen and (max-width: $breakpoint-lg - 1)
+      font-size: 1.2rem
+
+    a
+      color: #42bde4
+      border: 0;
+      text-decoration: underline;
+      font-size: .85rem
+      margin-left: 8px
+      @media screen and (max-width: $breakpoint-lg - 1)
+        clear both
+
+      &:hover
+        text-decoration: none;
+
+  &__politic
+    margin-top: 3rem
+    @media screen and (max-width: $breakpoint-lg - 1)
+      margin-top: 2.5rem
+
+  &__form
+    margin-top: 3rem
+    @media screen and (max-width: $breakpoint-lg - 1)
+      margin-top: 2rem
+
+  &__row
+    display: flex;
+    margin-bottom: 15px
+    align-items center
+    @media screen and (max-width: $breakpoint-lg - 1)
+      flex-direction column
+      align-items flex-start
+
+  &__label
+    width: 180px
+    flex-shrink 0
+    @media screen and (max-width: $breakpoint-lg - 1)
+      width: auto;
+      margin-bottom: 3px
+
+  &__input
+    flex: 1
+    @media screen and (max-width: $breakpoint-lg - 1)
+      width: 100%
+
+  &__buttons
+    display: flex;
+    margin-top: 3.5rem
+    @media screen and (max-width: $breakpoint-lg - 1)
+      margin-top: 2rem
+      flex-direction column-reverse
+
+  &__prev
+    position: relative;
+    @media screen and (max-width: $breakpoint-lg - 1)
+      margin-top: 20px
+
+    svg
+      position: absolute;
+      fill #42bde4
+      width: 12px
+      height: 12px
+      top: 24px;
+      left: 20px;
+      z-index: 3
+
+    &:before
+      background: #cce2e8
+
+    &:after, span
+      background: linear-gradient(to top, #daf0f6, #e9faff);
+
+    //&:after
+
+    span
+      color: #42bde4
+
+  &__next
+    margin-left: auto;
+    position: relative;
+
+    svg
+      position: absolute;
+      fill #fff
+      width: 12px
+      height: 12px
+      top: 24px;
+      right: 20px;
+      z-index: 3
+      transform rotate(180deg)
+
+  &__warn
+    font-size: .85rem
+    margin-top: 3rem
+    @media screen and (max-width: $breakpoint-lg - 1)
+      text-align: center;
+
+@import "record3.styl"

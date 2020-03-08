@@ -1,15 +1,15 @@
 import Swiper      from 'swiper';
 import Breakpoints from 'breakpoints-js';
 
-export default (selector, props, initOptions) => {
+export default ( selector, props, initOptions ) => {
   const $wrapper = $(selector);
   if ($wrapper.length) {
-    $wrapper.each((i, el) => {
+    $wrapper.each(( i, el ) => {
       let slider = null;
 
       const initSlider = () => {
         if (slider) return;
-        slider = new Swiper(el, props);
+        slider = new Swiper(el, typeof props === 'function' ? props($wrapper) : props);
       };
 
       const destroySlider = () => {
@@ -33,6 +33,6 @@ export default (selector, props, initOptions) => {
       Breakpoints.on('lg', 'enter', () => {
         initOptions.lg ? initSlider() : destroySlider();
       });
-    })
+    });
   }
 }

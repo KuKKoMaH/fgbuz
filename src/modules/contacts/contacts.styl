@@ -1,0 +1,90 @@
+.contacts
+  margin-bottom: 3rem
+  font-size: 1rem
+  @media screen and (max-width: $breakpoint-lg - 1)
+    margin-bottom: 3.5rem
+
+  &__items
+    display: flex;
+    flex-wrap wrap
+    margin: -15px
+    @media screen and (max-width: $breakpoint-lg - 1)
+      margin: 0
+      flex-direction column
+    @media print
+      display: block;
+      margin: 0
+
+  &__item
+    width: 50%
+    padding: 15px
+    page-break-inside: avoid;
+    @media screen and (max-width: $breakpoint-lg - 1)
+      width: 100%
+      padding: 0 0 10px
+      &:last-child
+        padding-bottom: 0
+    @media print
+      padding: 0 0 10px
+      width: 100%
+      &:last-child
+        padding-bottom: 0
+
+  &__card
+    border: 1px solid #eef0f0
+    border-radius: 7px
+    padding: 32px 39px 39px
+    @media screen and (max-width: $breakpoint-lg - 1)
+      padding: 24px 28px 29px
+
+  &__title
+    font-size: 1.4rem
+    line-height: 1.5
+    font-weight: 500
+    margin-bottom: 1.5rem
+    @media screen and (max-width: $breakpoint-lg - 1)
+      margin-bottom: 2rem
+
+  &__address
+    position: relative;
+    line-height: 1.55
+    padding-left: 25px
+    margin-bottom: 1rem
+    @media screen and (max-width: $breakpoint-lg - 1)
+      margin-bottom: 2rem
+
+    svg
+      fill: url(#icon-blue-gradient)
+      width: 20px
+      height: 20px
+      position: absolute;
+      top: 0
+      left: 0
+
+  &__contacts
+    margin-bottom: 2rem
+
+  &__contact
+    margin-bottom: 1rem
+
+  &__label
+    font-size: .85rem
+    opacity: .5
+    margin-bottom: -0.5rem
+
+  &__phone
+    border: 0
+    font-size: 1.25rem
+    color: $blue
+    anim()
+    @media screen and (max-width: $breakpoint-lg - 1)
+      font-size: 1.6rem
+
+    &:hover
+      color: $red
+
+  &__map
+    height: 191px
+    border-radius: 7px
+    background: #eef0f0
+    overflow: hidden;

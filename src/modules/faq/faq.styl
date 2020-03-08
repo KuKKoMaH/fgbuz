@@ -1,0 +1,66 @@
+.faq
+  @media screen and (max-width: $breakpoint-lg - 1)
+    margin-bottom: 4rem
+
+  &__item
+    font-size: 1rem
+    border: 1px solid #eef0f0
+    border-radius: 7px
+    margin-bottom: 2rem
+    padding: 19px 40px 30px
+    anim()
+    cursor: pointer;
+    @media screen and (max-width: $breakpoint-lg - 1)
+      padding: 23px 29px 24px
+      margin-bottom: 1rem
+
+    &:hover
+      border-color: #6ed7f9
+
+      .faq__question
+        p
+          color: #6ed7f9
+
+
+  &__question
+    position: relative;
+
+    p
+      anim()
+      margin-bottom: 1rem
+      @media screen and (max-width: $breakpoint-lg - 1)
+        font-size: 1.2rem
+
+  &__name
+    margin-top: 1rem
+    opacity: .5
+
+  &__date
+    position: absolute;
+    right: 0
+    bottom: 0
+    color: #42bde4
+    font-style normal
+    @media screen and (max-width: $breakpoint-lg - 1)
+      position: static;
+      margin-top: 1rem
+
+  &__inner
+    border-top: 1px solid #eef0f0
+    margin-top: 2.5rem
+    padding-top: 2rem
+    font-style italic
+    position: relative;
+    @media screen and (max-width: $breakpoint-lg - 1)
+      padding-top: 2.5rem
+
+    p
+      margin-bottom: 1rem
+
+  &__answer
+    height 0
+    overflow: hidden;
+    anim(.3s)
+    @media print
+      height: auto;
+

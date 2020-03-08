@@ -1,0 +1,58 @@
+.comment-respond
+  margin-top: 2rem
+  padding-top: 1rem
+  border-top: 1px solid #eef0f0;
+  @media print
+    display: none;
+
+.comment-reply-title
+  font-size: 1.4rem
+  font-weight: 500
+
+.comment-notes, .logged-in-as
+  font-size: .85rem
+  opacity: .5
+  margin 0 0 1rem
+
+.comment-form-comment,
+.comment-form-author,
+.comment-form-email,
+.comment-form-url
+  margin-bottom: 1rem
+
+  label
+    display: block;
+    font-size: 1rem
+
+  input, textarea
+    display: block
+    width: 100%
+    background: #fff
+    border: 1px solid #d0eef8
+    border-radius: 7px
+    padding: 23px 20px
+    font-size: 16px
+    line-height: 1
+    anim()
+    @media (max-width: $breakpoint-lg - 1)
+      font-size: 12px
+      padding: 17px 20px 16px
+
+    &:hover, &:focus
+      border-color: #42bde4
+
+    &--textarea
+      resize: none
+      min-width 100%
+      max-width 100%
+      line-height: 1.2
+
+    &.wpcf7-not-valid
+      border-color: red
+
+  textarea
+    line-height: 1.45
+
+.comment-meta
+  font-size: .85rem
+  opacity: .5

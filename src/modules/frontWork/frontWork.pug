@@ -2,46 +2,72 @@
   .c
     .frontWork__left
       h2 Режим работы
-      select.select
-        option(value='Стационар') Стационар
-        option(value='Поликлиника') Поликлиника
-      .frontWork__row
-        svg: use(xlink:href="#icon-geo")
-        .frontWork__address г. Заречный, ул. Спортивная, д.8.
-        a.frontWork__map(href='#') Карта проезда
+      select.select#frontWork-select
+        option(value='1') Стационар
+        option(value='2') Поликлиника
+      .frontWork__place#frontWork-1
+        .frontWork__row
+          svg: use(xlink:href="#icon-geo")
+          .frontWork__address г. Заречный, ул. Спортивная, д.8.
+          a.frontWork__map(href='#') Карта проезда
 
-      .frontWork__phones
-        .frontWork__inner
-          .frontWork__info
-            .frontWork__primary
-              .frontWork__label Хирургическое отделение
-              .frontWork__phone +7 (8412) 60-10-02
-            .frontWork__aside
-              .frontWork__days ежедневно
-              .frontWork__hours 08#[sup 30] – 10#[sup 00]
-          .frontWork__info
-            .frontWork__primary
-              .frontWork__label Хирургическое отделение
-              .frontWork__phone +7 (8412) 60-10-02
-            .frontWork__aside
-              .frontWork__days ежедневно
-              .frontWork__hours 08#[sup 30] – 10#[sup 00]
-          .frontWork__info
-            .frontWork__primary
-              .frontWork__label Хирургическое отделение
-              .frontWork__phone +7 (8412) 60-10-02
-            .frontWork__aside
-              .frontWork__days ежедневно
-              .frontWork__hours 08#[sup 30] – 10#[sup 00]
-          .frontWork__info
-            .frontWork__primary
-              .frontWork__label Хирургическое отделение
-              .frontWork__phone +7 (8412) 60-10-02
-            .frontWork__aside
-              .frontWork__days ежедневно
-              .frontWork__hours 08#[sup 30] – 10#[sup 00]
-        .frontWork__track
-          .frontWork__bar
+        .frontWork__phones
+          .frontWork__inner
+            .frontWork__info
+              .frontWork__primary
+                .frontWork__label Хирургическое отделение
+                .frontWork__phone +7 (8412) 60-10-02
+              .frontWork__aside
+                .frontWork__days ежедневно
+                .frontWork__hours 08#[sup 30] – 10#[sup 00]
+            .frontWork__info
+              .frontWork__primary
+                .frontWork__label Хирургическое отделение
+                .frontWork__phone +7 (8412) 60-10-02
+              .frontWork__aside
+                .frontWork__days ежедневно
+                .frontWork__hours 08#[sup 30] – 10#[sup 00]
+            .frontWork__info
+              .frontWork__primary
+                .frontWork__label Хирургическое отделение
+                .frontWork__phone +7 (8412) 60-10-02
+              .frontWork__aside
+                .frontWork__days ежедневно
+                .frontWork__hours 08#[sup 30] – 10#[sup 00]
+            .frontWork__info
+              .frontWork__primary
+                .frontWork__label Хирургическое отделение
+                .frontWork__phone +7 (8412) 60-10-02
+              .frontWork__aside
+                .frontWork__days ежедневно
+                .frontWork__hours 08#[sup 30] – 10#[sup 00]
+          .frontWork__track
+            .frontWork__bar
+
+      .frontWork__place#frontWork-2
+        .frontWork__row
+          svg: use(xlink:href="#icon-geo")
+          .frontWork__address г. Заречный, ул. Спортивная, д.8.
+          a.frontWork__map(href='#') Карта проезда
+
+        .frontWork__phones
+          .frontWork__inner
+            .frontWork__info
+              .frontWork__primary
+                .frontWork__label Хирургическое отделение
+                .frontWork__phone +7 (8412) 60-10-02
+              .frontWork__aside
+                .frontWork__days ежедневно
+                .frontWork__hours 08#[sup 30] – 10#[sup 00]
+            .frontWork__info
+              .frontWork__primary
+                .frontWork__label Хирургическое отделение
+                .frontWork__phone +7 (8412) 60-10-02
+              .frontWork__aside
+                .frontWork__days ежедневно
+                .frontWork__hours 08#[sup 30] – 10#[sup 00]
+          .frontWork__track
+            .frontWork__bar
 
     .frontWork__right
       .frontWork__item

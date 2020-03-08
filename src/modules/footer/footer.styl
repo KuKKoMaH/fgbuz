@@ -2,32 +2,36 @@
   background: #11262d
   padding: 6rem 0 0
   color: #ffffff
-  @media (max-width: $breakpoint-lg - 1)
+  @media screen and (max-width: $breakpoint-lg - 1)
     padding: 3rem 0 0
+  @media print
+    display: none;
 
   &__top
     display: flex;
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       flex-direction column
       position: relative;
 
   &__left
     width: 300px
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       width: 100%
       margin-bottom: 15rem
 
   &__logo
+    display: block;
     flex-shrink 0
     position: relative;
-    padding-left: 67px
-    padding-top: 4px
+    padding: 4px 0 0 67px;
     font-size: 1.15rem
     font-weight: 600
     line-height: 1.5
     margin-bottom: 1.5rem
+    border: 0
+    color: #ffffff
 
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       padding: 4px 0 4px 35px
       br
         display: none;
@@ -39,7 +43,7 @@
       top: 50%
       transform translateY(-50%)
       background: url(../../images/sprite-logo.png)
-      @media (max-width: $breakpoint-lg - 1)
+      @media screen and (max-width: $breakpoint-lg - 1)
         transform-origin 0 0
         top: 0
         transform scale(.5)
@@ -48,12 +52,12 @@
     font-size: .85rem
     opacity: .25
     max-width 180px
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       max-width none
 
   &__menu
     flex: 1
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       border-top: 1px solid #293c42
       padding-top: 2.5rem
 
@@ -84,7 +88,7 @@
       color: #ffffff
       opacity: .5
       border: 0
-      @media (max-width: $breakpoint-lg - 1)
+      @media screen and (max-width: $breakpoint-lg - 1)
         font-size: 1.2rem
 
       &:hover
@@ -94,7 +98,7 @@
     position: relative;
     width: 180px
     z-index: 1
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       position: absolute;
       top: 8rem
       display: flex;
@@ -109,14 +113,14 @@
       background: #11262d
       color: #ffffff
       margin-bottom: 12px
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       display: flex;
       margin: 0 -10px
       & .outlineBtn
         margin: 0 10px
 
   &__contacts
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       margin-bottom: 3rem
 
   &__label
@@ -136,7 +140,7 @@
     margin-top: 4rem
     height: 70px
     align-items center
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       flex-direction column-reverse
       height: auto;
       margin-top: 2rem
@@ -146,6 +150,6 @@
     opacity: .25
     color: #ffffff
     margin-left: auto;
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       width: 100%
       text-align: center;

@@ -46,6 +46,7 @@
   "dependencies": {
     "@bijection/smoke": "^1.0.2",
     "@glidejs/glide": "^3.3.0",
+    "accessibility-buttons": "^3.1.2",
     "baron": "^3.0.3",
     "breakpoints-js": "^1.0.6",
     "countup.js": "^2.0.4",

@@ -8,7 +8,7 @@
     border-radius: 7px
     position: relative;
     margin-bottom: 1rem
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       height: 157px
 
     img
@@ -38,22 +38,15 @@
     margin-bottom: .7rem
     anim()
 
-  &__tags
-    margin-top: 1.2rem
-    display: flex;
-
-  &__tag
-    background: #fdedeb
-    border-radius: 3px
-    color: #e7533b
-    font-size: .85rem
-    margin-right: 7px
-    padding: 0 7px
+  &__text
+    p
+      margin-bottom: 1rem
 
   &:hover
     .newsCard
       &__title
         color: #e7533b
+
       &__image img
         transform translate(-50%, -50%) scale(1.1)
 

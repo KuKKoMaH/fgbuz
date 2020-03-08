@@ -1,7 +1,6 @@
 .btn
   display: inline-block
   position: relative
-  color: #ffffff
   font-weight: 500
   height: 55px
   //background: linear-gradient(to top, #4cc2e9, #a6e7fd);
@@ -9,7 +8,7 @@
   padding: 2px 2px 7px
   border: 0
   line-height: 1.25
-  @media (max-width: $breakpoint-lg - 1)
+  @media screen and (max-width: $breakpoint-lg - 1)
     font-size: 1.4rem
 
   //border-bottom: 5px solid #3aa6ca;
@@ -36,6 +35,7 @@
     anim()
 
   span
+    color: #ffffff
     position: relative;
     display: flex;
     align-items center
@@ -83,4 +83,9 @@
 
   &--block
     width: 100%
-    padding: 0
+
+  &--big
+    height: 70px
+    width: 250px
+    @media screen and (max-width: $breakpoint-lg - 1)
+      width: 100%

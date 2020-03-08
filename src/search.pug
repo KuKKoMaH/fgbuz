@@ -1,0 +1,30 @@
+extends pug/_layout
+
+block body
+  .c
+    .page
+      .page__container
+        a.backButton(href='#')
+          svg: use(xlink:href="#icon-back")
+          | Назад
+        .breadcrumbs
+          span Главная
+          span.sep …
+          span Поиск по сайту
+        h1 Поиск по сайту
+
+        .searchBlock__label Введите ключевые слова для поиска
+        .searchBlock__block
+          .searchBlock__input
+            input
+            .searchBlock__tags
+              a.searchBlock__tag(href='#') Запись к врачу
+              a.searchBlock__tag(href='#') Контакты
+              a.searchBlock__tag(href='#') Время работы
+              a.searchBlock__tag(href='#') Запись к врачу
+              a.searchBlock__tag(href='#') Контакты
+              a.searchBlock__tag(href='#') Время работы
+          .searchBlock__button: button.btn: span Поиск
+
+        include modules/searchResults/searchResults
+

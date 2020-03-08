@@ -1,0 +1,113 @@
+extends pug/_layout
+
+block body
+  .c
+    .page
+      .page__container
+        a.backButton(href='#')
+          svg: use(xlink:href="#icon-back")
+          | Назад
+        .breadcrumbs
+          span Главная
+          span.sep …
+          span Руководство ФГБУЗ МСЧ №59
+        h1 Руководство ФГБУЗ МСЧ №59
+        .page__meta
+          a(href="") PDF
+          //|#{' | '}
+          a(href="") Печать
+          //|#{' | '}
+          a(href="") E-mail
+        .content
+
+          table
+            thead
+              tr
+                th ФИО
+                th Должность
+                th График работы
+            //tbody
+            //  tr
+            //    td(colspan=3) Отдел платных медицинских услуг
+            tbody
+              tr
+                td Петров Иван Иванович
+                td Старшая медсестра
+                td
+                  | пн - пт
+                  | 10:00 - 17:00
+                  | сб - вс
+                  | выходной
+              tr
+                td Ермакова Наталья Геннадьевна
+                td Заведующая отделением
+                td
+                  | ежедневно
+                  | 8:00 - 12:00
+
+
+          blockquote
+            p Хорошо бы еще немного поспать и забыть всю эту чепуху», – подумал он, но это было совершенно неосуществимо, он привык спать на правом боку, а в теперешнем своем.
+            cite Фамилия Имя, должность
+
+          a.document(href='#')
+            svg: use(xlink:href="#icon-file")
+            span Обзор изменений Федерального закона от 29.11.2010 N 326-ФЗ "Об обязательном медицинском страховании в Российской Федерации"
+
+          figure.wp-block-image
+            img(src='images/image1.jpg')
+            figcaption фото из источика «Название»
+
+          p Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое. Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой коричневый, выпуклый, разделенный дугообразными чешуйками живот, на верхушке которого еле держалось готовое вот-вот окончательно сползти одеяло.
+
+          .slider
+            .slider__items
+              .slider__item
+                img(src='modules/frontSlider/frontSlider-img.jpg')
+                .slider__title Название слайда
+              .slider__item
+                img(src='images/news-img.jpg')
+                .slider__title Название слайда
+            .arrowButton.arrowButton--left: svg: use(xlink:href="#icon-back")
+            .arrowButton.arrowButton--right: svg: use(xlink:href="#icon-back")
+
+          .youtube(data-url='https://www.youtube.com/embed/zpOULjyy-n8?rel=0&autoplay=1')
+            img.lazy(data-src='modules/frontSlider/frontSlider-img.jpg')
+            svg: use(xlink:href="#icon-youtube")
+
+          include modules/heads/heads
+          include modules/contacts/contacts
+          include modules/faq/faq
+          include modules/comments/comments
+      .page__aside
+        a.bannerCard.page__asideBlock(href='#')
+          img.lazy(data-src='images/card-img-1.jpg')
+          span Информация для пациентов
+
+        a.smallCard.page__asideBlock(href='#')
+          .smallCard__date.small 02 февраля 2019 в 15:51
+          .smallCard__title Проснувшись однажды утром после беспокойного сна
+          .smallCard__text Проснувшись однажды утром после беспокойного сна, Грегор Замзеа обнаружил, что он у себя в постели ...
+          .tags
+            span аудио
+            span видео
+            span фото
+
+        a.smallCard.page__asideBlock(href='#')
+          .smallCard__date.small 02 февраля 2019 в 15:51
+          .smallCard__title Проснувшись однажды утром после беспокойного сна
+          .smallCard__text Проснувшись однажды утром после беспокойного сна, Грегор Замзеа обнаружил, что он у себя в постели ...
+          .tags
+            span аудио
+            span видео
+            span фото
+
+        .page__asideBlock: .btn.btn--block: span Кнопка
+
+        .page__asideBlock: .page__asideLink: a(href='#') Рейтинг врачей
+        .page__asideBlock: .page__submenu
+          .page__submenuTitle Название раздела
+          ul
+            li: a(href='#') Подраздел
+            li: a(href='#') Еще один пункт
+            li: a(href='#') Узкие специалисты

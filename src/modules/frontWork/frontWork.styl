@@ -1,24 +1,24 @@
 .frontWork
   background: #f5fcfe
   padding: 5rem 0
-  @media (max-width: $breakpoint-lg - 1)
+  @media screen and (max-width: $breakpoint-lg - 1)
     padding: 2rem 0
 
   .c
     display: flex;
     align-items flex-start
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       flex-direction column
 
   h2
     margin-bottom: 2rem
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       margin-bottom: 2.5rem
 
   &__left
     width: 470px
     flex-shrink 0
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       width: 100%
 
   &__row
@@ -43,7 +43,7 @@
     background: #ffffff
     border-radius: 7px
     position: relative;
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       height: 220px
 
     &._scrollbar
@@ -53,7 +53,7 @@
   &__inner
     padding: 34px 82px 34px 39px
     height: 100%
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       padding: 27px 30px
 
   &__info
@@ -75,7 +75,7 @@
     text-align: right;
 
   &__days
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       font-size: .9rem
 
   &__hours
@@ -87,7 +87,7 @@
     display: flex;
     margin: 0 -10px
     padding-left: 80px
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       flex-direction column
       margin: 0
       padding: 0
@@ -100,7 +100,7 @@
     padding: 30px 40px 40px
     display: flex;
     flex-direction column
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       margin: 10px 0px 0
       padding: 25px 30px 30px
 
@@ -108,12 +108,15 @@
       margin-top: auto;
       width: 100%
 
+    p
+      margin-bottom: 1rem
+
   &__header
     font-size: 1.25rem
     color: #e7533b
     margin-bottom: 1.5rem
     line-height: 1.7
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       margin-bottom: 1rem
 
   &__track
@@ -125,7 +128,7 @@
     right: 40px;
     border-radius: 3px
     display: none;
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       right: 13px
       top: 27px
       bottom: 27px

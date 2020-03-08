@@ -1,0 +1,39 @@
+extends pug/_layout
+
+block body
+  .c
+    .page
+      .page__container
+        a.backButton(href='#')
+          svg: use(xlink:href="#icon-back")
+          | Назад
+        .breadcrumbs
+          span Главная
+          span.sep …
+          span Запись на платный прием в МСЧ №59:
+        h1 Запись на платный прием в МСЧ №59:
+        include modules/record/record
+
+      .page__aside
+        a.bannerCard.page__asideBlock(href='#')
+          img.lazy(data-src='images/card-img-1.jpg')
+          span Информация для пациентов
+
+        a.smallCard.page__asideBlock(href='#')
+          .smallCard__date.small 02 февраля 2019 в 15:51
+          .smallCard__title Проснувшись однажды утром после беспокойного сна
+          .smallCard__text Проснувшись однажды утром после беспокойного сна, Грегор Замзеа обнаружил, что он у себя в постели ...
+          .tags
+            span аудио
+            span видео
+            span фото
+
+        a.smallCard.page__asideBlock(href='#')
+          .smallCard__date.small 02 февраля 2019 в 15:51
+          .smallCard__title Проснувшись однажды утром после беспокойного сна
+          .smallCard__text Проснувшись однажды утром после беспокойного сна, Грегор Замзеа обнаружил, что он у себя в постели ...
+          .tags
+            span аудио
+            span видео
+            span фото
+

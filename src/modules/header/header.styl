@@ -1,6 +1,8 @@
 .header
-  @media (max-width: $breakpoint-lg - 1)
+  @media screen and (max-width: $breakpoint-lg - 1)
     padding-bottom: 2rem
+  @media print
+    display: none;
   &:before
     content ''
     display: block;
@@ -8,7 +10,7 @@
     left: 0
     width: 100%
     background: linear-gradient(to bottom, #42bde4, #76dbfc);
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       background: linear-gradient(to top, #42bde4, #76dbfc);
       height: 45px
 
@@ -18,7 +20,7 @@
     align-items center
     height: 110px
     justify-content space-between
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       flex-wrap wrap
       padding-top: 20px
       height: auto;
@@ -26,7 +28,8 @@
   &__blind
     position: absolute;
     top: 0;
-    left: calc(50% - 575px - (50% - 575px) / 2);
+
+    left: calc(25% - 287px);
     background: #24b4e2
     border-radius: 0 0 7px 7px
     font-size: 0
@@ -34,7 +37,7 @@
     height: 50px
     z-index: 1
     anim()
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       position: static;
       width: 100%
       border-radius: 5px
@@ -52,19 +55,19 @@
       width: 38px
       height: 24px
       vertical-align: middle;
-      @media (max-width: $breakpoint-lg - 1)
+      @media screen and (max-width: $breakpoint-lg - 1)
         margin-right: 8px
 
   &__logo
     flex-shrink 0
     position: relative;
-    padding-left: 67px
-    padding-top: 4px
+    padding: 4px 0 0 67px;
     font-size: 1.15rem
     font-weight: 600
     line-height: 1.5
+    border: 0
 
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       padding-left: 35px
       padding-top: 0
 
@@ -75,7 +78,7 @@
       top: 50%
       transform translateY(-50%)
       background: url(../../images/sprite-logo.png)
-      @media (max-width: $breakpoint-lg - 1)
+      @media screen and (max-width: $breakpoint-lg - 1)
         transform-origin 0 0
         top: 0
         transform scale(.5)
@@ -84,7 +87,7 @@
     flex-shrink 0
     position: relative;
     padding-left: 25px
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       font-size: .9rem
 
     svg
@@ -99,10 +102,10 @@
   &__buttons
     flex-shrink 0
     margin: 0 -5px
-    @media (max-width: $breakpoint-lg - 1)
-      width calc(100% + 20px)
+    @media screen and (max-width: $breakpoint-lg - 1)
+      width calc(100% + 8px)
       display: flex;
-      margin: 12px -10px 0
+      margin: 12px -4px 0
 
     .outlineBtn
       margin: 0 5px
@@ -134,7 +137,7 @@
       &.close
         opacity: 0
 
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       position: absolute;
       top: 0
       left: 50%
@@ -183,12 +186,12 @@
               opacity: 1
 
 
-    @media (max-width: $breakpoint-md - 1)
+    @media screen and (max-width: $breakpoint-md - 1)
       left: auto;
       right: 20px
 
   &__contacts
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       position: absolute;
       top: 7px
       left: 0
@@ -199,7 +202,7 @@
     font-size: .85rem
     opacity: .5
     margin-bottom: -3px
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       opacity: .75
       color: #ffffff
 
@@ -212,7 +215,7 @@
     &:hover
       color: $black
 
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       color: #ffffff
 
   &__bottom
@@ -226,7 +229,7 @@
       flex: 1
       margin: 0
       padding: 0
-      @media (max-width: $breakpoint-lg - 1)
+      @media screen and (max-width: $breakpoint-lg - 1)
         display: none;
 
       > li
@@ -287,14 +290,14 @@
     flex-shrink 0
     //height: 100%
     background: linear-gradient(to top, #66cae9, #8fe2fc);
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       position: absolute;
       top: 0
       right: 50%
       margin-right: 295px
       width: 45px
       height: 45px
-    @media (max-width: $breakpoint-md - 1)
+    @media screen and (max-width: $breakpoint-md - 1)
       right: auto;
       left: 20px
 
@@ -336,5 +339,5 @@
         opacity: 1
 
 
-@import "search.styl"
+@import "searchBlock.styl"
 @import "menu.styl"

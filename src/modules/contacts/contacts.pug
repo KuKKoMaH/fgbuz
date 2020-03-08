@@ -1,0 +1,15 @@
+.contacts
+  .contacts__items
+    each i in [1,2,3,4]
+      .contacts__item: .contacts__card
+        .contacts__title Городская поликлиника МСЧ №59
+        .contacts__address
+          svg: use(xlink:href="#icon-geo")
+          | г. Заречный, Пензенской области, ул. Спортивная, д.8
+        .contacts__contacts
+          .contacts__contact
+            .contacts__label по всем вопросам
+            a.contacts__phone(href='#') +7 (8412) 60-10-14
+
+        .contacts__map(data-center='[53.194756, 45.179986]' data-zoom=16)
+

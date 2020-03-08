@@ -11,7 +11,7 @@
   visibility: hidden;
   z-index: 3
   anim(.2s)
-  @media (max-width: $breakpoint-lg - 1)
+  @media screen and (max-width: $breakpoint-lg - 1)
     top: 45px
     padding: 0
 
@@ -39,7 +39,7 @@
         display: block;
 
 
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       overflow: hidden;
       padding: 51px 0 0
 
@@ -62,7 +62,7 @@
     height: 100%
     display: flex;
     -webkit-overflow-scrolling: touch;
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       flex-direction column
       anim(.3s)
 
@@ -74,12 +74,12 @@
 
   &__aside
     flex: 1
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       flex 0
       margin-bottom: 4rem
 
     ul
-      @media (max-width: $breakpoint-lg - 1)
+      @media screen and (max-width: $breakpoint-lg - 1)
         display: flex;
         flex-wrap wrap
         max-width 400px
@@ -87,7 +87,7 @@
 
     li
       margin-bottom: 1.3rem
-      @media (max-width: $breakpoint-lg - 1)
+      @media screen and (max-width: $breakpoint-lg - 1)
         width: 50%
         margin-bottom: 1.7em
 
@@ -101,7 +101,7 @@
 
     & > ul
       display: flex;
-      @media (max-width: $breakpoint-lg - 1)
+      @media screen and (max-width: $breakpoint-lg - 1)
         flex-direction column
 
       & > li
@@ -112,7 +112,7 @@
           font-weight: 500
           border: 0
           color: $black
-          @media (max-width: $breakpoint-lg - 1)
+          @media screen and (max-width: $breakpoint-lg - 1)
             position: relative;
             flex: auto
             height: 6.3rem
@@ -129,7 +129,7 @@
 
         & > ul
           margin-top: 1.5rem
-          @media (max-width: $breakpoint-lg - 1)
+          @media screen and (max-width: $breakpoint-lg - 1)
             position: absolute;
             top: 0
             left: 100%
@@ -168,7 +168,7 @@
               overflow: hidden;
               max-height 0
               anim(.2s)
-              @media (max-width: $breakpoint-lg - 1)
+              @media screen and (max-width: $breakpoint-lg - 1)
                 max-height none !important
                 display: none;
                 position: absolute;
@@ -191,7 +191,7 @@
                 border: 0
 
     a
-      @media (max-width: $breakpoint-lg - 1)
+      @media screen and (max-width: $breakpoint-lg - 1)
         position: relative;
         flex: auto
         height: 6.3rem
@@ -202,7 +202,7 @@
         font-weight: 500
 
     li
-      @media (max-width: $breakpoint-lg - 1)
+      @media screen and (max-width: $breakpoint-lg - 1)
         position: static;
         margin: 0 !important
         &:first-child > a
@@ -224,8 +224,9 @@
       justify-content: center
 
       & > li
-        flex: 0 0 auto
+        flex: 0 1 auto
         margin: 0 1.5rem
+        min-width 0
 
         & > a
           display: none;
@@ -250,7 +251,7 @@
     right: 0px;
     border-radius: 3px
     display: none;
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       display: none;
 
   &__bar
@@ -263,7 +264,7 @@
 
   &__back
     display: none;
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       display: block;
       position: absolute;
       top: 20px

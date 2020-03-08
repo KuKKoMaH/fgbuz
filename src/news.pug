@@ -1,0 +1,16 @@
+extends pug/_layout
+
+block body
+  .c
+    .page
+      .page__container
+        a.backButton(href='#')
+          svg: use(xlink:href="#icon-back")
+          | Назад
+        .breadcrumbs
+          span Главная
+          span.sep …
+          span Новости
+        h1 Новости
+        include modules/news/news
+

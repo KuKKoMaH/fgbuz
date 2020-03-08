@@ -66,17 +66,17 @@ import baron       from 'baron';
 // checkMenuFixed();
 //
 
-const $search = $('.search');
-const searchActiveClass = 'search--active';
+const $search = $('.searchBlock');
+const searchActiveClass = 'searchBlock--active';
 const toggleSearch = () => {
   $search.toggleClass(searchActiveClass);
   $('.header__search').toggleClass('header__search--active');
 };
 
 $('.header__search').on('click', toggleSearch);
-$('.search__close').on('click', toggleSearch);
+$('.searchBlock__close').on('click', toggleSearch);
 $search.on('click', ( e ) => {
-  if (!$(e.target).closest('.search__container').length) toggleSearch();
+  if (!$(e.target).closest('.searchBlock__container').length) toggleSearch();
 });
 
 
@@ -87,7 +87,8 @@ $('.header__hamburger').on('click', ( e ) => {
   $(e.delegateTarget).toggleClass('header__hamburger--active');
 });
 
-$('.menu__primary a').on('click', ( e ) => {
+$('.menu__primary li.menu-item-has-children > a').on('click', ( e ) => {
+  e.preventDefault();
   const $el = $(e.delegateTarget);
 
   $el.parent('li').toggleClass('active');
@@ -143,9 +144,9 @@ Breakpoints.on('lg', 'enter', init);
 
 $('.header__menu > ul > li.menu-item-has-children').on('mouseenter', ( e ) => {
   const $el = $(e.delegateTarget);
-  $el.find('.menu').addClass('menu--active')
+  $el.find('.menu').addClass('menu--active');
 });
 $('.header__menu > ul > li.menu-item-has-children').on('mouseleave', ( e ) => {
   const $el = $(e.delegateTarget);
-  $el.find('.menu').removeClass('menu--active')
+  $el.find('.menu').removeClass('menu--active');
 });

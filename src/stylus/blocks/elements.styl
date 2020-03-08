@@ -1,0 +1,47 @@
+
+.tags
+  margin-top: 1.2rem
+  display: flex;
+
+  span
+    background: #fdedeb
+    border-radius: 3px
+    color: #e7533b
+    font-size: .85rem
+    margin-right: 7px
+    padding: 0 7px
+
+.backButton
+  display: block;
+  position: absolute;
+  font-size: .85rem
+  font-weight: 500
+  background: #f5fcfe
+  border: 1px solid #42bde4
+  border-radius: 7px
+  //left: calc(50% - 575px - (50% - 575px) / 2);
+  left: calc(25% - 287px);
+  padding: 8px 12px 7px 28px
+  margin-top: -3.5rem
+  @media screen and (max-width: $breakpoint-lg - 1)
+    position: relative;
+    left: 0
+    margin-top: 0
+    width: 100%
+    text-align: center;
+    padding: 7px 12px 6px 28px
+    border-radius: 5px
+    margin-bottom: 3.5rem
+  @media print
+    display: none;
+
+  svg
+    position: absolute;
+    width: 9px
+    height: 9px
+    fill #42bde4
+    left: 12px;
+    top: 14px;
+    @media screen and (max-width: $breakpoint-lg - 1)
+      left: 7px;
+      top: 10px;

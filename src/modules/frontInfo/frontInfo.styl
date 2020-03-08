@@ -12,21 +12,24 @@
     margin-bottom: 1.5rem
     font-weight: 600
     width: 100%
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       font-size: 1.6rem
       margin-bottom: .5rem
 
   &__text
     margin-bottom: 2.4rem
     width: 100%
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       margin-bottom: 5rem
+
+    p
+      margin-bottom: 1rem
 
   &__buttons
     display: flex;
     margin-bottom: 5.5rem
     width: 100%
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       flex-direction column
       max-width 400px
       margin-bottom: 0
@@ -42,7 +45,7 @@
     padding: 10px 32px 10px 103px
     justify-content center
     flex-direction column
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       min-height auto
       margin-right: 0
       margin-bottom: 10px
@@ -72,7 +75,7 @@
     display: flex;
     justify-content space-between
     width: 100%
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       flex-direction column
       max-width 400px
 
@@ -86,7 +89,7 @@
     flex-direction column
     justify-content center
     padding-left: 50px
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       height: 280px
       width: 100%
       margin-bottom: 10px
@@ -99,7 +102,7 @@
       bottom: 0
       opacity: 0
       anim()
-      @media (max-width: $breakpoint-lg - 1)
+      @media screen and (max-width: $breakpoint-lg - 1)
         position: static;
         width: auto;
         max-height 110px
@@ -125,5 +128,5 @@
     line-height: 1.35
     font-weight: 500
     margin-bottom: 1.5rem
-    @media (max-width: $breakpoint-lg - 1)
+    @media screen and (max-width: $breakpoint-lg - 1)
       font-size: 1.6rem

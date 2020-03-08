@@ -1,0 +1,40 @@
+.searchResults
+  margin-top: 5rem
+  @media screen and (max-width: $breakpoint-lg - 1)
+    margin-top: 3rem
+
+  &__total
+    font-size: 1.15em
+    margin-bottom: 1.5rem
+    @media screen and (max-width: $breakpoint-lg - 1)
+      font-size: 1.4rem
+
+  &__item
+    display: block;
+    border: 1px solid #eef0f0
+    border-radius: 7px
+    margin-top: 15px
+    padding: 31px 39px 33px
+    anim()
+    @media screen and (max-width: $breakpoint-lg - 1)
+      border-radius: 5px
+      padding: 22px 28px 23px
+      margin-top: 10px
+
+    &:hover
+      border-color: $blue
+
+  &__title
+    font-size: 1.15rem
+    font-weight: 500
+    color: #50c5eb
+    margin-bottom: 1rem
+    @media screen and (max-width: $breakpoint-lg - 1)
+      font-size: 1.4rem
+
+  &__text
+    @media screen and (max-width: $breakpoint-lg - 1)
+      font-size: 1.2rem
+
+    > *:last-child
+        margin-bottom: 0

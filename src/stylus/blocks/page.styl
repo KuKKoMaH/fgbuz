@@ -1,0 +1,71 @@
+.page
+  display: flex;
+  padding: 5.5rem 0
+  @media screen and (max-width: $breakpoint-lg - 1)
+    flex-direction column
+    padding: 0 0 3rem
+
+  &__container
+    flex: 1
+    min-width 0
+
+  &__aside
+    width: 270px
+    flex-shrink 0
+    margin-left: 30px
+    @media screen and (max-width: $breakpoint-lg - 1)
+      margin-left: 0
+      width: 100%
+    @media print
+      display: none;
+
+  &__asideBlock
+    position: relative;
+    margin-bottom: 2rem
+    z-index: 1
+    @media screen and (max-width: $breakpoint-lg - 1)
+      margin-bottom: 1rem
+
+  &__asideLink
+    border: 1px solid #eef0f0
+    border-radius: 7px
+    font-size: 1.15rem
+    text-align: center;
+    font-weight: 500
+    padding: 1rem .5rem 1.5rem
+    @media screen and (max-width: $breakpoint-lg - 1)
+      border-radius: 5px
+
+  &__submenu
+    border: 1px solid #eef0f0
+    border-radius: 7px
+    padding: 1rem 2rem .5rem
+    @media screen and (max-width: $breakpoint-lg - 1)
+      border-radius: 5px
+
+    li
+      padding: 0
+
+      &:before
+        display: none;
+
+  &__submenuTitle
+    font-size: 1.4rem
+    font-weight: 500
+    margin-bottom: 1rem
+
+
+  &__meta
+    margin-top: -2rem
+    margin-bottom: 3rem
+    font-size: .85rem
+    font-style: italic;
+    @media screen and (max-width: $breakpoint-lg - 1)
+      margin-top: -2.5rem
+      margin-bottom: 3.5rem
+
+    @media print
+      display: none;
+
+    a
+      margin-right: .5rem

@@ -1,21 +1,37 @@
 .select
   position: relative;
 
-  .selectize-control
+  &.selectize-control
     position: relative;
 
     &:hover
+      background: #red
+
       .selectize-input
-        border-color: #DEDEDE;
+        border-color: #42bde4;
+
+    &.wpcf7-not-valid
+      .selectize-input
+        border-color: red
 
   .selectize-input
-    border: 1px solid #42bde4
+    //border: 1px solid #42bde4
+    border: 1px solid #c8ecf7
     background: #ffffff
-    padding: 14px 20px 14px 24px
+    height: 70px
+    //padding: 14px 20px 14px 24px
+    padding: 0 20px 0 24px
     position: relative
     white-space: nowrap
     border-radius: 7px
+    display: flex;
+    align-items center
     anim()
+    @media screen and (max-width: $breakpoint-lg - 1)
+      height: 50px
+
+    &.focus
+      border-color: #42bde4;
 
     //@media (max-width: $breakpoint-sm - 1)
     //  padding-top: 8px

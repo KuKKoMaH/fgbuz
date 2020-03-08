@@ -8,158 +8,25 @@
 @import "stylus/_vars.styl";
 @import "stylus/_mixins.styl";
 
-html
-  font-family: 'Montserrat', sans-serif;
-  color: $black
-  font-size: 14px
-  letter-spacing 0.025em
-  line-height: 1.85
-  @media (max-width: $breakpoint-lg - 1)
-    font-size: 10px
-    line-height: 1.8
-
-html, body
-  overflow-x: hidden
-
-h2
-  font-size: 2rem
-  line-height: 1.4
-  font-weight: 500
-  margin-bottom: 4rem
-
-b
-  font-weight: bold
-
-p
-  margin-bottom: 1rem
-
-a
-  color: $black
-  border-bottom: 1px solid #42bde4
-  padding-bottom: 2px
-  anim()
-
-  &:hover
-    border-color: #e7533b
-
-ul, ol
-  margin-bottom: 1.55em
-
-  li
-    margin-bottom: 1em
-    position relative
-
-ul
-  li
-    padding-left: 22px
-
-    &:before
-      content: ''
-      width: 7px
-      height: 7px
-      background: #e43641
-      border-radius: 50%
-      position absolute
-      top: .6em;
-      left: 2px;
-
-ol
-  counter-reset: list;
-
-  li
-    padding-left: 24px
-
-    &:before
-      counter-increment: list;
-      content: counter(list) "."
-      position absolute
-      top: 0;
-      left: 2px;
-      color: #d73436
-      font-weight: bold;
-
-.c
-  padding: 0 15px
-  margin-left: auto
-  margin-right: auto
-  max-width: $container-lg
-  width: 100%
-  @media (max-width: $breakpoint-lg - 1)
-    max-width: $container-md
-    padding: 0 20px
-  @media (max-width: $breakpoint-md - 1)
-    max-width: 100%
-
-//.page
-//  //anim(.2s)
-//  min-height 100vh
-//  display: flex
-//  flex-direction column
-//  will-change filter
-
-.lazy
-  visibility: hidden
-  opacity: 0
-
-  &.lazy--visible
-    visibility: visible
-    opacity: 1
-
-img[data-src],
-img[data-srcset]
-  //display: block;
-  min-height: 1px;
-
-.hidden
-  display: none
-
-#sprites
-  position: absolute
-  width: 0
-  height: 0
-  top: 0
-  left: 0
-
-.zoom
-  cursor: pointer;
-
-  &:after
-    content: ''
-    display: block
-    position: absolute
-    z-index: 1
-    anim(.2s)
-    left: 50%
-    top: 50%
-    margin-left: -45px
-    margin-top: -45px
-    background: rgba(#e21d2b, .45) url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAACj0lEQVR4AZ3BTWgWdAAH4N/2zqjMDNIitUwyKy0VKskKjPQggYVKBSF1qcOIiEhbkPaB5UEvdkg3b+YxupaGX+ClUjoYZSK5VIpgfuB0uk23J/7bq++b2zL2PBmZJgtssM9RHTr8bpd15qnk/1DxkgOGuuR7S3I9Jtlh0Dl7tVprrS1+cFHRb5tbMzLTHFF0WuXeXKXRfdbpVPzq9gzPzQ6h3y4PZhhm26/YY3yGY4dis6aMwI2+UmzNUN7Shy/zn9zkR8UL+TcVf6PdXanSYL4WbdqsMkdjqozTjePGpp7XFM2pMs9uNb2+NStV3sEly1PPCVxIlff1Kbr95rBeRafmDDDVn2hLjYmKzUlijE36cdEnJhvrFvfYpEfxWQbYjl9SY4FiWZLYqDjq0cSrDjrkjcQzTqPPexoSH6EvNV5WzEo0K46Ykpip26AFiUe047InEysgNVYopiX2KJYmiUWueDdJtCi2JJZDaixRzE8sVZwyNzHdWYPmJJ51Guc8lGiG1JiteDtJrFScsiix0E77LE68ohd9Xk8SbTiZGo2KnUlijE360W2tyRpVTNWqR/FpkqjYj72p5zvFuAzQok/R7bAjLik6NWeAx3Thw9TzsGJrqjxut5pe35iVKttw3hOpp8FOdHk6VRrM16JVq1Vma8xVDmJ3ruUp53HchFyHOVa7LUNZr2g3N6Nhhp8N6rLG+FzDJCsty0hMcwyXbTfoL59b7H4TTPSApVqdRK+7MxwzdSg2Jhb6Sb9BPc44o8cVezRlKNO1K9ZngBu8aIdO9U772vMqGcoMHYqPNaWOKZ7zpjVWa7bQHRmeuY4rPshouNMJ9NuY0TDDH4otKhkNxxRfZLRccNYGTRmlfwD1xhxeJgRSzgAAAABJRU5ErkJggg==') 50% 50% no-repeat;
-    width: 90px
-    height: 90px
-    border-radius: 50%
-    opacity 0
-
-  &:hover:after
-    opacity 1
-
-del, s
-  text-decoration: line-through
-
-.center
-  text-align: center;
-
+@import "stylus/blocks/common.styl";
+@import "stylus/blocks/typography.styl";
+@import "stylus/blocks/elements.styl";
 @import "stylus/blocks/btn.styl";
 @import "stylus/blocks/input.styl";
 @import "stylus/blocks/input.styl";
-@import "stylus/blocks/radio.styl";
+@import "stylus/blocks/checkbox.styl";
 @import "stylus/blocks/panel.styl";
 @import "stylus/blocks/wpcf7.styl";
-@import "stylus/blocks/card.styl";
+@import "stylus/blocks/bannerCard.styl";
 @import "stylus/blocks/arrowButton.styl";
 @import "stylus/blocks/moreBtn.styl";
 @import "stylus/blocks/select.styl";
 @import "stylus/blocks/newsCard.styl";
 @import "stylus/blocks/outlineBtn.styl";
+@import "stylus/blocks/page.styl";
+@import "stylus/blocks/breadcrumbs.styl";
+@import "stylus/blocks/smallCard.styl";
+@import "stylus/blocks/slider.styl";
 
 @import "modules/header/header.styl"
 @import "modules/frontSlider/frontSlider.styl"
@@ -169,6 +36,14 @@ del, s
 @import "modules/frontWork/frontWork.styl"
 @import "modules/frontNews/frontNews.styl"
 @import "modules/frontLinks/frontLinks.styl"
+@import "modules/heads/heads.styl"
+@import "modules/faq/faq.styl"
+@import "modules/news/news.styl"
+@import "modules/notFound/notFound.styl"
+@import "modules/contacts/contacts.styl"
+@import "modules/searchResults/searchResults.styl"
+@import "modules/record/record.styl"
+@import "modules/comments/comments.styl"
 
 @import "modules/footer/footer.styl"
 @import "modules/photoswipe/photoswipe.styl"

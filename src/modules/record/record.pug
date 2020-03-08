@@ -1,0 +1,231 @@
+.record
+  .record__progress
+    .record__item.record__item--complete: span Шаг 1: Личные данные
+    .record__item.record__item--active: span Шаг 2: Выбор врача
+    .record__item: span Шаг 3: Дата и время
+    .record__item: span Шаг 4: Подтверждение
+
+  .record__steps
+
+    .record__step.record__step--1
+      .record__body
+        .record__header 1. Введите ваши личные данные
+        .record__note Внимание, все поля являются обязательными для заполнения!
+        .record__form
+          .record__row
+            .record__label ФИО
+            .record__input: input.input__input
+          .record__row
+            .record__label Контактный телефон:
+            .record__input: input.input__input(type='tel')
+          .record__row
+            .record__label E-mail:
+            .record__input: input.input__input
+          .record__row
+            .record__label Дата рождения:
+            .record__input: input.input__input
+          .record__row
+            .record__label
+            .record__input
+              label.checkbox
+                input(type='checkbox')
+                span Персональные данные
+
+        .record__buttons
+          button.btn.btn--big.record__next
+            span
+              | Далее
+              svg: use(xlink:href="#icon-back")
+
+
+    .record__step.record__step--2
+      .record__body
+        .record__header 2. Выберите специалиста
+        .record__form
+          .record__row
+            .record__label Категория:
+            .record__input
+              select.select
+                option(value='Женская консультация') Женская консультация
+                option(value='Женская консультация') Женская консультация
+                option(value='Женская консультация') Женская консультация
+          .record__row
+            .record__label Врач:
+            .record__input
+              select.select
+                option(value='Акушер-гинеколог Иванова И.И.') Акушер-гинеколог Иванова И.И.
+
+        .record__buttons
+          button.btn.btn--big.record__prev
+            span
+              | Назад
+              svg: use(xlink:href="#icon-back")
+
+          button.btn.btn--big.record__next
+            span
+              | Далее
+              svg: use(xlink:href="#icon-back")
+
+
+    .record__step.record__step--3
+      .record__body
+        .record__header 3. Выберите свободную дату и время
+
+        .record__info
+          .record__infoItem
+            .record__infoLabel Категория:
+            .record__infoValue Женская консультация
+          .record__prevItem
+            .record__infoLabel Врач:
+            .record__infoValue Акушер-гинеколог Иванова И.И.
+
+        .record3__date
+          .record3__dateBtn.record3__dateBtn--prev: svg: use(xlink:href="#icon-back")
+          .record3__dateInput
+            span 30 декабря 2019
+            svg: use(xlink:href="#icon-clock")
+          .record3__dateBtn.record3__dateBtn--next: svg: use(xlink:href="#icon-back")
+
+        .record3__calendar
+          .record3__head
+            .record3__cell 8-9
+            .record3__cell 9-10
+            .record3__cell 10-11
+            .record3__cell 11-12
+            .record3__cell 12-13
+            .record3__cell 13-14
+            .record3__cell.record3__cell--active 14-15
+            .record3__cell.record3__cell--active 15-16
+            .record3__cell 16-17
+            .record3__cell 17-18
+            .record3__cell 18-19
+            .record3__cell 19-20
+          .record3__body
+            .record3__row
+              .record3__cell 8#[sup 00]
+              .record3__cell 9#[sup 00]
+              .record3__cell 10#[sup 00]
+              .record3__cell 11#[sup 00]
+              .record3__cell 12#[sup 00]
+              .record3__cell 13#[sup 00]
+              .record3__cell.record3__cell--available 14#[sup 00]
+              .record3__cell.record3__cell--available 15#[sup 00]
+              .record3__cell 16#[sup 00]
+              .record3__cell 17#[sup 00]
+              .record3__cell 18#[sup 00]
+              .record3__cell 19#[sup 00]
+            .record3__row
+              .record3__cell 8#[sup 15]
+              .record3__cell 9#[sup 15]
+              .record3__cell 10#[sup 15]
+              .record3__cell 11#[sup 15]
+              .record3__cell 12#[sup 15]
+              .record3__cell 13#[sup 15]
+              .record3__cell.record3__cell--unavailable 14#[sup 15]
+              .record3__cell.record3__cell--available 15#[sup 15]
+              .record3__cell 16#[sup 15]
+              .record3__cell 17#[sup 15]
+              .record3__cell 18#[sup 15]
+              .record3__cell 19#[sup 15]
+            .record3__row
+              .record3__cell 8#[sup 30]
+              .record3__cell 9#[sup 30]
+              .record3__cell 10#[sup 30]
+              .record3__cell 11#[sup 30]
+              .record3__cell 12#[sup 30]
+              .record3__cell 13#[sup 30]
+              .record3__cell.record3__cell--available 14#[sup 30]
+              .record3__cell.record3__cell--available 15#[sup 30]
+              .record3__cell 16#[sup 30]
+              .record3__cell 17#[sup 30]
+              .record3__cell 18#[sup 30]
+              .record3__cell 19#[sup 30]
+            .record3__row
+              .record3__cell 8#[sup 45]
+              .record3__cell 9#[sup 45]
+              .record3__cell 10#[sup 45]
+              .record3__cell 11#[sup 45]
+              .record3__cell 12#[sup 45]
+              .record3__cell 13#[sup 45]
+              .record3__cell.record3__cell--available.record3__cell--selected 14#[sup 45]
+              .record3__cell.record3__cell--unavailable 15#[sup 45]
+              .record3__cell 16#[sup 45]
+              .record3__cell 17#[sup 45]
+              .record3__cell 18#[sup 45]
+              .record3__cell 19#[sup 45]
+
+        .record3__legend
+          .record3__legendItem.record3__legendItem--available доступный интервал
+          .record3__legendItem.record3__legendItem--unavailable недоступный интервал
+          .record3__legendItem.record3__legendItem--selected выбраный интервал
+
+        .record3__selected Вторник 30 декабря с 14:45 до 15:00
+
+        .record__buttons
+          button.btn.btn--big.record__prev
+            span
+              | Назад
+              svg: use(xlink:href="#icon-back")
+
+          button.btn.btn--big.record__next
+            span
+              | Далее
+              svg: use(xlink:href="#icon-back")
+
+
+    .record__step.record__step--4.record__step--active
+      .record__body
+        .record__header 4. Подтвердите данные
+
+        .record__summary
+          .record__summaryItem
+            .record__summaryLabel ФИО:
+            .record__summaryValue
+              | Иванов Иван Петрович
+              a(href='#') Редактировать
+          .record__summaryItem
+            .record__summaryLabel Контактный телефон:
+            .record__summaryValue
+              | +7 (495) 665-55-66
+              a(href='#') Редактировать
+          .record__summaryItem
+            .record__summaryLabel Дата рождения:
+            .record__summaryValue
+              | 14 июня 1973
+              a(href='#') Редактировать
+          .record__summaryItem
+            .record__summaryLabel Категория:
+            .record__summaryValue
+              | Женская консультация
+              a(href='#') Редактировать
+          .record__summaryItem
+            .record__summaryLabel Врач:
+            .record__summaryValue
+              | Акушер-гинеколог Иванова И.И.
+              a(href='#') Редактировать
+          .record__summaryItem
+            .record__summaryLabel Дата:
+            .record__summaryValue
+              | 30 декабря 2019
+              a(href='#') Редактировать
+          .record__summaryItem
+            .record__summaryLabel Время:
+            .record__summaryValue
+              | 14:45 - 15:00
+              a(href='#') Редактировать
+
+        .record__note Внимание! Прием осуществляется по оплаченной квитанции. Оплата производится в кассе МСЧ №59
+
+        .record__politic
+          label.checkbox
+            input(type='checkbox')
+            span С #[a(href='#') правилами пользования сайта] согласен, с #[a(href='#') политикой обработки персональных данных] ознакомлен.
+
+        .record__buttons
+          button.btn.btn--big.record__prev
+            span Отмена
+
+          button.btn.btn--big.record__next
+            span Потвердить
+
+        .record__warn Уважаемые пользователи, просим Вас перед приемом обращаться в стол справок +7 (8412) 60-22-61 (Городская поликлиника), +7 (8412) 60-10-02 (Детская поликлиника), +7 (8412) 60-33-82 (Женская консультация) и уточнять расписание специалистов. Если у Вас возникли технические проблемы, вы можете позвонить по телефону: +7 (8412) 60-10-08.

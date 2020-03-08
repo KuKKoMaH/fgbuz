@@ -1,0 +1,25 @@
+.news
+  .news__header
+    .news__tags
+      a.news__tag(href='#') АУДИО
+      a.news__tag.news__tag--active(href='#') ВИДЕО
+      a.news__tag(href='#') ФОТО
+    .news__sort
+      select.select
+        option Упорядочить по релевантности
+        option Упорядочить по новизне
+  .news__items
+    each i in [1,2,3,4,5,6]
+      .news__item
+        a.newsCard(href='#')
+          .newsCard__image: img.lazy(data-src='images/news-img.jpg')
+          .newsCard__date 02 февраля 2019 в 15:51
+          .newsCard__title Его комната, настоящая, разве что слишком маленькая, но обычная комната, мирно покоилась в своих четырех
+          .newsCard__text
+            p Curabitur ullamcorper ultricies nisi. Nam egetdui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semperid ...
+          .tags
+            span аудио
+            span видео
+            span фото
+
+  .loadMore: a(href='#') Загрузить еще
