@@ -33,8 +33,8 @@
     background: #24b4e2
     border-radius: 0 0 7px 7px
     font-size: 0
-    width: 80px;
-    height: 50px
+    width: 62px;
+    height: 33px
     z-index: 1
     anim()
     @media screen and (max-width: $breakpoint-lg - 1)
@@ -233,42 +233,24 @@
         display: none;
 
       > li
-        position: relative;
+        position: static;
         margin: 0
         padding: 0
         flex: 1 1 auto
 
-        &:hover
+        &:hover > a
           &:after
             opacity: 1
 
         &:before
-          position: absolute;
-          width: 1px
-          height: 100%
-          top: 0
-          left: auto;
-          right: 0
-          background: linear-gradient(to top, #66cae9, #8fe2fc);
+          display: none;
 
-        &:after
-          content ''
-          position: absolute;
-          top: 0
-          left: 0
-          width: 100%
-          height: 100%
-          background: linear-gradient(to top, #66cae9, #8fe2fc);
-          opacity: 0
-          anim()
-
-        &.menu-item-has-children > a:after
+        &.menu-item-has-children > a span:after
           content: ''
           display: inline-block;
           vertical-align: middle;
           margin-left: 9px
           background: url(../../images/sprite-menu-arrow-white.png)
-
 
         > a
           height: 65px
@@ -280,6 +262,31 @@
           position: relative;
           z-index: 1
           border: 0
+
+          &:before
+            content ''
+            position: absolute;
+            width: 1px
+            height: 100%
+            top: 0
+            left: auto;
+            right: 0
+            background: linear-gradient(to top, #66cae9, #8fe2fc);
+
+          &:after
+            content ''
+            position: absolute;
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background: linear-gradient(to top, #66cae9, #8fe2fc);
+            opacity: 0
+            anim()
+
+          span
+            position: relative;
+            z-index: 1
 
           &:hover
             text-decoration: none;

@@ -65,5 +65,9 @@ window.printPage = () => {
   } else {
     window.print();
   }
+};
 
+window.updateLazyImages = () => {
+  lazyLoad.update();
+  $('.lazy').each(( i, el ) => observer.observe(el));
 };
